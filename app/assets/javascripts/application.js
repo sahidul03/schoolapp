@@ -1,4 +1,4 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
+// This is a manifest file that'll be compiled into application.js, which will include all the Copyfiles
 // listed below.
 //
 // Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
@@ -11,8 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
 //= require modernizr-2.6.2.min
 //= require marquee
 //= require jquery-migrate.min
@@ -33,10 +31,10 @@
 //= require layerslider.kreaturamedia.jquery
 //= require greensock
 //= require layerslider.transitions
-//= require jquery.themepunch.tools.min
-//= require jquery.themepunch.revolution.min
 //= require jquery.flexslider
 
+
+// admin js files
 
 //= require_tree .
 //<script type="text/javascript">var lsjQuery = jQuery;</script>

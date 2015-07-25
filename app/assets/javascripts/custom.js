@@ -74,8 +74,8 @@ jQuery(document).ready(function($){
 				if( (ParentLeftPosition + MegaMenuChildContainerWidth) > screenWidth ){
 					var SwMinuOffset = screenWidth - ParentLeftPosition;
 					var marginFromLeft = MegaMenuChildContainerWidth - SwMinuOffset;
-//					marginFromLeftActual = (marginFromLeft) + 25;
-//					marginLeftFromScreen = "-"+marginFromLeftActual+"px";
+					marginFromLeftActual = (marginFromLeft) + 25;
+					marginLeftFromScreen = "-"+marginFromLeftActual+"px";
 					$(this).css('left',marginLeftFromScreen);
 			  }
 			});		

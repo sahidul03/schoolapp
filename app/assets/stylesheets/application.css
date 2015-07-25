@@ -21,6 +21,10 @@
   *= require font-awesome.min
   *= require layerslider
   *= require prettyPhoto
+
+
+  //admin css
+ 
  *= require_tree .
  *= require_self
  */
