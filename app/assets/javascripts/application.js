@@ -35,6 +35,8 @@
 
 
 // admin js files
+//= require bootstrap.min
+//= require jquery.slimscroll
 
 //= require_tree .
 //<script type="text/javascript">var lsjQuery = jQuery;</script>
