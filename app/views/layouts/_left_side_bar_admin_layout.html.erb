@@ -10,8 +10,12 @@
       <div class="col-xs-8">
         <div class="profile-text">Welcome <b>Asad</b></div>
         <div class="profile-buttons">
-          <a href="#connect" title="Edit Profile" class=""><i class="fa fa-edit"></i></a>
-          <a href="javascript:;" title="Sign Out"><i class="fa fa-power-off text-red-1"></i></a>
+          <%= link_to edit_user_registration_path, :class => 'navbar-link', :title=>'Edit Profile',:data => { :no_turbolink => true } do %>
+              <i class="fa fa-edit"></i>
+          <% end %>
+          <%= link_to destroy_user_session_path, method: :delete, :class => 'navbar-link',:title=>"Sign Out" do  %>
+              <i class="fa fa-power-off text-red-1"></i>
+          <% end %>
         </div>
       </div>
     </div>

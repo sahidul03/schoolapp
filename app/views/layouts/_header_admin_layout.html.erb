@@ -137,13 +137,15 @@
           <li class="dropdown topbar-profile">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="rounded-image topbar-profile-image"><img src="images/user-256.jpg"></span> Asad <strong>Hossain</strong> <i class="fa fa-caret-down"></i></a>
             <ul class="dropdown-menu">
-              <!--<li><a href="#">My Profile</a></li>-->
-              <!--<li><a href="#">Change Password</a></li>-->
-              <li><a href="#">Account Setting</a></li>
+              <li>
+                <%= link_to 'Account Setting', edit_user_registration_path, :class => 'navbar-link',:data => { :no_turbolink => true } %>
+              </li>
               <li class="divider"></li>
-              <!--<li><a href="#"><i class="icon-help-2"></i> Help</a></li>-->
-              <!--<li><a href="lockscreen.html"><i class="icon-lock-1"></i> Lock me</a></li>-->
-              <li><a class="md-trigger" data-modal="logout-modal"><i class="fa fa-sign-out"></i> Logout</a></li>
+              <li>
+                <%= link_to destroy_user_session_path, method: :delete, :class => 'navbar-link' do  %>
+                <i class="fa fa-sign-out"></i> Logout
+                <% end %>
+              </li>
             </ul>
           </li>
           <li class="right-opener">

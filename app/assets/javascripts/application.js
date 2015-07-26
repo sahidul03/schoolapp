@@ -11,6 +11,8 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery_ujs
+//= require turbolinks
 //= require modernizr-2.6.2.min
 //= require marquee
 //= require jquery-migrate.min
