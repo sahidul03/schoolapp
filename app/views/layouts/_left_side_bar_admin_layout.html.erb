@@ -123,12 +123,20 @@
     <div class="clearfix"></div>
     <div class="portlets">
       <div id="chat_groups" class="widget transparent nomargin">
-        <h2>Chat Groups</h2>
+        <h2>Information</h2>
         <div class="widget-content">
           <ul class="list-unstyled">
-            <li><a href="javascript:;"><i class="fa fa-circle-o text-red-1"></i> Student</a></li>
-            <li><a href="javascript:;"><i class="fa fa-circle-o text-blue-1"></i> Teacher</a></li>
-            <li><a href="javascript:;"><i class="fa fa-circle-o text-green-1"></i> Employee</a></li>
+            <li>
+              <%= link_to students_path,:data => { :no_turbolink => true } do %>
+                  <i class="fa fa-circle-o text-red-1"></i> Student
+              <% end %>
+            </li>
+            <li>
+              <a href="javascript:;"><i class="fa fa-circle-o text-blue-1"></i> Teacher</a>
+            </li>
+            <li>
+              <a href="javascript:;"><i class="fa fa-circle-o text-green-1"></i> Employee</a>
+            </li>
           </ul>
         </div>
       </div>

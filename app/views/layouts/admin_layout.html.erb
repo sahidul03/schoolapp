@@ -27,11 +27,17 @@
 <%= render 'layouts/left_side_bar_admin_layout' %>
 <!-- Left Sidebar End -->
 <!-- Start right content -->
+
 <div class="content-page">
 
 <div class="content">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+<div>
+  <div class="alert_and_notice_display">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
+</div>
+
   <%= yield %>
 <!-- Footer Start -->
 <%= render 'layouts/footer_admin_layout' %>

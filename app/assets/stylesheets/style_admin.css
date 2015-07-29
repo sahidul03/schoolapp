@@ -1935,7 +1935,7 @@ body.mobile .slimscroller {
   position: relative;
 }
 .content-page > .content {
-  margin-top: 50px;
+  /*margin-top: 50px;*/
   padding: 20px;
   position: relative;
 }
@@ -5810,6 +5810,7 @@ footer .footer-links a:last-child {
  height:auto;	
 }
 .border-student{
+    min-height: 140px;
  border:1px solid #E7E7E7;	
 	
 }
@@ -5838,4 +5839,8 @@ footer .footer-links a:last-child {
  background-color:#E9EBEB;
  border-radius:3px;
  padding:4px;	
+}
+
+.alert_and_notice_display{
+    margin-top: 30px;
 }

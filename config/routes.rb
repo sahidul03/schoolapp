@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :admins
-
+  resources :students
 
   # Example resource route with options:
   #   resources :products do

@@ -5,3 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Level.create(name: 'One')
+Level.create(name: 'Two')
+Level.create(name: 'Three')
+Level.create(name: 'Four')
+Level.create(name: 'Five')
+Level.create(name: 'Six')
+Level.create(name: 'Seven')
+Level.create(name: 'Eight')
+Level.create(name: 'Nine')
+Level.create(name: 'Ten')
+Level.create(name: 'Eleven')
+Level.create(name: 'Twelve')
+
+User.create(email: 'sahidul03@gmail.com',password: 'abcd1234')
