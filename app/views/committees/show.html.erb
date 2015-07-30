@@ -1,0 +1,69 @@
+<div class="tab-pane animated fadeInRight" id="about">
+  <div class="user-profile-content">
+
+
+    <div class="row">
+
+
+      <div class="col-sm-6 profile_dl_tl">
+
+        <% if @committee.profile_photo %>
+            <%= image_tag(@committee.profile_photo, :width => '50%') %>
+        <% else %>
+            <img src="/images/user.jpg">
+        <% end %>
+        <h4>Committee Member's info</h4>
+        <div class="profile_dl_ct">
+          <div class="p_left">Name</div>
+          <div class="p_right"><%= @committee.name %></div>
+        </div>
+        <div class="profile_dl_ct">
+          <div class="p_left">Designation</div>
+          <div class="p_right"><%= @committee.designation %></div>
+        </div>
+        <div class="profile_dl_ct">
+          <div class="p_left">Address</div>
+          <div class="p_right"><%= @committee.address %></div>
+        </div>
+        <div class="profile_dl_ct">
+          <div class="p_left">Email Address</div>
+          <div class="p_right"><%= @committee.email %></div>
+        </div>
+        <div class="profile_dl_ct">
+          <div class="p_left">Contact No</div>
+          <div class="p_right"><%= @committee.phone %> </div>
+        </div>
+        <div class="profile_dl_ct">
+          <div class="p_left">Gender</div>
+          <div class="p_right"><%= @committee.gender %> </div>
+        </div>
+      </div>
+      <div class="col-sm-5 pull-right">
+        <p>
+          <%= link_to edit_committee_path(@committee), :class=>'btn btn-info',:data => { :no_turbolink => true } do %>
+              <i class='fa fa-align-left fa-edit'></i> edit
+          <% end %>
+
+          <%= link_to committee_path(@committee), :class=>'btn btn-info', method: :delete,data: { confirm: 'Are you sure?' } do %>
+              <i class='fa fa-align-right fa-crop'></i> delete
+          <% end %>
+          <%= link_to committees_path, :class=>'btn btn-info',:data => { :no_turbolink => true } do %>
+              <i class='fa fa-align-left fa-reply-all'></i> All Committee Members
+          <% end %>
+        </p>
+      </div>
+      <div  class="col-sm-5 profile_gd">
+        <h4>Important Info</h4>
+        <div class="profile_dl_right">
+          <div class="pp_left">Designation</div>
+          <div class="pp_right"><%= @committee.designation %> </div>
+        </div>
+        <div class="profile_dl_right">
+          <div class="pp_left">Message</div>
+          <div class="pp_right"><%= @committee.message %></div>
+        </div>
+
+      </div>
+    </div><!-- End div .row -->
+  </div><!-- End div .user-profile-content -->
+</div>

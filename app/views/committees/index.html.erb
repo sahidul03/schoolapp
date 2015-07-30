@@ -1,0 +1,87 @@
+<div class="row">
+  <div class="col-lg-12 portlets">
+    <div id="website-statistics1" class="widget">
+      <div class="widget-header transparent">
+        <h2><i class="fa fa-bar-chart"></i> <strong>Managing Committee's </strong> Information</h2>
+        <div class="additional-btn">
+
+        </div>
+      </div>
+      <div class="widget-content">
+
+        <div class="bill-to-receipt">
+          <div class="row">
+            <div class="col-sm-6">
+              <small class="text-left class_information_container">
+                <h4><strong><a ><span class="school_name">চর ভয়রা উচ্চ বিদ্যালয় </span> </a></strong></h4>
+                <p><strong>TOTAL MEMBERS : </strong> # <span class="label label-info"><%= Committee.all.count %></span> </p>
+                <p><strong>TOTAL MALE MEMBERS: </strong> # <span class="label label-danger"><%= Committee.where(:gender=>'male').count %></span> </p>
+                <p><strong>TOTAL FEMALE MEMBERS: </strong> # <span class="label label-primary"><%= Committee.where(:gender=>'female').count %></span> </p>
+              </small>
+
+            </div>
+            <div class="col-sm-6"><br>
+
+            </div>
+          </div>
+        </div>
+        <!--end of bill to--->
+
+        <div  class="data-table-toolbar">
+          <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-8">
+              <div class=" pull-right ">
+                <%= link_to new_committee_path, :data => { :no_turbolink => true }, :class=>'btn btn-primary' do %>
+                    <i class="fa fa-plus"></i>Add Committee Member
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--start student list--->
+        <div class="student_container">
+          <% if Committee.all.any? %>
+              <% Committee.all.each do |committee|  %>
+                  <div class="col-sm-6">
+                    <div class="widget border-student">
+                      <div class="widget-content">
+                        <div class="student-list">
+                          <%= image_tag(committee.profile_photo, :class => 'img-responsive') if committee.profile_photo %>
+                        </div>
+                        <div class="student-details">
+                          <small class="text-left">
+                            <h4>
+                              <%= link_to committee_path(committee),:data => { :no_turbolink => true } do %>
+                                  <b> <%= committee.name %></b>
+                              <% end %>
+                            </h4>
+                            <p><b> Designation : <%= committee.designation %>  </b></p>
+                            <p><b> Gender : <%= committee.gender %> </b></p>
+                            <p>
+                              <%= link_to edit_committee_path(committee), :class=>'btn btn-info',:data => { :no_turbolink => true } do %>
+                                  <i class='fa fa-align-left fa-edit'></i> edit
+                              <% end %>
+                              <%= link_to committee_path(committee), :class=>'btn btn-info', method: :delete,data: { confirm: 'Are you sure?' } do %>
+                                  <i class='fa fa-align-right fa-crop'></i> delete
+                              <% end %>
+                            </p>
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              <% end %>
+          <% end %>
+        </div>
+        <!--end student list--->
+
+
+      </div>
+    </div>
+
+
+  </div>
+</div>

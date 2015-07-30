@@ -6,4 +6,7 @@ class UsersController < ApplicationController
     render layout: 'user_layout'
   end
 
+
+
+
 end

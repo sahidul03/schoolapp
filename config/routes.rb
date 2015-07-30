@@ -23,7 +23,8 @@ Rails.application.routes.draw do
        get 'search_student'
     end
   end
-
+  resources :teachers
+  resources :committees
   # Example resource route with options:
   #   resources :products do
   #     member do

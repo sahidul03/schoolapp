@@ -132,10 +132,14 @@
               <% end %>
             </li>
             <li>
-              <a href="javascript:;"><i class="fa fa-circle-o text-blue-1"></i> Teacher</a>
+              <%= link_to teachers_path,:data => { :no_turbolink => true } do %>
+                  <i class="fa fa-circle-o text-blue-1"></i> Teacher
+              <% end %>
             </li>
             <li>
-              <a href="javascript:;"><i class="fa fa-circle-o text-green-1"></i> Employee</a>
+              <%= link_to committees_path,:data => { :no_turbolink => true } do %>
+                  <i class="fa fa-circle-o text-green-1"></i> Committee
+              <% end %>
             </li>
           </ul>
         </div>

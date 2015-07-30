@@ -27,7 +27,7 @@
           <p><strong>All Students  : </strong> <span class="label label-info"><%= Student.all.count %></span></p>
           <p><strong>All Male Students : </strong> <span class="label label-danger"><%= Student.where(:gender=>'male').count %></span></p>
 
-          <p><strong>All Male Students  : </strong> <span class="label label-primary"><%= Student.where(:gender=>'female').count %></span></p>
+          <p><strong>All Female Students  : </strong> <span class="label label-primary"><%= Student.where(:gender=>'female').count %></span></p>
 
         </small>
       </div>

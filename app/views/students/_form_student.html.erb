@@ -1,0 +1,61 @@
+<%= form_for @student do |f| %>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Student Name</label>
+      <%= f.text_field :name, :class=>'form-control',:placeholder=>"Student name" %>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Fathers Name</label>
+      <%= f.text_field :father_name, :class=>'form-control',:placeholder=>"Father's name" %>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Mother's Name</label>
+      <%= f.text_field :mother_name, :class=>'form-control',:placeholder=>"Mother's name" %>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Address</label>
+      <%= f.text_field :address, :class=>'form-control',:placeholder=>"Address" %>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Guardian name</label>
+      <%= f.text_field :guardian_name, :class=>'form-control',:placeholder=>"Guardian name" %>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Guardian Contact No</label>
+      <%= f.text_field :guardian_contact_no, :class=>'form-control',:placeholder=>"Guardian Contact No" %>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-2 control-label">Gender</label>
+      <div class="col-sm-10">
+        <div class="radio iradio">
+          <label>
+            <%= f.radio_button :gender,'male',:checked=>true %>
+            <!--<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>-->
+            Male
+          </label>
+        </div>
+        <div class="radio iradio">
+          <label>
+            <%= f.radio_button :gender,'female' %>
+            <!--<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">-->
+            Female
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Roll No</label>
+      <%= f.text_field :roll_no, :class=>'form-control',:placeholder=>"Roll No" %>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Select Class</label>
+      <%= select_tag 'level_id', options_from_collection_for_select(Level.all,:id, :name, :selected=>@student.level_id), { :class => 'form-control' } %>
+    </div>
+
+    <div class="form-group">
+      <%= f.file_field :profile_photo, :class=>'btn btn-default' %>
+      <!--<input type="file" class="btn btn-default" title="Search for a file to add">-->
+      <p class="help-block">Profile Photo fo student</p>
+    </div>
+    <%= f.submit 'Submit', :class=>'btn btn-default' %>
+<% end %>

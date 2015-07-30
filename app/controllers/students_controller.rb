@@ -40,7 +40,7 @@ class StudentsController < ApplicationController
       redirect_to students_path
     else
       flash[:alert] = "Please name and Roll no insert correctly."
-      redirect_to new_student_path
+      redirect_to edit_student_path(@student)
     end
   end
 

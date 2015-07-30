@@ -1,8 +1,14 @@
 <div  class="row">
   <div  class="col-lg-8 portlets">
+    <div class="text-right" style="margin-bottom: 10px">
+      <%= link_to committees_path, :class=>'btn btn-info',:data => { :no_turbolink => true } do %>
+          <i class='fa fa-align-left fa-reply-all'></i> All Committee Members
+      <% end %>
+    </div>
+
     <div  class="widget">
       <div class="widget-header">
-        <h2><i class="fa fa-user"></i> <strong>Admission</strong> Form</h2>
+        <h2><i class="fa fa-user"></i> <strong>Committee Member's info Edit Form</strong> </h2>
 
       </div>
       <div class="widget-content">
@@ -13,7 +19,7 @@
 
               <div class="widget-content padding">
                 <div id="basic-form">
-                  <%= render 'students/form_student' %>
+                  <%= render 'committees/form_committee' %>
                 </div>
               </div>
             </div>
