@@ -53,12 +53,13 @@ class StudentsController < ApplicationController
 
 
   def search_student
+    @selected_class=Level.find(params[:level_id])
     if params[:roll_no] ==''
-      @students=Level.find(params[:level_id]).students
+      @students=@selected_class.students
     else
-      @students=Level.find(params[:level_id]).students.where(:roll_no=>params[:roll_no])
+      @students=@selected_class.students.where(:roll_no=>params[:roll_no])
     end
-    raise @students.inspect
+    # raise @students.inspect
   end
 
   protected

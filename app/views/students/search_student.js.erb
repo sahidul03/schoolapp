@@ -1,0 +1,5 @@
+$('.student_container').html('<%= escape_javascript render("students/search_student_partial_view") %>');
+$('.class_information_container .class_name').text('<%= @selected_class.name %>')
+$('.class_information_container .all_students_of_class').text('<%= @selected_class.students.count %>')
+$('.class_information_container .all_male_student_of_class').text('<%= @selected_class.students.where(:gender=>'male').count %>')
+$('.class_information_container .all_female_student_of_class').text('<%= @selected_class.students.where(:gender=>'female').count %>')
