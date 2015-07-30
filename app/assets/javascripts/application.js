@@ -34,6 +34,7 @@
 //= require greensock
 //= require layerslider.transitions
 //= require jquery.flexslider
+//= require custom_admin
 
 
 // admin js files

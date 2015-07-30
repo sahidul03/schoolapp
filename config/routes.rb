@@ -18,7 +18,11 @@ Rails.application.routes.draw do
 
   resources :users
   resources :admins
-  resources :students
+  resources :students do
+    collection do
+       get 'search_student'
+    end
+  end
 
   # Example resource route with options:
   #   resources :products do

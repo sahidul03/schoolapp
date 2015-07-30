@@ -15,6 +15,11 @@ class StudentsController < ApplicationController
     render layout: 'admin_layout'
   end
 
+  def show
+    @student=Student.find(params[:id])
+    render layout: 'admin_layout'
+  end
+
   def create
     @student=Student.new(params_student)
     # raise params_student.inspect
@@ -44,6 +49,16 @@ class StudentsController < ApplicationController
     @student.destroy
     flash[:notice] = "Student deleted successfully."
     redirect_to students_path
+  end
+
+
+  def search_student
+    if params[:roll_no] ==''
+      @students=Level.find(params[:level_id]).students
+    else
+      @students=Level.find(params[:level_id]).students.where(:roll_no=>params[:roll_no])
+    end
+    raise @students.inspect
   end
 
   protected

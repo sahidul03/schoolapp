@@ -1,0 +1,74 @@
+<div class="tab-pane animated fadeInRight" id="about">
+  <div class="user-profile-content">
+
+
+    <div class="row">
+
+
+      <div class="col-sm-6 profile_dl_tl">
+
+        <% if @student.profile_photo %>
+            <%= image_tag(@student.profile_photo, :width => '50%') %>
+        <% else %>
+            <img src="/images/user.jpg">
+        <% end %>
+        <h4>Student info</h4>
+        <div class="profile_dl_ct">
+          <div class="p_left">Name</div>
+          <div class="p_right"><%= @student.name %></div>
+        </div>
+        <div class="profile_dl_ct">
+          <div class="p_left">Fathers name</div>
+          <div class="p_right"><%= @student.father_name %></div>
+        </div>
+        <div class="profile_dl_ct">
+          <div class="p_left">Mothers name</div>
+          <div class="p_right"><%= @student.mother_name %></div>
+        </div>
+        <div class="profile_dl_ct">
+          <div class="p_left">Class</div>
+          <div class="p_right"><%= @student.level.name %></div>
+        </div>
+        <div class="profile_dl_ct">
+          <div class="p_left">Roll No</div>
+          <div class="p_right"><%= @student.roll_no %></div>
+        </div>
+        <div class="profile_dl_ct">
+          <div class="p_left">Address</div>
+          <div class="p_right"><%= @student.address %> </div>
+        </div>
+
+      </div>
+      <div class="col-sm-5 pull-right">
+        <p>
+          <%= link_to edit_student_path(@student), :class=>'btn btn-info',:data => { :no_turbolink => true } do %>
+              <i class='fa fa-align-left fa-edit'></i> edit
+          <% end %>
+
+          <%= link_to student_path(@student), :class=>'btn btn-info', method: :delete,data: { confirm: 'Are you sure?' } do %>
+              <i class='fa fa-align-right fa-crop'></i> delete
+          <% end %>
+          <%= link_to students_path, :class=>'btn btn-info',:data => { :no_turbolink => true } do %>
+              <i class='fa fa-align-left fa-reply-all'></i> All Students
+          <% end %>
+        </p>
+      </div>
+      <div  class="col-sm-5 profile_gd">
+        <h4>Guardian Info</h4>
+        <div class="profile_dl_right">
+          <div class="pp_left">Name</div>
+          <div class="pp_right"><%= @student.guardian_name %> </div>
+        </div>
+        <div class="profile_dl_right">
+          <div class="pp_left">Phone</div>
+          <div class="pp_right"><%= @student.guardian_contact_no %></div>
+        </div>
+        <div class="profile_dl_right">
+          <div class="pp_left">Address</div>
+          <div class="pp_right"><%= @student.address %></div>
+        </div>
+
+      </div>
+    </div><!-- End div .row -->
+  </div><!-- End div .user-profile-content -->
+</div>
