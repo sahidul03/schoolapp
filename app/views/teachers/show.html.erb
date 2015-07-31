@@ -66,10 +66,13 @@
           <div class="pp_left">Qualification</div>
           <div class="pp_right"><%= @teacher.qualification %></div>
         </div>
-        <div class="profile_dl_right">
-          <div class="pp_left">Contact No</div>
-          <div class="pp_right"><%= @teacher.phone %></div>
-        </div>
+        <% if @teacher.message %>
+            <div class="profile_dl_right">
+              <div class="pp_left">Message</div>
+              <div class="pp_right"><%= @teacher.message %></div>
+            </div>
+        <% end %>
+
 
       </div>
     </div><!-- End div .row -->
