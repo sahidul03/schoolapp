@@ -21,18 +21,18 @@ ActiveRecord::Schema.define(version: 20150801141250) do
     t.string   "designation",   limit: 255
     t.string   "profile_photo", limit: 255
     t.string   "gender",        limit: 255
-    t.string   "message",       limit: 255
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.text     "message",       limit: 65535
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.date     "birth_day"
   end
 
   create_table "events", force: :cascade do |t|
     t.string   "title",      limit: 255
-    t.string   "body",       limit: 255
+    t.text     "body",       limit: 65535
     t.string   "image",      limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "galleries", force: :cascade do |t|
@@ -49,10 +49,10 @@ ActiveRecord::Schema.define(version: 20150801141250) do
 
   create_table "notices", force: :cascade do |t|
     t.string   "title",      limit: 255
-    t.string   "body",       limit: 255
+    t.text     "body",       limit: 65535
     t.string   "image",      limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "photos", force: :cascade do |t|
@@ -92,9 +92,9 @@ ActiveRecord::Schema.define(version: 20150801141250) do
     t.string   "designation",   limit: 255
     t.string   "profile_photo", limit: 255
     t.string   "gender",        limit: 255
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.string   "message",       limit: 255
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.text     "message",       limit: 65535
     t.date     "birth_day"
   end
 

@@ -8,7 +8,7 @@ class CreateCommittees < ActiveRecord::Migration
       t.string :designation
       t.string :profile_photo
       t.string :gender
-      t.string :message
+      t.text :message
 
       t.timestamps null: false
     end
