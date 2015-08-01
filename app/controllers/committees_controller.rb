@@ -54,7 +54,7 @@ class CommitteesController < ApplicationController
   protected
 
   def params_committee
-    params.require(:committee).permit(:name,:email, :phone, :message, :designation, :address,:profile_photo,:gender)
+    params.require(:committee).permit(:name,:email, :phone, :message, :designation, :address,:profile_photo,:gender,:birth_day)
   end
 
 end

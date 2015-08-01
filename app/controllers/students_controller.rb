@@ -65,7 +65,7 @@ class StudentsController < ApplicationController
   protected
 
   def params_student
-    params.require(:student).permit(:name,:father_name, :mother_name, :guardian_name, :guardian_contact_no, :roll_no, :address,:profile_photo,:gender).merge(:level_id=>params[:level_id])
+    params.require(:student).permit(:name,:father_name, :mother_name, :guardian_name, :guardian_contact_no, :roll_no, :address,:profile_photo,:gender,:birth_day).merge(:level_id=>params[:level_id])
   end
 
 end

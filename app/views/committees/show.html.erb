@@ -17,6 +17,11 @@
 
       </div>
       <div  class="col-sm-3">
+        <%= link_to committee_path(@committee),:method => :delete,data: { confirm: 'Are you sure?' } do %>
+            <div class="edit_delete">
+              <i class="fa fa-close"></i>
+            </div>
+        <% end %>
         <%= link_to edit_committee_path(@committee),:data => { :no_turbolink => true } do %>
             <div class="edit_profile">
               <i class="fa fa-pencil"></i>
@@ -61,6 +66,10 @@
                 <div class="p_left">Gender</div>
                 <div class="p_right"><%= @committee.gender %> </div>
               </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Date of Birth</div>
+                <div class="p_right"><%= @committee.birth_day %> </div>
+              </div>
 
 
             </div>
@@ -88,5 +97,5 @@
       <!-- End Tab user messages -->
     </div><!-- End div .tab-content -->
   </div><!-- End div .box-info -->
-</div>
+  <%= render 'layouts/right_side_student_count_class_wise_admin' %>
 </div>
