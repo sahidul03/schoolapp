@@ -1,5 +1,6 @@
 var custom_admin=new function(){
     var that=this;
+
     this.Student=new function(){
         this.StudentSearchByClass=new function(){
             var level_id_selector=$('#level_id');

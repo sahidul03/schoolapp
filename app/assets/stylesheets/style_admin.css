@@ -1484,14 +1484,12 @@ hr.divider {
 .the-timeline .post-to-timeline textarea {
   height: auto;
   resize: none;
-  min-height:100px;
-  border:none;
+  min-height:120px;
+  /*border:none;*/
   line-height:18px;
   margin-top:-15px;
   word-wrap: break-word;
-  overflow: hidden;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: auto;
   vertical-align: bottom;
   margin-bottom: 10px;
   box-sizing: border-box;
@@ -5844,4 +5842,18 @@ footer .footer-links a:last-child {
 
 .alert_and_notice_display{
     margin-top: 30px;
+}
+.textaria_for_teacher_and_committee{
+
+    height: auto;
+    resize: none;
+    min-height:120px;
+    /*border:none;*/
+    line-height:18px;
+    word-wrap: break-word;
+    overflow: auto;
+    vertical-align: bottom;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    outline: 0px none;
 }

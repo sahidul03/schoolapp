@@ -1,0 +1,89 @@
+<div class="row">
+<div class="col-lg-12 portlets">
+  <div class="widget">
+    <div class="widget-header">
+      <h2><i class="fa fa-bar-chart"></i> <strong>Video Galleries</strong> </h2>
+    </div>
+
+    <div class="widget-content">
+      <!--end of bill to--->
+      <div class="table-responsive text-left">
+        <h4 class="text-center padding-top">Add a Video</h4>
+        <div  class="data-table-toolbar">
+          <div class="row">
+            <div class="col-md-12">
+              <%= form_for @video do |f| %>
+                  <div class="form-group padding">
+                    <%= f.text_field :title , :class=>'form-control', placeholder: 'Video title...' %>
+                    <!--<input type="text" class="form-control" placeholder="position name of academy..">-->
+                  </div>
+                  <div class="form-group padding">
+                    <%= f.text_field :url , :class=>'form-control', placeholder: 'Video embed code ....' %>
+                  </div>
+                  <div style="margin-right:100%;" class="form-group">
+                    <%= f.submit  :class=>'btn btn-blue-3' %>
+                    <!--<button type="submit" class="btn btn-blue-3"><i class="fa fa-check"></i> Submit</button>-->
+                  </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div><!--end of table-responsive --->
+
+      <div class="widget transparent animated fadeInDown">
+        <div class="box-info animated fadeInDown">
+          <div class="row">
+            <div class="col-sm-12 portlets">
+              <div class="widget">
+                <div class="widget-content">
+                  <div class="col-sm-7">
+                    <h4><b>Video Galleries</b></h4>
+                  </div>
+                  <div class="col-sm-5">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <% if @videos.any? %>
+            <div class="box-info animated fadeInDown">
+
+              <div class="gallery-wrap">
+                <% @videos.each do |video|  %>
+                    <div style="min-height: 350px" class="column-3">
+                      <div class="inner">
+                        <a class="zooming">
+                          <div class="img-wrap">
+                            <%= video.url.html_safe %>
+                            <!--<iframe width="854" height="510" src="https://www.youtube.com/embed/UFKL178IaRM?list=RDUFKL178IaRM" frameborder="0" allowfullscreen></iframe>-->
+                          </div>
+                          <div class="col-sm-12">
+                            <h5><%= video.title if video.title %></h5>
+                            <div class="">
+                              <%= link_to edit_video_path(video), :class=>'label label-info',:data => { :no_turbolink => true } do %>
+                                  <i class="fa fa-edit"></i>  Edit
+                              <% end %>
+                              <%= link_to video_path(video), :class=>'label label-danger', method: :delete,data: { confirm: 'Are you sure?' } do %>
+                                  <i class="fa fa-close"></i>  Delete
+                              <% end %>
+
+                              <!--<a href="#" class="label label-info"><i class="fa fa-edit"></i> Edit</a>-->
+                              <!--<a href="#" class="label label-danger"><i class="fa fa-close"></i>  Delete</a>-->
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                <% end %>
+              </div>
+            </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>

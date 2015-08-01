@@ -1,0 +1,86 @@
+<div style="margin-top:30px;" class="row">
+
+  <div class="col-sm-8">
+    <div class="widget">
+      <div class="widget-header">
+        <h2><i class="fa fa-bar-chart"></i> <strong>Events</strong> </h2>
+      </div>
+
+      <div class="tab-content">
+
+
+        <!-- Tab timeline -->
+        <div class="tab-pane animated active fadeInRight" id="my-timeline">
+          <div class="user-profile-content">
+            <div style="border:1px solid #EDEDED; border-radius:3px; padding:10px;" class="widget">
+
+              <ul style="margin:0" id="demo5" class="nav nav-tabs nav-simple">
+                <li class="active">
+                  <a href="#demo5-home" data-toggle="tab"><i class="fa fa-pencil-square-o"></i> Create Event</a>
+                </li>
+
+              </ul>
+
+              <div class="tab-content">
+                <div class="tab-pane fade active in the-timeline" id="demo5-home">
+                  <%= form_for @event,:html => {:class => 'post-to-timeline'} do |f| %>
+                      <!--<form role="form" class="post-to-timeline">--><br>
+                      <%= f.text_field :title, :class=>"form-control", :placeholder=>'Event title...' %><br><br>
+                      <%= f.text_area :body, :class=>"form-control", :placeholder=>'Event Post to timeline...' %>
+                      <!--<textarea class="form-control"  placeholder="Notice Post to timeline..."></textarea>-->
+                      <div  style="margin-bottom:-40px; margin-left:2px; margin-right:2px; border-top:1px solid #ddd; padding-top:10px;"  class="row">
+                        <div  class="col-sm-9">
+                          <%= f.file_field :image, :class=>'btn btn-info btn-file' %>
+                        </div>
+
+                        <div class="col-sm-3 text-right">
+                          <%= f.submit :class=>'btn btn-blue-3' %>
+                        </div>
+                      </div>
+                      <!--</form>-->
+                  <% end %>
+
+                </div> <!-- / .tab-pane -->
+
+
+              </div> <!-- / .tab-content -->
+            </div><!-- / total .tab-content -->
+
+            <!-- Begin timeline -->
+            <div class="the-timeline">
+
+              <ul>
+                <% if @events.any? %>
+                    <% @events.each do |event| %>
+                        <li>
+                          <h4>
+                            <%= event.title %>
+                          </h4>
+                          <h6>
+                            <%= event.created_at.strftime('%d %B, %y') %> <span>|  BY CBHS </span>
+                            <%= link_to event_path(event), :class=>'label label-danger pull-right', method: :delete,data: { confirm: 'Are you sure?' } do %>
+                                <i class="fa fa-close"></i>  Delete
+                            <% end %>
+                            <%= link_to edit_event_path(event), :class=>'label label-info pull-right',:data => { :no_turbolink => true } do %>
+                                <i class="fa fa-edit"></i>  Edit
+                            <% end %>
+                          </h6>
+
+                          <p>
+                            <%= event.body if event.body %>
+                          </p><br>
+                          <%= image_tag(event.image) if event.image %>
+                        </li>
+                    <% end %>
+                <% end %>
+
+              </ul>
+            </div><!-- End div .the-timeline -->
+            <!-- End timeline -->
+          </div><!-- End div .user-profile-content -->
+        </div><!-- End div .tab-pane -->
+
+      </div><!-- End div .tab-content -->
+    </div><!-- End div .box-info -->
+  </div>
+</div>

@@ -1,6 +1,6 @@
 class GalleriesController < ApplicationController
   def index
-    @galleries=Gallery.all
+    @galleries=Gallery.all.reverse
     @gallery=Gallery.new
     # @galleries=Gallery.page(params[:page]).per(20)
     render layout: 'admin_layout'

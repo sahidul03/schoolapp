@@ -28,6 +28,9 @@ Rails.application.routes.draw do
   resources :galleries do
     resources :photos
   end
+  resources :videos
+  resources :notices
+  resources :events
   # Example resource route with options:
   #   resources :products do
   #     member do

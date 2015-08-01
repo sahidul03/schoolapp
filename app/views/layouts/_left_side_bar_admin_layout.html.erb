@@ -27,10 +27,24 @@
     <div id="sidebar-menu">
       <ul>
         <li class='has_sub'>
+          <%= link_to events_path, :data => { :no_turbolink => true } do %>
+              <i class='fa fa-calendar'></i><span>Events</span> <span class="pull-right"></span>
+          <% end %>
+        </li>
+        <li class='has_sub'>
+          <%= link_to notices_path, :data => { :no_turbolink => true } do %>
+              <i class='fa fa-pencil-square-o'></i><span>Notices</span> <span class="pull-right"></span>
+          <% end %>
+        </li>
+        <li class='has_sub'>
             <%= link_to galleries_path, :data => { :no_turbolink => true } do %>
             <i class='fa fa-photo'></i><span>Galleries</span> <span class="pull-right"></span>
             <% end %>
-
+        </li>
+        <li class='has_sub'>
+          <%= link_to videos_path, :data => { :no_turbolink => true } do %>
+              <i class='fa fa-video-camera'></i><span>Videos</span> <span class="pull-right"></span>
+          <% end %>
         </li>
       </ul>
       <div class="clearfix"></div>
