@@ -1,80 +1,100 @@
-<div class="tab-pane animated fadeInRight" id="about">
-  <div class="user-profile-content">
+<div class="row">
 
 
-    <div class="row">
-
-
-      <div class="col-sm-6 profile_dl_tl">
-
+  <div class="col-sm-8">
+    <div class="person_profile">
+      <div  class="col-sm-3 profile-picture">
         <% if @teacher.profile_photo %>
-            <%= image_tag(@teacher.profile_photo, :width => '50%') %>
+            <%= image_tag(@teacher.profile_photo) %>
         <% else %>
             <img src="/images/user.jpg">
         <% end %>
-        <h4>Teacher's info</h4>
-        <div class="profile_dl_ct">
-          <div class="p_left">Name</div>
-          <div class="p_right"><%= @teacher.name %></div>
-        </div>
-        <div class="profile_dl_ct">
-          <div class="p_left">Designation</div>
-          <div class="p_right"><%= @teacher.designation %></div>
-        </div>
-        <div class="profile_dl_ct">
-          <div class="p_left">Qualification</div>
-          <div class="p_right"><%= @teacher.qualification %></div>
-        </div>
-        <div class="profile_dl_ct">
-          <div class="p_left">Address</div>
-          <div class="p_right"><%= @teacher.address %></div>
-        </div>
-        <div class="profile_dl_ct">
-          <div class="p_left">Email Address</div>
-          <div class="p_right"><%= @teacher.email %></div>
-        </div>
-        <div class="profile_dl_ct">
-          <div class="p_left">Contact No</div>
-          <div class="p_right"><%= @teacher.phone %> </div>
-        </div>
-        <div class="profile_dl_ct">
-          <div class="p_left">Gender</div>
-          <div class="p_right"><%= @teacher.gender %> </div>
-        </div>
-      </div>
-      <div class="col-sm-5 pull-right">
-        <p>
-          <%= link_to edit_teacher_path(@teacher), :class=>'btn btn-info',:data => { :no_turbolink => true } do %>
-              <i class='fa fa-align-left fa-edit'></i> edit
-          <% end %>
 
-          <%= link_to teacher_path(@teacher), :class=>'btn btn-info', method: :delete,data: { confirm: 'Are you sure?' } do %>
-              <i class='fa fa-align-right fa-crop'></i> delete
-          <% end %>
-          <%= link_to teachers_path, :class=>'btn btn-info',:data => { :no_turbolink => true } do %>
-              <i class='fa fa-align-left fa-reply-all'></i> All Teachers
-          <% end %>
-        </p>
       </div>
-      <div  class="col-sm-5 profile_gd">
-        <h4>Important Info</h4>
-        <div class="profile_dl_right">
-          <div class="pp_left">Designation</div>
-          <div class="pp_right"><%= @teacher.designation %> </div>
-        </div>
-        <div class="profile_dl_right">
-          <div class="pp_left">Qualification</div>
-          <div class="pp_right"><%= @teacher.qualification %></div>
-        </div>
-        <% if @teacher.message %>
-            <div class="profile_dl_right">
-              <div class="pp_left">Message</div>
-              <div class="pp_right"><%= @teacher.message %></div>
+      <div  class="col-sm-6 profile-name">
+        <h3 class="text-left"><%= @teacher.name %></h3>
+        <h4 class="text-left">Designation : <%= @teacher.designation %> </h4>
+
+      </div>
+      <div  class="col-sm-3">
+        <%= link_to edit_teacher_path(@teacher),:data => { :no_turbolink => true } do %>
+            <div class="edit_profile">
+              <i class="fa fa-pencil"></i>
             </div>
         <% end %>
-
-
       </div>
-    </div><!-- End div .row -->
-  </div><!-- End div .user-profile-content -->
+    </div>
+    <div class="widget widget-tabbed">
+
+      <!-- Tab about -->
+      <div class="tab-pane animated fadeInRight" id="about">
+        <div class="user-profile-content">
+
+
+          <div class="row">
+
+
+            <div class="col-sm-6 profile_dl_tl">
+
+              <h4>Teacher's info</h4>
+              <div class="profile_dl_ct">
+                <div class="p_left">Name</div>
+                <div class="p_right"><%= @teacher.name %></div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Designation</div>
+                <div class="p_right"><%= @teacher.designation %></div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Qualification</div>
+                <div class="p_right"><%= @teacher.qualification %></div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Address</div>
+                <div class="p_right"><%= @teacher.address %></div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Email Address</div>
+                <div class="p_right"><%= @teacher.email %></div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Contact No</div>
+                <div class="p_right"><%= @teacher.phone %> </div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Gender</div>
+                <div class="p_right"><%= @teacher.gender %> </div>
+              </div>
+
+
+            </div>
+            <div  class="col-sm-5 profile_gd">
+              <h4>Important Info</h4>
+              <div class="profile_dl_right">
+                <div class="pp_left">Designation</div>
+                <div class="pp_right"><%= @teacher.designation %> </div>
+              </div>
+              <div class="profile_dl_right">
+                <div class="pp_left">Qualification</div>
+                <div class="pp_right"><%= @teacher.qualification %></div>
+              </div>
+              <% if @teacher.message %>
+                  <div class="profile_dl_right">
+                    <div class="pp_left">Message</div>
+                    <div class="pp_right"><%= @teacher.message %></div>
+                  </div>
+              <% end %>
+
+            </div>
+          </div><!-- End div .row -->
+        </div><!-- End div .user-profile-content -->
+      </div><!-- End div .tab-pane -->
+      <!-- End Tab about -->
+
+
+
+      <!-- End Tab user messages -->
+    </div><!-- End div .tab-content -->
+  </div><!-- End div .box-info -->
+</div>
 </div>
