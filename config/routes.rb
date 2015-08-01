@@ -25,6 +25,9 @@ Rails.application.routes.draw do
   end
   resources :teachers
   resources :committees
+  resources :galleries do
+    resources :photos
+  end
   # Example resource route with options:
   #   resources :products do
   #     member do

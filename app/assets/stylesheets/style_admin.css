@@ -3649,6 +3649,7 @@ hr.dashed {
   -webkit-transition: All 0.4s ease;
   -moz-transition: All 0.4s ease;
   -o-transition: All 0.4s ease;
+    opacity: .7;
 }
 .gallery-wrap .column .inner .caption-hover.success,
 .gallery-wrap .column-4 .inner .caption-hover.success,

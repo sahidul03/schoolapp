@@ -1,0 +1,275 @@
+<div class="row">
+<div class="col-lg-8 portlets">
+  <div class="widget">
+    <div class="widget-header">
+      <h2><i class="fa fa-bar-chart"></i> <strong>Photo Galleries</strong> </h2>
+    </div>
+
+    <div class="widget-content">
+      <!--end of bill to--->
+      <div class="table-responsive text-left">
+        <h4 class="text-center padding-top">Create a photo Gallery</h4>
+        <div  class="data-table-toolbar">
+          <div class="row">
+            <div class="col-md-12">
+              <%= form_for @gallery do |f| %>
+                  <div class="form-group padding">
+                    <%= f.text_field :title , :class=>'form-control', placeholder: 'Gallery title...' %>
+                    <!--<input type="text" class="form-control" placeholder="position name of academy..">-->
+                  </div>
+                  <div class="form-group padding">
+                    <%= f.file_field :files, multiple: true, :class=>'btn btn-info btn-file' %>
+                    <!--<input type="file" name="attachment" class="btn btn-info btn-file" title="Search for a file to add">-->
+                    <p><h6>(670*480)</h6></p>
+                  </div>
+
+                  <div style="margin-right:100%;" class="form-group">
+
+                    <%= f.submit  :class=>'btn btn-blue-3' %>
+                    <!--<button type="submit" class="btn btn-blue-3"><i class="fa fa-check"></i> Submit</button>-->
+                  </div>
+              <% end %>
+
+
+            </div>
+
+
+          </div>
+        </div>
+      </div><!--end of table-responsive --->
+
+
+      <% if @galleries.any? %>
+          <div class="widget invoice">
+            <div class="widget-content">
+              <div class="table-responsive">
+
+                <table class="table table-condensed ">
+                  <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Gallery Name</th>
+                    <th>Images</th>
+                    <th>Edit / Delete</th>
+                  </tr>
+                  </thead>
+
+                  <tbody>
+                  <% @galleries.each do |gallery| %>
+                      <tr>
+                        <td>
+                          <%= gallery.created_at.strftime('%d %B, %y') %>
+                        </td>
+                        <td>
+                          <%= link_to gallery.title, gallery_path(gallery), :data => { :no_turbolink => true } %>
+                        </td>
+
+                        <td>
+                          <%= link_to gallery_path(gallery), :data => { :no_turbolink => true } do%>
+                              <img width="50" height="30" src="/images/photo_gallery_default.png">
+                          <% end %>
+                        </td>
+                        <td>
+                          <div class="btn-group btn-group-xs">
+                            <%= link_to edit_gallery_path(gallery), :class=>'btn btn-orange-4',:title=>'Edit', :data => { :no_turbolink => true } do%>
+                                <i class="fa fa-edit"></i>
+                            <% end %>
+                            <%= link_to gallery_path(gallery), :class=>'btn btn-red-1',:title=>'Delete',:method=>'delete', data: { confirm: 'Are you sure?' } do%>
+                                <i class="fa fa-close"></i>
+                            <% end %>
+                            <!--<a data-toggle="tooltip" title="Delete" class="btn btn-red-1"><i class="fa fa-close"></i></a>-->
+                            <!--<a data-toggle="tooltip" title="Edit" class="btn btn-orange-4"><i class="fa fa-edit"></i></a>-->
+                          </div>
+                        </td>
+                      </tr>
+                  <% end %>
+
+
+
+
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+          </div>
+
+    <% end %>
+
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4 portlets">
+    <div class="widget lightblue-2">
+        <div class="widget-header transparent">
+            <h2><i class="fa fa-barcode"></i><strong> Subject list</strong></h2>
+            <div class="additional-btn">
+                <a href="#" class="hidden reload"><i class="fa fa-repeat"></i></a>
+                  <a class="hidden" id="dropdownMenu1" data-toggle="dropdown">
+                    <i class="fa fa-cogs"></i>
+                  </a>
+                  <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                 <a href="#" class="widget-popout hidden tt" title="Pop Out/In"><i class="fa fa-chevron-up "></i></a>
+                <a href="#" class="widget-maximize hidden"><i class="fa fa-arrows"></i></a>
+                <a href="#" class="widget-toggle"><i class="fa fa-chevron-down"></i></a>
+
+            </div>
+        </div>
+        <div class="widget-content">
+            <div id="website-statistic2" class="statistic-chart">
+
+                <div class="col-sm-12 stacked">
+
+                    <div class="table-responsive">
+
+            <table class="table table-condensed ">
+             <thead>
+               <tr>
+                   <th>sub. code</th>
+                <th>sub. name</th>
+                <th>option</th>
+              </tr>
+             </thead>
+
+            <tbody>
+              <tr>
+                <td>101</td>
+                <td>Bangla</td>
+                <td>
+                 <div class="btn-group btn-group-xs">
+                                    <a data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-close"></i></a>
+                                    <a data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                 </div>
+               </td>
+              </tr>
+              <tr>
+                <td>102</td>
+                <td>English</td>
+                <td>
+                 <div class="btn-group btn-group-xs">
+                                    <a data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-close"></i></a>
+                                    <a data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                 </div>
+               </td>
+              </tr>
+              <tr>
+                <td>105</td>
+                <td>Math</td>
+                <td>
+                 <div class="btn-group btn-group-xs">
+                                    <a data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-close"></i></a>
+                                    <a data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                 </div>
+               </td>
+              </tr>
+              <tr>
+                <td>201</td>
+                <td>Chemistry</td>
+                <td>
+                <div class="btn-group btn-group-xs">
+                                    <a data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-close"></i></a>
+                                    <a data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                 </div>
+               </td>
+              </tr>
+              <tr>
+                <td>205</td>
+                <td>Economy</td>
+                <td>
+                 <div class="btn-group btn-group-xs">
+                                    <a data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-close"></i></a>
+                                    <a data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                 </div>
+               </td>
+              </tr>
+              <tr>
+                <td>105</td>
+                <td>Math</td>
+                <td>
+                 <div class="btn-group btn-group-xs">
+                                    <a data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-close"></i></a>
+                                    <a data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                 </div>
+               </td>
+              </tr>
+              <tr>
+                <td>101</td>
+                <td>Bangla</td>
+                <td>
+                 <div class="btn-group btn-group-xs">
+                                    <a data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-close"></i></a>
+                                    <a data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                 </div>
+               </td>
+              </tr>
+              <tr>
+                <td>102</td>
+                <td>English</td>
+                <td>
+                 <div class="btn-group btn-group-xs">
+                                    <a data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-close"></i></a>
+                                    <a data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                 </div>
+               </td>
+              </tr>
+              <tr>
+                <td>105</td>
+                <td>Math</td>
+                <td>
+                 <div class="btn-group btn-group-xs">
+                                    <a data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-close"></i></a>
+                                    <a data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                 </div>
+               </td>
+              </tr>
+              <tr>
+                <td>101</td>
+                <td>Bangla</td>
+                <td>
+                <div class="btn-group btn-group-xs">
+                                    <a data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-close"></i></a>
+                                    <a data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                 </div>
+               </td>
+              </tr>
+              <tr>
+                <td>102</td>
+                <td>English</td>
+                <td>
+                 <div class="btn-group btn-group-xs">
+                                    <a data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-close"></i></a>
+                                    <a data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                 </div>
+               </td>
+              </tr>
+              <tr>
+                <td>105</td>
+                <td>Math</td>
+                <td>
+                 <div class="btn-group btn-group-xs">
+                                    <a data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-close"></i></a>
+                                    <a data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                 </div>
+               </td>
+              </tr>
+
+           </tbody>
+
+       </table>
+       </div>
+                </div>
+                <div class="clearfix"></div>
+                <div id="home-chart-2"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>

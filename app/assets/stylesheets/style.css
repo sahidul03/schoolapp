@@ -144,7 +144,7 @@ input::-webkit-input-placeholder {
 
 input[type="button"]{border:0px; outline:none; cursor:pointer;}
 
-input[type=submit]{background:#015057; color:#FFFFFF; font-family:inherit; padding:18px 24px; font-size:14px; border:none; outline:none; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; cursor:pointer;}
+input[type=submit]{background:#015057; color:#FFFFFF; font-family:inherit; padding:5px 10px; font-size:14px; border:none; outline:none; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; cursor:pointer;}
 
 input[type="submit"], button, input[type="button"], button[type=submit]{-webkit-appearance:none;}
 
@@ -1773,8 +1773,14 @@ margin-bottom:15px;
 }
 
 
+/*Gallery*/
 
+.img-wrap iframe {
+    width:100%;
+    height:auto;
+    min-height:200px;
 
+}
 
 
 /*committee*/

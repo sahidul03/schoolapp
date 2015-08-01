@@ -1,0 +1,71 @@
+<div class="widget transparent animated fadeInDown">
+  <div class="box-info animated fadeInDown">
+    <div class="row">
+      <div class="col-sm-12 portlets">
+        <div class="widget">
+          <div class="widget-content">
+            <div class="col-sm-7">
+              <h4><b><%= @gallery.title if @gallery.title %></b></h4>
+            </div>
+            <div class="col-sm-5">
+
+              <div style="padding-top:2%;" class="btn-group pull-right">
+                <%= link_to new_gallery_photo_path(@gallery), :class=>'btn btn-blue-3',:data => { :no_turbolink => true } do %>
+                    <i class="fa fa-plus"></i> Add more photo
+                <% end %>
+                <%= link_to edit_gallery_path(@gallery), :class=>'btn btn-info',:data => { :no_turbolink => true } do %>
+                    <i class="fa fa-edit"></i> Edit Title
+                <% end %>
+                <%= link_to galleries_path, :class=>'btn btn-blue-3',:data => { :no_turbolink => true } do %>
+                    <i class="fa fa-photo"></i> Galleries
+                <% end %>
+                <!--<a class="btn btn-blue-3"><i class="fa fa-plus"></i> Add more</a>-->
+                <!--<a class="btn btn-info"><i class="fa fa-edit"></i> Title Edit</a>-->
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="box-info animated fadeInDown">
+
+    <% if @gallery.photos.any? %>
+        <div class="gallery-wrap">
+          <% @gallery.photos.each do |photo| %>
+              <div class="column-3">
+                <div class="inner">
+                  <a class="zooming" href="<%=photo.image %>">
+                    <div class="img-wrap">
+                      <%= image_tag(photo.image,:class => 'mfp-fade') %>
+                      <!--<img src="images/cover-e.jpg" alt="Image gallery" title="Image title here" class="mfp-fade">-->
+                    </div>
+                    <div class="caption-hover col-sm-12">
+                      <div class="btn-group">
+                        <!--<a class="btn btn-info"><i class="fa fa-edit"></i> Edit</a>-->
+                        <%= link_to gallery_photo_path(@gallery,photo), :class=>'btn btn-danger', method: :delete,data: { confirm: 'Are you sure?' } do %>
+                            <i class="fa fa-close"></i>  Delete
+                        <% end %>
+                        <!--<a class="btn btn-danger"><i class="fa fa-close"></i>  Delete</a>-->
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+          <% end %>
+
+
+        </div>
+    <% end %>
+
+
+
+  </div>
+    </div>

@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-lg-10 portlets">
+    <div class="widget">
+      <div class="widget-header">
+        <h2><i class="fa fa-bar-chart"></i> <strong>Photo Galleries</strong> </h2>
+      </div>
+
+      <div class="widget-content">
+        <!--end of bill to--->
+        <div class="table-responsive text-left">
+          <h4 class="text-center padding-top"><b>Edit Photo Gallery Title</b></h4>
+          <div  class="data-table-toolbar">
+            <div class="row">
+              <div class="col-md-12">
+                <%= form_for @gallery do |f| %>
+                    <div class="form-group padding">
+                      <%= f.text_field :title , :class=>'form-control', placeholder: 'Gallery title...' %>
+                      <!--<input type="text" class="form-control" placeholder="position name of academy..">-->
+                    </div>
+                    <div style="margin-right:100%;" class="form-group">
+
+                      <%= f.submit  :class=>'btn btn-blue-3' %>
+                      <!--<button type="submit" class="btn btn-blue-3"><i class="fa fa-check"></i> Submit</button>-->
+                    </div>
+                <% end %>
+
+
+              </div>
+
+
+            </div>
+          </div>
+        </div><!--end of table-responsive --->
+
+
+
+
+      </div>
+    </div>
+  </div>
+ </div>
