@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   resources :results
   resources :routines
   resources :speeches
+  resources :index_sliders
 
 
   # Example resource route with options:

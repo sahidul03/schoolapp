@@ -1,0 +1,2 @@
+module IndexSlidersHelper
+end

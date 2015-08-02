@@ -1,0 +1,5 @@
+class IndexslidersController < ApplicationController
+
+
+
+end
