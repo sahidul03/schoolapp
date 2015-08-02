@@ -50,19 +50,6 @@ class ResultsController < ApplicationController
     flash[:alert] = "Result deleted successfully."
     redirect_to results_path
   end
-  IMAGES_PATH = File.join(Rails.root, "public")
-
-  def download
-    # send_file (File.basename(params[:file_path]))
-    send_file Rails.root.join('public', params[:file_path]), :type=>"application/pdf", :x_sendfile=>true
-    # send_file "#{Rails.root.to_s}/public"  +  params[:file_path]
-    # send_file(File.join(IMAGES_PATH, params[:file_path]))
-  end
-
-  # def download
-  #   # raise params.inspect
-  #   send_file(params[:file_path])
-  # end
 
   protected
   def params_result

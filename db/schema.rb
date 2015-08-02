@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150802044215) do
+ActiveRecord::Schema.define(version: 20150802055410) do
 
   create_table "committees", force: :cascade do |t|
     t.string   "name",          limit: 255
@@ -76,6 +76,22 @@ ActiveRecord::Schema.define(version: 20150802044215) do
   end
 
   add_index "results", ["level_id"], name: "index_results_on_level_id", using: :btree
+
+  create_table "routines", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.text     "body",       limit: 65535
+    t.string   "file",       limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "speeches", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.text     "body",       limit: 65535
+    t.string   "image",      limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "students", force: :cascade do |t|
     t.string   "name",                limit: 255
