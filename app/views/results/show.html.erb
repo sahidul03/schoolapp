@@ -1,0 +1,53 @@
+<div style="margin-top:30px;" class="row">
+
+  <div class="col-sm-12">
+    <div class="widget">
+      <div class="widget-header">
+        <h2><i class="fa fa-bar-chart"></i> <strong>Result Details</strong> </h2>
+      </div>
+
+      <div class="tab-content">
+
+
+        <!-- Tab timeline -->
+        <div class="tab-pane animated active fadeInRight" id="my-timeline">
+          <div class="user-profile-content">
+
+            <!-- Begin timeline -->
+            <div class="the-timeline">
+
+              <ul>
+                        <li>
+                          <h4><strong class="label label-info">TITLE:</strong> <b><%= @result.title %></b>
+
+                          </h4>
+                          <h6>
+                             <span><strong class="">Class: <%= @result.level.name %> </strong> </span> | <%= @result.created_at.strftime('%d %B, %y') %>
+                            <%= link_to result_path(@result), :class=>'label label-danger pull-right', method: :delete,data: { confirm: 'Are you sure?' } do %>
+                                <i class="fa fa-close"></i>  Delete
+                            <% end %>
+                            <%= link_to edit_result_path(@result), :class=>'label label-info pull-right',:data => { :no_turbolink => true } do %>
+                                <i class="fa fa-edit"></i>  Edit
+                            <% end %>
+                          </h6>
+
+                          <p>
+                            <%= @result.body.html_safe if @result.body %>
+                          </p><br>
+                          <h4>
+                            <i class="fa fa-download"></i>
+                            <a href="<%= @result.file if @result.file %>" target="_blank"> Download Result</a>
+                          </h4>
+
+                        </li>
+
+              </ul>
+            </div><!-- End div .the-timeline -->
+            <!-- End timeline -->
+          </div><!-- End div .user-profile-content -->
+        </div><!-- End div .tab-pane -->
+
+      </div><!-- End div .tab-content -->
+    </div><!-- End div .box-info -->
+  </div>
+</div>

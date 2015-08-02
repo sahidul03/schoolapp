@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require ckeditor-jquery
 //= require modernizr-2.6.2.min
 //= require marquee
 //= require jquery-migrate.min

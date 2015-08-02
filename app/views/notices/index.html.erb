@@ -28,15 +28,22 @@
                         <%= f.text_field :title, :class=>"form-control", :placeholder=>'Notice title...' %><br><br>
                         <%= f.text_area :body, :class=>"form-control", :placeholder=>'Notice Post to timeline...' %>
                         <!--<textarea class="form-control"  placeholder="Notice Post to timeline..."></textarea>-->
-                        <div  style="margin-bottom:-40px; margin-left:2px; margin-right:2px; border-top:1px solid #ddd; padding-top:10px;"  class="row">
-                          <div  class="col-sm-9">
+                        <div  style="margin-bottom:-40px; margin-left:2px; margin-right:2px; padding-top:10px;"  class="row">
+                          <div  class="col-sm-6">
+                            <%= f.label 'Image Upload', :class=>'' %>
                             <%= f.file_field :image, :class=>'btn btn-info btn-file' %>
                           </div>
-
-                          <div class="col-sm-3 text-right">
-                            <%= f.submit :class=>'btn btn-blue-3' %>
+                          <div  class="col-sm-6">
+                            <%= f.label 'File Upload(pdf, doc, xls and image)', :class=>'' %>
+                            <%= f.file_field :file, :class=>'btn btn-info btn-file' %>
                           </div>
                         </div>
+                      <div   class='row'>
+                        <div style=" margin-left:17px; margin-top:25px; "  class="col-sm-6">
+                          <%= f.submit :class=>'btn btn-blue-3' %>
+                        </div>
+
+                      </div>
                       <!--</form>-->
                   <% end %>
 
@@ -67,9 +74,16 @@
                           </h6>
 
                           <p>
-                            <%= notice.body if notice.body %>
+                            <%= notice.body.html_safe if notice.body %>
                           </p><br>
                           <%= image_tag(notice.image) if notice.image %>
+                          <%  if notice.file %>
+                              <h4>
+                                <i class="fa fa-download"></i>
+                                <a href="<%= notice.file %>" target="_blank"> Download Notice Attachment</a>
+                              </h4>
+                          <% end %>
+
                         </li>
                 <% end %>
                 <% end %>
@@ -83,4 +97,5 @@
       </div><!-- End div .tab-content -->
     </div><!-- End div .box-info -->
   </div>
+  <%= render 'layouts/right_side_student_count_class_wise_admin' %>
 </div>

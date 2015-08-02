@@ -67,7 +67,7 @@
                           </h6>
 
                           <p>
-                            <%= event.body if event.body %>
+                            <%= event.body.html_safe if event.body %>
                           </p><br>
                           <%= image_tag(event.image) if event.image %>
                         </li>
@@ -83,4 +83,5 @@
       </div><!-- End div .tab-content -->
     </div><!-- End div .box-info -->
   </div>
+  <%= render 'layouts/right_side_student_count_class_wise_admin' %>
 </div>

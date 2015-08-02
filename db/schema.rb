@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150801141250) do
+ActiveRecord::Schema.define(version: 20150802044215) do
 
   create_table "committees", force: :cascade do |t|
     t.string   "name",          limit: 255
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20150801141250) do
     t.string   "image",      limit: 255
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.string   "file",       limit: 255
   end
 
   create_table "photos", force: :cascade do |t|
@@ -64,6 +65,17 @@ ActiveRecord::Schema.define(version: 20150801141250) do
   end
 
   add_index "photos", ["gallery_id"], name: "index_photos_on_gallery_id", using: :btree
+
+  create_table "results", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.text     "body",       limit: 65535
+    t.string   "file",       limit: 255
+    t.integer  "level_id",   limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "results", ["level_id"], name: "index_results_on_level_id", using: :btree
 
   create_table "students", force: :cascade do |t|
     t.string   "name",                limit: 255

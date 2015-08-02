@@ -6005,3 +6005,7 @@ footer .footer-links a:last-child {
     text-align:left;
     height:auto;
 }
+.result_index_new{
+    margin-top: -35px;
+    margin-right: 10px;
+}

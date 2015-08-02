@@ -31,6 +31,11 @@ Rails.application.routes.draw do
   resources :videos
   resources :notices
   resources :events
+  resources :results do
+    collection do
+      get "download/:file_path", action: 'download', as: :download
+    end
+  end
   # Example resource route with options:
   #   resources :products do
   #     member do

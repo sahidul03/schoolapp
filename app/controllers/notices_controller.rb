@@ -13,7 +13,7 @@ class NoticesController < ApplicationController
       flash[:notice] = "Notice Created successfully."
       redirect_to notices_path
     else
-      flash[:alert] = "Title can't be blank and choose a valid profile photo."
+      flash[:alert] = "Title can't be blank and choose a valid Image and file format."
       redirect_to notices_path
     end
   end
@@ -44,7 +44,7 @@ class NoticesController < ApplicationController
 
   protected
   def params_notice
-    params.require(:notice).permit(:title,:body, :image)
+    params.require(:notice).permit(:title,:body, :image, :file)
   end
 
 end
