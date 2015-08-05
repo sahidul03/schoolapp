@@ -17,8 +17,9 @@ class ResultsController < ApplicationController
       flash[:notice] = "Result Created successfully."
       redirect_to results_path
     else
-      flash[:alert] = "Title can't be blank and choose a valid profile photo."
-      redirect_to results_path
+      render 'new', :layout=>'admin_layout'
+      # flash[:alert] = "Title can't be blank and choose a valid profile photo."
+      # redirect_to results_path
     end
   end
 
@@ -39,8 +40,9 @@ class ResultsController < ApplicationController
       flash[:notice] = "Result information Updated successfully."
       redirect_to results_path
     else
-      flash[:alert] = "Result title can't be blank."
-      redirect_to edit_result_path(@result)
+      render 'edit', :layout=>'admin_layout'
+      # flash[:alert] = "Result title can't be blank."
+      # redirect_to edit_result_path(@result)
     end
   end
 

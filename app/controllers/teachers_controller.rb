@@ -22,8 +22,9 @@ class TeachersController < ApplicationController
       flash[:notice] = "Teacher Added successfully."
       redirect_to teachers_path
     else
-      flash[:alert] = "Name can't be blank and choose a valid profile photo."
-      redirect_to new_teacher_path
+      render 'new', :layout=>'admin_layout'
+      # flash[:alert] = "Name can't be blank and choose a valid profile photo."
+      # redirect_to new_teacher_path
     end
   end
 
@@ -39,8 +40,9 @@ class TeachersController < ApplicationController
       flash[:notice] = "Teacher's information Updated successfully."
       redirect_to teachers_path
     else
-      flash[:alert] = "Please insert name and choose profile photo correctly."
-      redirect_to edit_teacher_path(@teacher)
+      render 'edit', :layout=>'admin_layout'
+      # flash[:alert] = "Please insert name and choose profile photo correctly."
+      # redirect_to edit_teacher_path(@teacher)
     end
   end
 

@@ -1,4 +1,17 @@
 <%= form_for @teacher do |f| %>
+    <% if @teacher.errors.any? %>
+        <div id="error_explanation">
+          <h4>
+            <%= pluralize(@teacher.errors.count, "error") %> prohibited
+            this teacher from being saved:
+          </h4>
+          <ul>
+            <% @teacher.errors.full_messages.each do |msg| %>
+                <li style="color: deeppink"><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
     <div class="form-group">
       <label for="exampleInputEmail1">Teacher Name</label>
       <%= f.text_field :name, :class=>'form-control',:placeholder=>"Teacher name" %>

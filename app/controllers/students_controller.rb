@@ -27,8 +27,9 @@ class StudentsController < ApplicationController
       flash[:notice] = "Student Added successfully."
       redirect_to students_path
     else
-      flash[:alert] = "Please name and Roll no insert correctly."
-      redirect_to new_student_path
+      render 'new', :layout=>'admin_layout'
+      # flash[:alert] = "Please name and Roll no insert correctly."
+      # redirect_to new_student_path
     end
   end
 
@@ -39,8 +40,9 @@ class StudentsController < ApplicationController
       flash[:notice] = "Student Updated successfully."
       redirect_to students_path
     else
-      flash[:alert] = "Please name and Roll no insert correctly."
-      redirect_to edit_student_path(@student)
+      render 'edit', :layout=>'admin_layout'
+      # flash[:alert] = "Please name and Roll no insert correctly."
+      # redirect_to edit_student_path(@student)
     end
   end
 

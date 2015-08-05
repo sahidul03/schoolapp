@@ -22,8 +22,9 @@ class CommitteesController < ApplicationController
       flash[:notice] = "Committee Member Added successfully."
       redirect_to committees_path
     else
-      flash[:alert] = "Name can't be blank and choose a valid profile photo."
-      redirect_to new_committee_path
+      render 'new', :layout=>'admin_layout'
+      # flash[:alert] = "Name can't be blank and choose a valid profile photo."
+      # redirect_to new_committee_path
     end
   end
 
@@ -39,8 +40,9 @@ class CommitteesController < ApplicationController
       flash[:notice] = "Committee Member's information Updated successfully."
       redirect_to committees_path
     else
-      flash[:alert] = "Please name insert and choose profile photo correctly."
-      redirect_to edit_committee_path(@committee)
+      render 'edit', :layout=>'admin_layout'
+      # flash[:alert] = "Please name insert and choose profile photo correctly."
+      # redirect_to edit_committee_path(@committee)
     end
   end
 

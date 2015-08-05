@@ -1,6 +1,19 @@
 <div class="tab-content">
   <div class="tab-pane fade active in the-timeline" id="demo5-home">
     <%= form_for @result,:html => {:class => 'post-to-timeline'} do |f| %>
+        <% if @result.errors.any? %>
+            <div id="error_explanation">
+              <h4>
+                <%= pluralize(@result.errors.count, "error") %> prohibited
+                this result from being saved:
+              </h4>
+              <ul>
+                <% @result.errors.full_messages.each do |msg| %>
+                    <li style="color: deeppink"><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
         <!--<form role="form" class="post-to-timeline">--><br>
         <%= f.text_field :title, :class=>"form-control", :placeholder=>'Result title...' %><br><br>
         <div class="form-group">

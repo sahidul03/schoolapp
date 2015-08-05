@@ -1,4 +1,17 @@
 <%= form_for @committee do |f| %>
+    <% if @committee.errors.any? %>
+        <div id="error_explanation">
+          <h4>
+            <%= pluralize(@committee.errors.count, "error") %> prohibited
+            this committee member from being saved:
+          </h4>
+          <ul>
+            <% @committee.errors.full_messages.each do |msg| %>
+                <li style="color: deeppink"><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
     <div class="form-group">
       <label for="exampleInputEmail1">Member Name</label>
       <%= f.text_field :name, :class=>'form-control',:placeholder=>"Member name" %>
