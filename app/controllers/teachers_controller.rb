@@ -56,6 +56,6 @@ class TeachersController < ApplicationController
   protected
 
   def params_teacher
-    params.require(:teacher).permit(:name,:email, :phone, :qualification, :designation, :address,:profile_photo,:gender, :message,:birth_day)
+    params.require(:teacher).permit(:name,:email, :phone, :qualification, :designation, :address,:profile_photo,:gender, :message,:birth_day, :head)
   end
 end

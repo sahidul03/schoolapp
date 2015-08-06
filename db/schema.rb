@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150805180640) do
+ActiveRecord::Schema.define(version: 20150806174949) do
 
   create_table "committees", force: :cascade do |t|
     t.string   "name",          limit: 255
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150805180640) do
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.date     "birth_day"
+    t.string   "head",          limit: 255
   end
 
   create_table "events", force: :cascade do |t|
@@ -131,6 +132,7 @@ ActiveRecord::Schema.define(version: 20150805180640) do
     t.datetime "updated_at",                  null: false
     t.text     "message",       limit: 65535
     t.date     "birth_day"
+    t.string   "head",          limit: 255
   end
 
   create_table "useful_links", force: :cascade do |t|
