@@ -831,7 +831,7 @@ a:focus {
   font-size:11px;
 }
 .container {
-  width: auto;
+  /*width: auto;*/
 }
 .navbar {
   margin: 0 0 0 -15px;
@@ -1628,12 +1628,6 @@ iframe {
   width: 100%;
   border: none;
 }
-.breadcrumb {
-  padding: 0;
-  background: #1C303F;
-  font-size: 12px;
-  margin: 0;
-}
 .progress.progress-xs {
   height: 5px;
   margin-top: 25px;
@@ -2040,30 +2034,7 @@ body.fixed-left .left-footer {
 button.navbar-toggle {
   padding: 5px 20px;
 }
-.breadcrumb {
-  top: 50px;
-  line-height: 30px;
-  padding: 0px 15px;
-  background: #1C303F;
-  position: relative;
-  font-family: "Open Sans";
-  -webkit-border-radius: 0px !important;
-  -moz-border-radius: 0px !important;
-  border-radius: 0px !important;
-}
-.breadcrumb li a {
-  font-family: "Open Sans";
-  color: #9dabab;
-}
-.breadcrumb li.active {
-  color: #7A868F;
-}
-.breadcrumb > li + li:before {
-  color: #9dabab;
-  padding: 0px 10px;
-  content: "ï„…";
-  font-family: FontAwesome;
-}
+
 .sidebar-inner {
   height: 100%;
 }

@@ -37,6 +37,19 @@ Rails.application.routes.draw do
   resources :index_sliders
   resources :useful_links
 
+  resources :schools do
+    collection do
+      get 'teachers'
+      get "teacher_profile/:id", action: 'teacher_profile', as: :teacher_profile
+      get 'committees'
+      get "committee_profile/:id", action: 'committee_profile', as: :committee_profile
+      get 'students'
+      get "student_profile/:id", action: 'student_profile', as: :student_profile
+      get 'notices'
+      get "notice_details/:id", action: 'notice_details', as: :notice_details
+    end
+  end
+
 
   # Example resource route with options:
   #   resources :products do
