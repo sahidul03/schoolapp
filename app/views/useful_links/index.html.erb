@@ -63,7 +63,7 @@
 
                           <p>
                             <% if useful_link.link %>
-                            Link: <a href="<%= useful_link.link %>"><%= useful_link.link %></a>
+                            Link: <a href="<%= useful_link.link %>" target="_blank"><%= useful_link.link %></a>
                             <% end %>
                           </p><br>
 
@@ -72,13 +72,16 @@
                 <% end %>
 
               </ul>
+
             </div><!-- End div .the-timeline -->
             <!-- End timeline -->
           </div><!-- End div .user-profile-content -->
         </div><!-- End div .tab-pane -->
 
       </div><!-- End div .tab-content -->
+      <%#= paginate @useful_links %>
     </div><!-- End div .box-info -->
   </div>
+
   <%= render 'layouts/right_side_student_count_class_wise_admin' %>
 </div>

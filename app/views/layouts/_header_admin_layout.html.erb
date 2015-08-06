@@ -1,7 +1,9 @@
 <div class="topbar">
   <div class="topbar-left">
     <div class="logo">
-      <h4><a href="#">Char Bhoira High School</a></h4>
+      <h4>
+        <%= link_to 'Char Bhoira High School', root_path, :target => '_blank' %>
+      </h4>
     </div>
     <button class="button-menu-mobile open-left">
       <i class="fa fa-bars"></i>
@@ -11,100 +13,9 @@
   <div class="navbar navbar-default" role="navigation">
     <div class="container">
       <div class="navbar-collapse2">
-        <ul class="nav navbar-nav hidden-xs">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-th"></i></a>
-            <div class="dropdown-menu grid-dropdown">
-              <div class="row stacked">
-                <div class="col-xs-4">
-                  <a href="javascript:;" data-app="notes-app" data-status="active"><i class="icon-edit"></i>Notes</a>
-                </div>
-                <div class="col-xs-4">
-                  <a href="javascript:;" data-app="todo-app" data-status="active"><i class="icon-check"></i>Todo List</a>
-                </div>
-                <div class="col-xs-4">
-                  <a href="javascript:;" data-app="calc" data-status="inactive"><i class="fa fa-calculator"></i>Calculator</a>
-                </div>
-              </div>
-              <div class="row stacked">
-                <div class="col-xs-4">
-                  <a href="javascript:;" data-app="weather-widget" data-status="active"><i class="icon-cloud-3"></i>Weather</a>
-                </div>
-                <div class="col-xs-4">
-                  <a href="javascript:;" data-app="calendar-widget2" data-status="active"><i class="icon-calendar"></i>Calendar</a>
-                </div>
-                <div class="col-xs-4">
-                  <a href="javascript:;" data-app="stock-app" data-status="inactive"><i class="icon-chart-line"></i>Stocks</a>
-                </div>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-          </li>
-          <li class="language_bar dropdown hidden-xs">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">English (US) <i class="fa fa-caret-down"></i></a>
-            <ul class="dropdown-menu pull-right">
-              <li><a href="#">German</a></li>
-              <li><a href="#">French</a></li>
-              <li><a href="#">Italian</a></li>
-              <li><a href="#">Spanish</a></li>
-            </ul>
-          </li>
-        </ul>
+
         <ul class="nav navbar-nav navbar-right top-navbar">
-          <li class="dropdown iconify hide-phone">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i><span class="label label-danger absolute">4</span></a>
-            <ul class="dropdown-menu dropdown-message">
-              <li class="dropdown-header notif-header"><i class="icon-bell-2"></i> New Notifications<a class="pull-right" href="#"><i class="fa fa-cog"></i></a></li>
-              <li class="unread">
-                <a href="#">
-                  <p><strong>John Doe</strong> Uploaded a photo <strong>&#34;DSC000254.jpg&#34;</strong>
-                    <br /><i>2 minutes ago</i>
-                  </p>
-                </a>
-              </li>
-              <li class="unread">
-                <a href="#">
-                  <p><strong>John Doe</strong> Created an photo album  <strong>&#34;Fappening&#34;</strong>
-                    <br /><i>8 minutes ago</i>
-                  </p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <p><strong>John Malkovich</strong> Added 3 products
-                    <br /><i>3 hours ago</i>
-                  </p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <p><strong>Sonata Arctica</strong> Send you a message <strong>&#34;Lorem ipsum dolor...&#34;</strong>
-                    <br /><i>12 hours ago</i>
-                  </p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <p><strong>Johnny Depp</strong> Updated his avatar
-                    <br /><i>Yesterday</i>
-                  </p>
-                </a>
-              </li>
-              <li class="dropdown-footer">
-                <div class="btn-group btn-group-justified">
-                  <div class="btn-group">
-                    <a href="#" class="btn btn-sm btn-primary"><i class="icon-ccw-1"></i> Refresh</a>
-                  </div>
-                  <div class="btn-group">
-                    <a href="#" class="btn btn-sm btn-danger"><i class="icon-trash-3"></i> Clear All</a>
-                  </div>
-                  <div class="btn-group">
-                    <a href="#" class="btn btn-sm btn-success">See All <i class="icon-right-open-2"></i></a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </li>
+
           <li class="dropdown iconify hide-phone">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i><span class="label label-danger absolute">3</span></a>
             <ul class="dropdown-menu dropdown-message">
@@ -133,9 +44,8 @@
               <li class="dropdown-footer"><div class=""><a href="#" class="btn btn-sm btn-block btn-primary"><i class="fa fa-share"></i> See all messages</a></div></li>
             </ul>
           </li>
-          <li class="dropdown iconify hide-phone"><a href="#" onclick="javascript:toggle_fullscreen()"><i class="fa fa-expand"></i></a></li>
           <li class="dropdown topbar-profile">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="rounded-image topbar-profile-image"><img src="images/user-256.jpg"></span> Asad <strong>Hossain</strong> <i class="fa fa-caret-down"></i></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="rounded-image topbar-profile-image"><img src="/images/user.jpg"></span><%= current_user.email %> <i class="fa fa-caret-down"></i></a>
             <ul class="dropdown-menu">
               <li>
                 <%= link_to 'Account Setting', edit_user_registration_path, :class => 'navbar-link',:data => { :no_turbolink => true } %>
@@ -149,7 +59,7 @@
             </ul>
           </li>
           <li class="right-opener">
-            <a href="javascript:;" class="open-right"><i class="fa fa-angle-double-left"></i><i class="fa fa-angle-double-right"></i></a>
+            <a href="javascript:;" class="open-right"></a>
           </li>
         </ul>
       </div>

@@ -1,5 +1,0 @@
-class IndexslidersController < ApplicationController
-
-
-
-end

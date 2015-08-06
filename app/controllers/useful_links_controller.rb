@@ -1,7 +1,7 @@
 class UsefulLinksController < ApplicationController
 
   def index
-    @useful_links=UsefulLink.all.reverse
+    @useful_links=UsefulLink.all.reverse_order.page(params[:page]).per(3)
     @useful_link=UsefulLink.new
     render layout: 'admin_layout'
   end
