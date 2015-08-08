@@ -52,7 +52,11 @@ class SchoolsController < ApplicationController
 
   def student_profile
     @student=Student.find(params[:id])
-    render layout: 'user_layout'
+    if @student.is_accepted==false
+      redirect_to students_schools_path
+    else
+      render layout: 'user_layout'
+    end
   end
 
   def teachers
@@ -76,9 +80,9 @@ class SchoolsController < ApplicationController
   def search_student
     @selected_class=Level.find(params[:level_id])
     if params[:roll_no] ==''
-      @students=@selected_class.students
+      @students=@selected_class.students.where(:is_accepted=>true)
     else
-      @students=@selected_class.students.where(:roll_no=>params[:roll_no])
+      @students=@selected_class.students.where(:roll_no=>params[:roll_no],:is_accepted=>true)
     end
     # raise @students.inspect
   end
@@ -91,6 +95,37 @@ class SchoolsController < ApplicationController
   def result_details
     @result=Result.find(params[:id])
     render layout: 'user_layout'
+  end
+
+  def academic_speeches
+    @academic_speeches=Speech.all.reverse_order.page(params[:page]).per(12)
+    render layout: 'user_layout'
+  end
+
+  def academic_speech
+    @academic_speech=Speech.find(params[:id])
+    render layout: 'user_layout'
+  end
+
+  def admission
+    @student=Student.new
+    render layout: 'user_layout'
+  end
+
+  def admission_save
+    @student=Student.new(params_student)
+    if @student.save
+      flash[:notice] = "Admission form submitted successfully."
+      redirect_to root_path
+    else
+      render 'admission', :layout=>'user_layout'
+    end
+  end
+
+  protected
+
+  def params_student
+    params.require(:student).permit(:name,:father_name, :mother_name, :guardian_name, :guardian_contact_no, :address,:profile_photo,:gender,:birth_day).merge(:level_id=>params[:level_id],:is_accepted=>false,:roll_no=>'8888')
   end
 
 end

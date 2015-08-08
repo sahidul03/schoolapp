@@ -1,0 +1,49 @@
+<div id="main">
+  <!--breadcrumb-section starts-->
+
+  <!--breadcrumb-section ends-->
+  <!--container starts-->
+  <div class="container">
+    <!--primary starts-->
+    <section  id="primary" class="with-sidebar">
+      <!--dt-sc-one-half starts-->
+      <div class="column dt-sc-one-column">
+        <div class="notice_banner">
+          <h2>
+
+            Academic Speech</h2>
+
+        </div>
+        <% if @academic_speeches.any?  %>
+            <% @academic_speeches.each do |speech| %>
+                <div class="notice_show_web">
+                  <h4><%= link_to speech.title, academic_speech_schools_path(speech),:data => { :no_turbolink => true } %></h4>
+                  <h6><%= speech.created_at.strftime('%d %B, %y') %> | BY CBHS</h6>
+                  <% if speech.image %>
+                      <%= link_to academic_speech_schools_path(speech),:data => { :no_turbolink => true } do %>
+                          <%= image_tag(speech.image) %>
+                      <% end %>
+                  <% end %>
+                  <p>
+                    <%= link_to speech.body.to_s[0..200]+'...', academic_speech_schools_path(speech),:data => { :no_turbolink => true } if speech.body %>
+                  </p>
+                </div>
+            <% end %>
+        <% end %>
+        <div class="pagination_container_div">
+          <%= paginate @academic_speeches %>
+        </div>
+
+
+      </div>
+      <!--dt-sc-one-half ends-->
+    </section>
+    <!--primary ends-->
+
+    <!--secondary starts-->
+    <%= render 'layouts/right_side_user_layout' %>
+    <!--secondary ends-->
+
+  </div>
+  <!--container ends-->
+</div>

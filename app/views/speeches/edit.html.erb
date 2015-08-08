@@ -27,6 +27,10 @@
                       <!--<form role="form" class="post-to-timeline">--><br>
                       <%= f.text_field :title, :class=>"form-control", :placeholder=>'Speech title...' %><br><br>
                       <%= f.text_area :body, :class=>"form-control", :placeholder=>'Speech Post to timeline...' %>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">If you want to set it as a main speech, Please check it.</label>
+                        <%= f.check_box :head, {:class => "", :style=>'  width: 31px; height: 16px;'}, "head", "general" %>
+                      </div>
                       <!--<textarea class="form-control"  placeholder="Notice Post to timeline..."></textarea>-->
                       <div  style="margin-bottom:-40px; margin-left:2px; margin-right:2px; padding-top:10px;"  class="row">
                         <div  class="col-sm-6">

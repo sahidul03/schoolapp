@@ -57,6 +57,10 @@ Rails.application.routes.draw do
       get "search_student"
       get "results"
       get "result_details/:id", action: "result_details", as: :result_details
+      get "academic_speeches"
+      get "academic_speech/:id", action: "academic_speech", as: :academic_speech
+      get "admission"
+      post "admission_save"
 
 
     end

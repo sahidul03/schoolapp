@@ -93,17 +93,45 @@
         <div class="dt-sc-ico-content type1">
           <div class="icon">
                                 <span class="icon-outer">
-                                    <%= image_tag(president_committee.profile_photo) %>
+                                  <%= link_to committee_profile_schools_path(president_committee), :data => { :no_turbolink => true } do %>
+                                       <%= image_tag(president_committee.profile_photo) %>
+                                  <% end %>
+
                                     <!--<img src="/images/Principal.jpg" alt="" title="">-->
                                     <span class="infolayer">
-                                        <a href="#"><i class="fa fa-link"></i></a>
+                                      <%= link_to committee_profile_schools_path(president_committee), :data => { :no_turbolink => true } do %>
+                                      <i class="fa fa-link"></i>
+                                      <% end %>
                                     </span>
                                 </span>
           </div>
-          <h5><a href=""><%= president_committee.name %></a></h5>
-          <h6><a href=""><%= president_committee.designation %></a></h6>
-          <p><%= president_committee.message.to_s.length> 90 ? president_committee.message.to_s[0..90]+'...' : president_committee.message.to_s[0..90] %></p>
+          <h5><%= link_to president_committee.name, committee_profile_schools_path(president_committee), :data => { :no_turbolink => true } %></h5>
+          <h6><%= link_to president_committee.designation, committee_profile_schools_path(president_committee), :data => { :no_turbolink => true } %></h6>
+          <p><%= link_to president_committee.message.to_s.length> 80 ? president_committee.message.to_s[0..80]+'...' : president_committee.message.to_s[0..80],committee_profile_schools_path(president_committee), :data => { :no_turbolink => true } %></p>
         </div>
+    <% else %>
+        <% if Committee.last %>
+        <% president_committee=Committee.last %>
+            <div class="dt-sc-ico-content type1">
+              <div class="icon">
+                                <span class="icon-outer">
+                                  <%= link_to committee_profile_schools_path(president_committee), :data => { :no_turbolink => true } do %>
+                                       <%= image_tag(president_committee.profile_photo) %>
+                                  <% end %>
+
+                                  <!--<img src="/images/Principal.jpg" alt="" title="">-->
+                                    <span class="infolayer">
+                                      <%= link_to committee_profile_schools_path(president_committee), :data => { :no_turbolink => true } do %>
+                                      <i class="fa fa-link"></i>
+                                      <% end %>
+                                    </span>
+                                </span>
+              </div>
+              <h5><%= link_to president_committee.name, committee_profile_schools_path(president_committee), :data => { :no_turbolink => true } %></h5>
+              <h6><%= link_to president_committee.designation, committee_profile_schools_path(president_committee), :data => { :no_turbolink => true } %></h6>
+              <p><%= link_to president_committee.message.to_s.length> 80 ? president_committee.message.to_s[0..80]+'...' : president_committee.message.to_s[0..80],committee_profile_schools_path(president_committee), :data => { :no_turbolink => true } %></p>
+            </div>
+        <% end %>
     <% end %>
   </div>
 
@@ -113,34 +141,95 @@
         <div class="dt-sc-ico-content type1">
           <div class="icon">
                                 <span class="icon-outer">
-                                    <%= image_tag(headmaster.profile_photo) %>
+                                  <%= link_to teacher_profile_schools_path(headmaster), :data => { :no_turbolink => true } do %>
+                                       <%= image_tag(headmaster.profile_photo) %>
+                                  <% end %>
+
                                   <!--<img src="/images/Principal.jpg" alt="" title="">-->
                                     <span class="infolayer">
-                                        <a href="#"><i class="fa fa-link"></i></a>
+                                      <%= link_to teacher_profile_schools_path(headmaster), :data => { :no_turbolink => true } do %>
+                                      <i class="fa fa-link"></i>
+                                      <% end %>
                                     </span>
                                 </span>
           </div>
-          <h5><a href=""><%= headmaster.name %></a></h5>
-          <h6><a href=""><%= headmaster.designation %></a></h6>
-          <p><%= headmaster.message.to_s.length> 90 ? headmaster.message.to_s[0..90]+'...' : headmaster.message.to_s[0..90] %></p>
+          <h5><%= link_to headmaster.name, teacher_profile_schools_path(headmaster), :data => { :no_turbolink => true } %></h5>
+          <h6><%= link_to headmaster.designation, teacher_profile_schools_path(headmaster), :data => { :no_turbolink => true } %></h6>
+          <p><%= link_to headmaster.message.to_s.length> 80 ? headmaster.message.to_s[0..80]+'...' : headmaster.message.to_s[0..80], teacher_profile_schools_path(headmaster), :data => { :no_turbolink => true } %></p>
         </div>
+    <% else %>
+        <% if Teacher.last %>
+        <% headmaster=Teacher.last %>
+            <div class="dt-sc-ico-content type1">
+              <div class="icon">
+                                <span class="icon-outer">
+                                  <%= link_to teacher_profile_schools_path(headmaster), :data => { :no_turbolink => true } do %>
+                                       <%= image_tag(headmaster.profile_photo) %>
+                                  <% end %>
+
+                                  <!--<img src="/images/Principal.jpg" alt="" title="">-->
+                                    <span class="infolayer">
+                                      <%= link_to teacher_profile_schools_path(headmaster), :data => { :no_turbolink => true } do %>
+                                      <i class="fa fa-link"></i>
+                                      <% end %>
+                                    </span>
+                                </span>
+              </div>
+              <h5><%= link_to headmaster.name, teacher_profile_schools_path(headmaster), :data => { :no_turbolink => true } %></h5>
+              <h6><%= link_to headmaster.designation, teacher_profile_schools_path(headmaster), :data => { :no_turbolink => true } %></h6>
+              <p><%= link_to headmaster.message.to_s.length> 80 ? headmaster.message.to_s[0..80]+'...' : headmaster.message.to_s[0..80], teacher_profile_schools_path(headmaster), :data => { :no_turbolink => true } %></p>
+            </div>
+        <% end %>
     <% end %>
   </div>
 
+
   <div class="dt-sc-one-fourth column">
-    <div class="dt-sc-ico-content type1">
-      <div class="icon">
+    <% speech= Speech.where(:head=>"head").first if Speech.where(:head=>"head").any? %>
+    <% if speech %>
+        <div class="dt-sc-ico-content type1">
+          <div class="icon">
                                 <span class="icon-outer">
-                                    <img src="/images/school.jpg" alt="" title="">
+                                  <%= link_to academic_speech_schools_path(speech), :data => { :no_turbolink => true } do %>
+                                       <%= image_tag(speech.image) %>
+                                  <% end %>
+
+                                  <!--<img src="/images/Principal.jpg" alt="" title="">-->
                                     <span class="infolayer">
-                                        <a href="#"><i class="fa fa-link"></i></a>
+                                      <%= link_to academic_speech_schools_path(speech), :data => { :no_turbolink => true } do %>
+                                      <i class="fa fa-link"></i>
+                                      <% end %>
                                     </span>
                                 </span>
-      </div>
-      <h5><a href="">আমাদের বিদ্যালয়</a></h5>
-      <h6><a href="">CBHS</a></h6>
-      <p>শিক্ষিত মা, শিক্ষিত জাতি গড়ে। মানুষ গড়ার আঙ্গিনায় যোগ্য কারিগরের বিকল্প নাই। শিক্ষার আলোয় আলোকিত দেশ..</p>
-    </div>
+          </div>
+          <h5><%= link_to speech.title, academic_speech_schools_path(speech), :data => { :no_turbolink => true } %></h5>
+          <h6><%= link_to 'CBHS', academic_speech_schools_path(speech), :data => { :no_turbolink => true } %></h6>
+          <p><%= link_to speech.body.to_s.length> 80 ? speech.body.to_s[0..80]+'...' : speech.body.to_s[0..80], academic_speech_schools_path(speech), :data => { :no_turbolink => true } %></p>
+        </div>
+    <% else %>
+        <% if Speech.last %>
+            <% speech=Speech.last %>
+            <div class="dt-sc-ico-content type1">
+              <div class="icon">
+                                <span class="icon-outer">
+                                  <%= link_to academic_speech_schools_path(speech), :data => { :no_turbolink => true } do %>
+                                       <%= image_tag(speech.image) %>
+                                  <% end %>
+
+                                  <!--<img src="/images/Principal.jpg" alt="" title="">-->
+                                    <span class="infolayer">
+                                      <%= link_to academic_speech_schools_path(speech), :data => { :no_turbolink => true } do %>
+                                      <i class="fa fa-link"></i>
+                                      <% end %>
+                                    </span>
+                                </span>
+              </div>
+              <h5><%= link_to speech.title, academic_speech_schools_path(speech), :data => { :no_turbolink => true } %></h5>
+              <h6><%= link_to 'CBHS', academic_speech_schools_path(speech), :data => { :no_turbolink => true } %></h6>
+              <p><%= link_to speech.body.to_s.length> 80 ? speech.body.to_s[0..80]+'...' : speech.body.to_s[0..80], academic_speech_schools_path(speech), :data => { :no_turbolink => true } %></p>
+            </div>
+        <% end %>
+    <% end %>
   </div>
 
   <div  class="dt-sc-one-fourth column">

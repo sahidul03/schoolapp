@@ -1730,6 +1730,11 @@ footer .footer-links p{float:left; background:url(../images/footer_arrow.png) ri
     background-color:#11A9CC;
     margin-bottom: 20px;
 }
+.slider_right_side {
+    width:100%;
+    min-height:115px;
+    margin-bottom: 20px;
+}
 .notice_right_side h2{
     color:#FFF;
     font-size:18px;
@@ -2088,4 +2093,9 @@ footer .footer-links p{float:left; background:url(../images/footer_arrow.png) ri
     color:#FFF;
     text-align:left;
     height:auto;
+}
+
+/*footer*/
+.footer_user_layout{
+
 }

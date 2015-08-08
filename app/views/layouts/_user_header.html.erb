@@ -47,6 +47,9 @@
               <li>
                 <%= link_to 'Committee', committees_schools_path ,:data => { :no_turbolink => true } %>
               </li>
+              <li>
+                <%= link_to 'Academic Speech', academic_speeches_schools_path ,:data => { :no_turbolink => true } %>
+              </li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="about.html">FAQs for Parents</a></li>
             </ul>
@@ -83,7 +86,9 @@
 
           <li class="menu-item-simple-parent menu-item-depth-0"><a href="#" title="">Admission <i class="fa fa-angle-down"></i></a>
             <ul class="sub-menu">
-              <li><a href="admission.html">Admission Information</a></li>
+              <li>
+                <%= link_to 'Admission Form', admission_schools_path ,:data => { :no_turbolink => true } %>
+              </li>
               <li><a href="admission.html">Admission Result</a>
               </li>
             </ul>

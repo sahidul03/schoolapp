@@ -43,7 +43,7 @@ class SpeechesController < ApplicationController
 
   protected
   def params_speech
-    params.require(:speech).permit(:title,:body, :image)
+    params.require(:speech).permit(:title,:body, :image, :head)
   end
 
 end

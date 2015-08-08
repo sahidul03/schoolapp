@@ -12,12 +12,20 @@ class StudentsController < ApplicationController
 
   def edit
     @student=Student.find(params[:id])
-    render layout: 'admin_layout'
+    if @student.is_accepted==false
+      redirect_to students_path
+    else
+      render layout: 'admin_layout'
+    end
   end
 
   def show
     @student=Student.find(params[:id])
-    render layout: 'admin_layout'
+    if @student.is_accepted==false
+      redirect_to students_path
+    else
+      render layout: 'admin_layout'
+    end
   end
 
   def create
@@ -57,9 +65,9 @@ class StudentsController < ApplicationController
   def search_student
     @selected_class=Level.find(params[:level_id])
     if params[:roll_no] ==''
-      @students=@selected_class.students
+      @students=@selected_class.students.where(:is_accepted=>true)
     else
-      @students=@selected_class.students.where(:roll_no=>params[:roll_no])
+      @students=@selected_class.students.where(:roll_no=>params[:roll_no],:is_accepted=>true)
     end
     # raise @students.inspect
   end
@@ -67,7 +75,7 @@ class StudentsController < ApplicationController
   protected
 
   def params_student
-    params.require(:student).permit(:name,:father_name, :mother_name, :guardian_name, :guardian_contact_no, :roll_no, :address,:profile_photo,:gender,:birth_day).merge(:level_id=>params[:level_id])
+    params.require(:student).permit(:name,:father_name, :mother_name, :guardian_name, :guardian_contact_no, :roll_no, :address,:profile_photo,:gender,:birth_day).merge(:level_id=>params[:level_id],:is_accepted=>true)
   end
 
 end
