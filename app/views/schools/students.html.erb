@@ -52,7 +52,7 @@
                                   <b> <%= student.name %></b>
                               <% end %>
                             </h5>
-                            <p><b> Class: <%= student.level.name %> , Roll no : <%= student.roll_no %> </b></p>
+                            <p><b> Class: <%= student.level.name %> <br> Roll no : <%= student.roll_no %> </b></p>
 
                           </small>
                         </div>
@@ -79,3 +79,26 @@
   </div>
   <!--container ends-->
 </div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var level_id_selector=$('#level_id');
+        level_id_selector.click(function(){
+            var level_id=$(this).val();
+            var roll_no=$('#search_by_roll_no').val();
+            $.ajax({
+                url:'/schools/search_student',
+                data: {level_id: level_id,roll_no:roll_no},
+                type: 'get'
+            });
+        });
+        $('#search_by_roll_no').keyup(function(){
+            var level_id=$('#level_id').val();
+            var roll_no=$('#search_by_roll_no').val();
+            $.ajax({
+                url:'/schools/search_student',
+                data: {level_id: level_id,roll_no:roll_no},
+                type: 'get'
+            });
+        });
+    })
+</script>

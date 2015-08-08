@@ -12,10 +12,7 @@
         <!--end of bill to--->
         <div class="table-responsive text-left">
           <!--<h4 class="text-center padding-top">All Results</h4>-->
-          <div class="btn-group pull-right" style="margin:10px 10px">
-            <%= select_tag 'level_id', options_from_collection_for_select(Level.all,:id, :name), { :class => 'btn btn-blue-3 dropdown-toggle' } %>
 
-          </div>
           <div  class="data-table-toolbar">
             <div class="row">
               <div class="col-md-12">
@@ -84,6 +81,9 @@
             </div>
 
         <% end %>
+        <div class="pagination_container_div">
+          <%= paginate @results %>
+        </div>
 
       </div>
     </div>

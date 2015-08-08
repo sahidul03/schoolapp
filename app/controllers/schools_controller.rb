@@ -73,4 +73,24 @@ class SchoolsController < ApplicationController
     render layout: 'user_layout'
   end
 
+  def search_student
+    @selected_class=Level.find(params[:level_id])
+    if params[:roll_no] ==''
+      @students=@selected_class.students
+    else
+      @students=@selected_class.students.where(:roll_no=>params[:roll_no])
+    end
+    # raise @students.inspect
+  end
+
+  def results
+    @results=Result.all.reverse_order.page(params[:page]).per(30)
+    render layout: 'user_layout'
+  end
+
+  def result_details
+    @result=Result.find(params[:id])
+    render layout: 'user_layout'
+  end
+
 end

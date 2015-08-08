@@ -1,7 +1,7 @@
 class ResultsController < ApplicationController
 
   def index
-    @results=Result.all.reverse
+    @results=Result.all.reverse_order.page(params[:page]).per(30)
     render layout: 'admin_layout'
   end
 

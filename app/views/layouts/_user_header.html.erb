@@ -55,7 +55,9 @@
 
           <li class="menu-item-simple-parent menu-item-depth-0 "><a href="#" title="">Students <i class="fa fa-angle-down"></i></a>
             <ul class="sub-menu">
-              <li><a href="result.html">Exam Result</a></li>
+              <li>
+                <%= link_to 'Results', results_schools_path ,:data => { :no_turbolink => true } %>
+              </li>
               <li>
                 <%= link_to 'Academic Routine', routine_schools_path ,:data => { :no_turbolink => true } %>
               </li>

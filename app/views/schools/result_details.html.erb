@@ -1,0 +1,45 @@
+<div id="main">
+  <!--breadcrumb-section starts-->
+
+  <!--breadcrumb-section ends-->
+  <!--container starts-->
+  <div class="container">
+    <!--primary starts-->
+    <section  id="primary" class="with-sidebar">
+      <!--dt-sc-one-half starts-->
+      <div class="column dt-sc-one-column">
+        <div class="notice_banner">
+          <h2>Result </h2>
+
+        </div>
+        <% if @result  %>
+            <div class="notice_show_web">
+              <h4><%= @result.title %></h4>
+              <h6>
+                  <%= @result.created_at.strftime('%d %B, %y') %> | Class : <%= @result.level.name %>
+              </h6>
+              <p>
+                <%= @result.body.html_safe if @result.body %>
+              </p>
+              <%  if @result.file %>
+                  <h3>
+                    <i class="fa fa-download"></i>
+                    <a href="<%= @result.file %>" target="_blank"> Download Result Attachment</a>
+                  </h3>
+              <% end %>
+            </div>
+        <% end %>
+
+
+      </div>
+      <!--dt-sc-one-half ends-->
+    </section>
+    <!--primary ends-->
+
+    <!--secondary starts-->
+    <%= render 'layouts/right_side_user_layout' %>
+    <!--secondary ends-->
+
+  </div>
+  <!--container ends-->
+</div>

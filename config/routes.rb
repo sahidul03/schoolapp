@@ -54,6 +54,9 @@ Rails.application.routes.draw do
       get "video_gallery"
       get "photo_galleries"
       get "photo_gallery/:id", action: 'photo_gallery', as: :photo_gallery
+      get "search_student"
+      get "results"
+      get "result_details/:id", action: "result_details", as: :result_details
 
 
     end
