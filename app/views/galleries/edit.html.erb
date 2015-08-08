@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-lg-10 portlets">
+  <div class="col-lg-8 portlets">
     <div class="widget">
       <div class="widget-header">
         <h2><i class="fa fa-bar-chart"></i> <strong>Photo Galleries</strong> </h2>
@@ -15,6 +15,10 @@
                 <%= form_for @gallery do |f| %>
                     <div class="form-group padding">
                       <%= f.text_field :title , :class=>'form-control', placeholder: 'Gallery title...' %>
+                      <!--<input type="text" class="form-control" placeholder="position name of academy..">-->
+                    </div>
+                    <div class="form-group padding">
+                      <%= f.text_area :body , :class=>'form-control ckeditor', placeholder: 'Gallery Description...' %>
                       <!--<input type="text" class="form-control" placeholder="position name of academy..">-->
                     </div>
                     <div style="margin-right:100%;" class="form-group">
@@ -38,4 +42,5 @@
       </div>
     </div>
   </div>
+  <%= render 'layouts/right_side_student_count_class_wise_admin' %>
  </div>

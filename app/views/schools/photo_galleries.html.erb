@@ -1,0 +1,58 @@
+<div id="main">
+<!--container starts-->
+<div class="container">
+<!--primary starts-->
+<section id="primary" class="dt-sc-one-column">
+<!--dt-sc-portfolio-container starts-->
+<div class="dt-sc-portfolio-container">
+<% if @galleries.any? %>
+      <% @galleries.each do |gallery| %>
+          <div class="portfolio dt-sc-one-fourth column photo_galleries_every_gallery ">
+            <div class="portfolio-thumb photo_galleries_every_gallery_image_container">
+              <% if gallery.photos.any? %>
+                  <%= image_tag(gallery.photos.first.image) %>
+              <% else %>
+                  <img src="/images/photo_gallery_default_image.jpg" alt="" title="">
+              <% end %>
+              <div class="image-overlay">
+                <%= link_to photo_gallery_schools_path(gallery) ,:data => { :no_turbolink => true }, :class=>'link' do %>
+                    <span class="fa fa-link"></span>
+                <% end %>
+                <!--<a href="portfolio-detail.html" class="link"><span class="fa fa-link"></span></a>-->
+
+                <% if gallery.photos.any? %>
+                    <a href="<%= gallery.photos.first.image %>" data-gal="prettyPhoto[gallery]" class="zoom"><span class="fa fa-search"></span></a>
+                <% else %>
+                    <a href="/images/photo_gallery_default_image.jpg" data-gal="prettyPhoto[gallery]" class="zoom"><span class="fa fa-search"></span></a>
+
+                <% end %>
+
+              </div>
+            </div>
+            <div class="portfolio-detail">
+              <div class="portfolio-title">
+                <h5>
+
+                  <%= link_to gallery.title.to_s[0..35]+'...' , photo_gallery_schools_path(gallery) ,:data => { :no_turbolink => true } %>
+                </h5>
+                <h6><%= link_to gallery.created_at.strftime('%d %B, %y')+' | By CBHS' , photo_gallery_schools_path(gallery) ,:data => { :no_turbolink => true } %></h6>
+              </div>
+            </div>
+          </div>
+      <% end %>
+
+
+<% end %>
+  <div class="pagination_container_div">
+    <%= paginate @galleries %>
+  </div>
+
+
+</div>
+<!--dt-sc-portfolio-container ends-->
+</section>
+<!--primary ends-->
+
+</div>
+<!--container ends-->
+</div>

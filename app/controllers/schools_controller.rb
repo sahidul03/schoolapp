@@ -30,4 +30,19 @@ class SchoolsController < ApplicationController
     render layout: 'user_layout'
   end
 
+  def video_gallery
+    @videos=Video.all.reverse_order.page(params[:page]).per(10)
+    render layout: 'user_layout'
+  end
+
+  def photo_galleries
+    @galleries=Gallery.all.reverse_order.page(params[:page]).per(12)
+    render layout: 'user_layout'
+  end
+
+  def photo_gallery
+    @photo_gallery=Gallery.find(params[:id])
+    render layout: 'user_layout'
+  end
+
 end

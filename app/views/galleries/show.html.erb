@@ -14,7 +14,7 @@
                     <i class="fa fa-plus"></i> Add more photo
                 <% end %>
                 <%= link_to edit_gallery_path(@gallery), :class=>'btn btn-info',:data => { :no_turbolink => true } do %>
-                    <i class="fa fa-edit"></i> Edit Title
+                    <i class="fa fa-edit"></i> Edit
                 <% end %>
                 <%= link_to galleries_path, :class=>'btn btn-blue-3',:data => { :no_turbolink => true } do %>
                     <i class="fa fa-photo"></i> Galleries
@@ -68,7 +68,13 @@
         </div>
     <% end %>
 
+  <div class="photo_gallery_description">
 
+    <p>
+      <strong> Description</strong>
+      <%= @gallery.body.html_safe if @gallery.body %>
+    </p>
+  </div>
 
   </div>
     </div>

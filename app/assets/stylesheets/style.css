@@ -821,7 +821,7 @@ header #menu-container ul.dt-sc-social-icons{float:right; height:55px;}
 
 .portfolio.dt-sc-one-third{width:292px; margin:0px 0px 30px 0px; text-align:center;}
 
-.portfolio-thumb{width:100%; position:relative; display:inline-block; float:none; margin:0px 0px 20px; overflow:hidden;}
+.portfolio-thumb{width:100%; position:relative; display:inline-block; float:none; margin:0px 0px 0px; overflow:hidden;}
 
 .portfolio.dt-sc-one-fourth .portfolio-thumb{max-height:242px;}
 
@@ -872,7 +872,7 @@ header #menu-container ul.dt-sc-social-icons{float:right; height:55px;}
 
 .dt-sc-team .dt-sc-entry-thumb img{float:left; width:100%;}
 
-.dt-sc-team .dt-sc-image-overlay, .portfolio .image-overlay{background:rgba(24, 151, 163, 0.9); float:left; height:100%; left:0; opacity:0; position:absolute; top:0; transition:opacity 0.2s ease 0s; -moz-transition:opacity 0.2s ease 0s; -webkit-transition:opacity 0.2s ease 0s; visibility:hidden; width:100%;}
+.dt-sc-team .dt-sc-image-overlay, .portfolio .image-overlay{background:rgba(24, 151, 163, 0.5); float:left; height:100%; left:0; opacity:0; position:absolute; top:0; transition:opacity 0.2s ease 0s; -moz-transition:opacity 0.2s ease 0s; -webkit-transition:opacity 0.2s ease 0s; visibility:hidden; width:100%;}
 
 .dt-sc-team:hover .dt-sc-entry-thumb .dt-sc-image-overlay, .portfolio:hover .image-overlay{opacity:1; visibility:visible;}
 
@@ -1906,14 +1906,32 @@ footer .footer-links p{float:left; background:url(../images/footer_arrow.png) ri
 
 
 /*Gallery*/
-
+.photo_gallery_description{
+    width: 100%;
+    color: gray;
+    padding: 20px;
+    background-color: white;
+    line-height: 1.8;
+}
 .img-wrap iframe {
     width:100%;
     height:auto;
     min-height:200px;
 
 }
+.photo_galleries_every_gallery{
+    padding-right: 20px;
 
+}
+.photo_galleries_every_gallery_image_container{
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+.photo_galleries_every_gallery img{
+    width: 100%;
+    min-height: 180px;
+}
 
 /*committee*/
 

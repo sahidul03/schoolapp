@@ -80,8 +80,11 @@
           </li>
           <li class="menu-item-simple-parent menu-item-depth-0"><a href="#" title="">Media Gallery <i class="fa fa-angle-down"></i></a>
             <ul class="sub-menu">
-              <li><a href="gallery.html">Photo Gallery</a></li>
-              <li><a href="gallery.html">Video Gallery</a>
+              <li>
+                <%= link_to 'Photo Gallery', photo_galleries_schools_path ,:data => { :no_turbolink => true } %>
+              </li>
+              <li>
+                <%= link_to 'Video Gallery', video_gallery_schools_path ,:data => { :no_turbolink => true } %>
               </li>
             </ul>
             <a class="dt-menu-expand">+</a>

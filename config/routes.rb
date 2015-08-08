@@ -51,6 +51,10 @@ Rails.application.routes.draw do
       get "event_details/:id", action: 'event_details', as: :event_details
       get "useful_links"
       get "routine"
+      get "video_gallery"
+      get "photo_galleries"
+      get "photo_gallery/:id", action: 'photo_gallery', as: :photo_gallery
+
     end
   end
 

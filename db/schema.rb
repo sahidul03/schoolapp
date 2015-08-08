@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150806174949) do
+ActiveRecord::Schema.define(version: 20150808065319) do
 
   create_table "committees", force: :cascade do |t|
     t.string   "name",          limit: 255
@@ -38,8 +38,9 @@ ActiveRecord::Schema.define(version: 20150806174949) do
 
   create_table "galleries", force: :cascade do |t|
     t.string   "title",      limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.text     "body",       limit: 65535
   end
 
   create_table "index_sliders", force: :cascade do |t|

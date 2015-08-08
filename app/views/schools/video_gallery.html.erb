@@ -1,0 +1,44 @@
+<div id="main">
+  <!--breadcrumb-section starts-->
+
+  <!--breadcrumb-section ends-->
+  <!--container starts-->
+  <div class="container">
+    <!--primary starts-->
+    <section  id="primary" class="with-sidebar">
+      <!--dt-sc-one-half starts-->
+      <div class="column dt-sc-one-column">
+        <div class="notice_banner">
+          <h2>
+            <i class="fa fa-video-camera"></i>
+            Video Gallery</h2>
+
+        </div>
+        <% if @videos.any?  %>
+            <% @videos.each do |video| %>
+                <div class="notice_show_web">
+                  <h4><%= video.title  %></h4>
+                  <h6><%= video.created_at.strftime('%d %B, %y') %> | BY CBHS</h6>
+                  <div class="video_gallery_web">
+                    <%= video.url.html_safe if video.url %>
+                  </div>
+                </div>
+            <% end %>
+        <% end %>
+        <div class="pagination_container_div">
+          <%= paginate @videos %>
+        </div>
+
+
+      </div>
+      <!--dt-sc-one-half ends-->
+    </section>
+    <!--primary ends-->
+
+    <!--secondary starts-->
+    <%= render 'layouts/right_side_user_layout' %>
+    <!--secondary ends-->
+
+  </div>
+  <!--container ends-->
+</div>

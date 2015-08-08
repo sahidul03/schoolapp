@@ -27,12 +27,15 @@ class GalleriesController < ApplicationController
   def create
     @gallery=Gallery.new
     @gallery.title=params[:gallery][:title]
+    @gallery.body=params[:gallery][:body]
     if @gallery.save
       # raise @user.inspect
-      if params[:gallery][:files].any?
-        # index=0
-        params[:gallery][:files].each do |im|
-          Photo.create(:gallery_id=>@gallery.id,:image=>im)
+      if params[:gallery][:files]
+        if params[:gallery][:files].any?
+          # index=0
+          params[:gallery][:files].each do |im|
+            Photo.create(:gallery_id=>@gallery.id,:image=>im)
+          end
         end
       end
       flash[:notice] = "Photo Gallery created successfully."
@@ -45,7 +48,7 @@ class GalleriesController < ApplicationController
 
   def update
     @gallery=Gallery.find(params[:id])
-    if @gallery.update(:title=>params[:gallery][:title])
+    if @gallery.update(:title=>params[:gallery][:title],:body=>params[:gallery][:body])
       flash[:notice] = "Gallery name updated successfully."
       redirect_to gallery_path(@gallery)
     else

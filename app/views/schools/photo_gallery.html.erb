@@ -1,0 +1,89 @@
+<div id="main">
+
+  <div class="container">
+    <!--primary starts-->
+    <section id="primary" class="content-full-width">
+
+      <article class="portfolio-single">
+        <div class="dt-sc-two-third column first">
+          <div class="portfolio-slider-container">
+            <ul class="portfolio-slider">
+              <% if @photo_gallery.photos.any? %>
+              <% @photo_gallery.photos.each do |photo| %>
+                      <li>
+                        <%= image_tag(photo.image) %>
+                      </li>
+              <% end %>
+              <% else %>
+                  <li> <img src="/images/photo_gallery_default_image.jpg" alt="" title=""> </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dt-sc-one-third column">
+          <h4><%= @photo_gallery.title %></h4>
+          <p>
+            <%= @photo_gallery.body.html_safe if @photo_gallery.body %>
+          </p>
+
+          <div class="project-details">
+
+
+            <p><span class="fa fa-calendar"></span><%= link_to @photo_gallery.created_at.strftime('%d %B, %y')+' | By CBHS'%></p>
+          </div>
+        </div>
+
+      </article>
+
+      <div class="dt-sc-hr"></div>
+      <h2 class="dt-sc-hr-green-title">More Gallery</h2>
+      <% if Gallery.all.any? %>
+          <% counter_flag=1 %>
+          <% Gallery.last(5).each do |gallery| %>
+              <% if gallery!=@photo_gallery && counter_flag<5 %>
+                  <% counter_flag=counter_flag+1 %>
+                  <div class="portfolio dt-sc-one-fourth column photo_galleries_every_gallery first ">
+                    <div class="portfolio-thumb photo_galleries_every_gallery_image_container">
+                      <% if gallery.photos.any? %>
+                          <%= image_tag(gallery.photos.first.image) %>
+                      <% else %>
+                          <img src="/images/photo_gallery_default_image.jpg" alt="" title="">
+                      <% end %>
+                      <div class="image-overlay">
+                        <%= link_to photo_gallery_schools_path(gallery) ,:data => { :no_turbolink => true }, :class=>'link' do %>
+                            <span class="fa fa-link"></span>
+                        <% end %>
+                        <!--<a href="portfolio-detail.html" class="link"><span class="fa fa-link"></span></a>-->
+
+                        <% if gallery.photos.any? %>
+                            <a href="<%= gallery.photos.first.image %>" data-gal="prettyPhoto[gallery]" class="zoom"><span class="fa fa-search"></span></a>
+                        <% else %>
+                            <a href="/images/photo_gallery_default_image.jpg" data-gal="prettyPhoto[gallery]" class="zoom"><span class="fa fa-search"></span></a>
+
+                        <% end %>
+
+                      </div>
+                    </div>
+                    <div class="portfolio-detail">
+                      <div class="portfolio-title">
+                        <h5>
+
+                          <%= link_to gallery.title.to_s[0..35]+'...' , photo_gallery_schools_path(gallery) ,:data => { :no_turbolink => true } %>
+                        </h5>
+                        <h6><%= link_to gallery.created_at.strftime('%d %B, %y')+' | By CBHS' , photo_gallery_schools_path(gallery) ,:data => { :no_turbolink => true } %></h6>
+                      </div>
+                    </div>
+                  </div>
+              <% end %>
+          <% end %>
+
+
+      <% end %>
+
+
+    </section>
+    <!--primary ends-->
+  </div>
+  <!--container ends-->
+</div>

@@ -18,6 +18,10 @@
                     <!--<input type="text" class="form-control" placeholder="position name of academy..">-->
                   </div>
                   <div class="form-group padding">
+                    <%= f.text_area :body , :class=>'form-control ckeditor', placeholder: 'Gallery Description...' %>
+                    <!--<input type="text" class="form-control" placeholder="position name of academy..">-->
+                  </div>
+                  <div class="form-group padding">
                     <%= f.file_field :files, multiple: true, :class=>'btn btn-info btn-file' %>
                     <!--<input type="file" name="attachment" class="btn btn-info btn-file" title="Search for a file to add">-->
                     <p><h6>(670*480)</h6></p>
