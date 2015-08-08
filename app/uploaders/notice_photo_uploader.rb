@@ -30,7 +30,7 @@ class NoticePhotoUploader < CarrierWave::Uploader::Base
   # def scale(width, height)
   #   # do something
   # end
-  process resize_to_fit: [660, 350]
+  process resize_to_fit: [930, 22220]
   # Create different versions of your uploaded files:
   # version :thumb do
   #   process :resize_to_fit => [50, 50]

@@ -1707,16 +1707,16 @@ footer .footer-links p{float:left; background:url(../images/footer_arrow.png) ri
 .notice_banner {
     background-image:url(../images/notice-bb.png);
     width:100%;
-    height:100px;
+    height:60px;
     background-position:center top;
     background-size:100% 100%;
     margin-bottom:15px;
 }
 .notice_banner h2 {
-    font-size:45px;
+    font-size:30px;
     color:#FFF;
     font-weight:300;
-    padding:20px
+    padding:10px
 }
 .facebook_like img{
     width:100%;
@@ -1916,3 +1916,12 @@ footer .footer-links p{float:left; background:url(../images/footer_arrow.png) ri
 
 
 /*committee*/
+
+/*pagination*/
+.pagination_container_div{
+    width: 100%;
+    /*height: 20px;*/
+    padding-left: 20px;
+    background-color: #ddd;
+    display: inline-block;
+}

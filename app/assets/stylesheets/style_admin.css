@@ -1788,7 +1788,7 @@ iframe {
 .rows,
 .col,
 .page {
-  position: absolute;
+  /*position: absolute;*/
 }
 .rows {
   left: 0;

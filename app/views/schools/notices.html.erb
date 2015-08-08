@@ -1,15 +1,6 @@
 <div id="main">
   <!--breadcrumb-section starts-->
-  <div class="breadcrumb-section">
-    <div class="container">
-      <h4>Academic News </h4>
-      <div class="breadcrumb">
-        <a href="index.html">Home</a>
-        <span class="fa fa-angle-double-right"></span>
-        <span class="current">Academic Notice</span>
-      </div>
-    </div>
-  </div>
+
   <!--breadcrumb-section ends-->
   <!--container starts-->
   <div class="container">
@@ -18,25 +9,36 @@
       <!--dt-sc-one-half starts-->
       <div class="column dt-sc-one-column">
         <div class="notice_banner">
-          <h2>Notice Board</h2>
+          <h2>
+
+            Notice Board</h2>
 
         </div>
-        <div class="notice_show_web">
-          <h4>Happy friendship day to all my fb and real friends...... </h4>
-          <h5>02 August, 15 | BY CBHS</h5>
-
-          <p>বিতর্কিত মন্তব্য করে মন্ত্রিত্ব ও দলীয় সদস্যপদ হারানো সাবেক ডাক, তার ও টেলিযোগাযোগমন্ত্রী আবদুল লতিফ সিদ্দিকীর সংসদ সদস্য পদ বাতিলের জন্য নির্বাচন কমিশনকেও সুপারিশ করেছে আওয়ামী লীগ। আজ রোববার দলটির সাধারণ সম্পাদক সৈয়দ আশরাফুল ইসলাম স্বাক্ষরিত এক চিঠিতে এ সুপারিশ করা হয়। দুপুরে আওয়ামী লীগের উপদপ্তর সম্পাদক মৃণাল কান্তি দাস নির্বাচন কমিশনে গিয়ে দলের সাধারণ সম্পাদকের চিঠিটি পৌঁছে দেন। নির্বাচন কমিশন সচিব মোহাম্মদ সিরাজুল ইসলাম চিঠিটি গ্রহণ করেন। এ সময় মৃণাল কান্তি দাসের সঙ্গে ছিলেন আইনজীবী এবিএম রিয়াজুল কবীর কাওসার।
-          </p>
-          <a href="#">
-            <h3><i class="fa fa-download"></i> Download Attachment</h3>
-          </a>
-        </div> <!-- ends notice_show_web-->
-        <div class="notice_show_web">
-          <h4>Happy friendship day to all my fb and real friends...... </h4>
-          <h5>02 August, 15 | BY CBHS</h5>
-          <img src="/images/bg2.jpg">
-          <p>বিতর্কিত মন্তব্য করে মন্ত্রিত্ব ও দলীয় সদস্যপদ হারানো সাবেক ডাক, তার ও টেলিযোগাযোগমন্ত্রী আবদুল লতিফ সিদ্দিকীর সংসদ সদস্য পদ বাতিলের জন্য নির্বাচন কমিশনকেও সুপারিশ করেছে আওয়ামী লীগ। আজ রোববার দলটির সাধারণ সম্পাদক সৈয়দ আশরাফুল ইসলাম স্বাক্ষরিত এক চিঠিতে এ সুপারিশ করা হয়। দুপুরে আওয়ামী লীগের উপদপ্তর সম্পাদক মৃণাল কান্তি দাস নির্বাচন কমিশনে গিয়ে দলের সাধারণ সম্পাদকের চিঠিটি পৌঁছে দেন। নির্বাচন কমিশন সচিব মোহাম্মদ সিরাজুল ইসলাম চিঠিটি গ্রহণ করেন। এ সময় মৃণাল কান্তি দাসের সঙ্গে ছিলেন আইনজীবী এবিএম রিয়াজুল কবীর কাওসার।</p>
-        </div> <!-- ends notice_show_web-->
+        <% if @notices.any?  %>
+            <% @notices.each do |notice| %>
+                <div class="notice_show_web">
+                  <h4><%= link_to notice.title, notice_details_schools_path(notice),:data => { :no_turbolink => true } %></h4>
+                  <h6><%= notice.created_at.strftime('%d %B, %y') %> | BY CBHS</h6>
+                  <% if notice.image %>
+                      <%= link_to notice_details_schools_path(notice),:data => { :no_turbolink => true } do %>
+                          <%= image_tag(notice.image) %>
+                      <% end %>
+                  <% end %>
+                  <p>
+                    <%= link_to notice.body.to_s[0..200]+'...', notice_details_schools_path(notice),:data => { :no_turbolink => true } if notice.body %>
+                  </p>
+                  <%  if notice.file %>
+                      <h3>
+                        <i class="fa fa-download"></i>
+                        <a href="<%= notice.file %>" target="_blank"> Download Notice Attachment</a>
+                      </h3>
+                  <% end %>
+                </div>
+            <% end %>
+        <% end %>
+        <div class="pagination_container_div">
+          <%= paginate @notices %>
+        </div>
 
 
       </div>

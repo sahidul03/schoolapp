@@ -1,0 +1,50 @@
+<div id="main">
+  <!--breadcrumb-section starts-->
+
+  <!--breadcrumb-section ends-->
+  <!--container starts-->
+  <div class="container">
+    <!--primary starts-->
+    <section  id="primary" class="with-sidebar">
+      <!--dt-sc-one-half starts-->
+      <div class="column dt-sc-one-column">
+        <div class="notice_banner">
+          <h2>
+
+           Academic Routine</h2>
+
+        </div>
+        <% if @routines.any?  %>
+            <% @routines.each do |routine| %>
+                <div class="notice_show_web">
+                  <h4><%= routine.title %></h4>
+                  <h6><%= routine.created_at.strftime('%d %B, %y') %> | BY CBHS</h6>
+                  <p>
+                    <%=  routine.body.html_safe if routine.body %>
+                  </p>
+                  <%  if routine.file %>
+                      <h3>
+                        <i class="fa fa-download"></i>
+                        <a href="<%= routine.file %>" target="_blank"> Download Routine Attachment</a>
+                      </h3>
+                  <% end %>
+                </div>
+            <% end %>
+        <% end %>
+        <div class="pagination_container_div">
+          <%= paginate @routines %>
+        </div>
+
+
+      </div>
+      <!--dt-sc-one-half ends-->
+    </section>
+    <!--primary ends-->
+
+    <!--secondary starts-->
+    <%= render 'layouts/right_side_user_layout' %>
+    <!--secondary ends-->
+
+  </div>
+  <!--container ends-->
+</div>

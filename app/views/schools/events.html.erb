@@ -1,0 +1,50 @@
+<div id="main">
+  <!--breadcrumb-section starts-->
+
+  <!--breadcrumb-section ends-->
+  <!--container starts-->
+  <div class="container">
+    <!--primary starts-->
+    <section  id="primary" class="with-sidebar">
+      <!--dt-sc-one-half starts-->
+      <div class="column dt-sc-one-column">
+        <div class="notice_banner">
+          <h2>
+
+            News & Events</h2>
+
+        </div>
+        <% if @events.any?  %>
+            <% @events.each do |event| %>
+                <div class="notice_show_web">
+                  <h4><%= link_to event.title, event_details_schools_path(event),:data => { :no_turbolink => true } %></h4>
+                  <h6><%= event.created_at.strftime('%d %B, %y') %> | BY CBHS</h6>
+                  <% if event.image %>
+                  <%= link_to event_details_schools_path(event),:data => { :no_turbolink => true } do %>
+                      <%= image_tag(event.image) %>
+                  <% end %>
+                  <% end %>
+                  <p>
+                    <%= link_to event.body.to_s[0..200]+'...', event_details_schools_path(event),:data => { :no_turbolink => true } if event.body %>
+                  </p>
+
+                </div>
+            <% end %>
+        <% end %>
+        <div class="pagination_container_div">
+          <%= paginate @events %>
+        </div>
+
+
+      </div>
+      <!--dt-sc-one-half ends-->
+    </section>
+    <!--primary ends-->
+
+    <!--secondary starts-->
+    <%= render 'layouts/right_side_user_layout' %>
+    <!--secondary ends-->
+
+  </div>
+  <!--container ends-->
+</div>

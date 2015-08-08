@@ -47,9 +47,8 @@
           <li class="menu-item-simple-parent menu-item-depth-0 "><a href="#" title="">Students <i class="fa fa-angle-down"></i></a>
             <ul class="sub-menu">
               <li><a href="result.html">Exam Result</a></li>
-              <li><a href="exam-routine.html">Exam routine </a>
-              </li>
-              <li><a href="class-routine.html">Class routine </a>
+              <li>
+                <%= link_to 'Academic Routine', routine_schools_path ,:data => { :no_turbolink => true } %>
               </li>
 
             </ul>
@@ -59,9 +58,13 @@
           <li class="menu-item-simple-parent menu-item-depth-0"><a title=""> Notice <i class="fa fa-angle-down"></i></a>
             <ul class="sub-menu">
               <li>
-                <%= link_to 'Academic Notice', notices_schools_path %>
+                <%= link_to 'Academic Notice', notices_schools_path,:data => { :no_turbolink => true } %>
               </li>
-              <li><a href="admission.html">News & Event</a>
+              <li>
+                <%= link_to 'News & Event', events_schools_path ,:data => { :no_turbolink => true } %>
+              </li>
+              <li>
+                <%= link_to 'Useful Links', useful_links_schools_path ,:data => { :no_turbolink => true } %>
               </li>
             </ul>
             <a class="dt-menu-expand">+</a>

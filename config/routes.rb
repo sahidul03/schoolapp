@@ -47,6 +47,10 @@ Rails.application.routes.draw do
       get "student_profile/:id", action: 'student_profile', as: :student_profile
       get 'notices'
       get "notice_details/:id", action: 'notice_details', as: :notice_details
+      get 'events'
+      get "event_details/:id", action: 'event_details', as: :event_details
+      get "useful_links"
+      get "routine"
     end
   end
 
