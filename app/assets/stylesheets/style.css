@@ -1943,3 +1943,149 @@ footer .footer-links p{float:left; background:url(../images/footer_arrow.png) ri
     background-color: #ddd;
     display: inline-block;
 }
+
+
+/*student*/
+.border-student_user{
+    min-height: 112px;
+    border: 1px solid #E7E7E7;
+}
+.student-list_user{
+    width:50%;
+    float:left;
+    height:112px;
+    overflow: hidden;
+}
+.student-list_user img{
+    width:80%;
+    padding:4px;
+    height:auto;
+    min-height: 110px;
+}
+.student-details_user{
+    width:48%;
+    float:left;
+    padding:2%;
+    height:auto;
+}
+.student_profile {
+    width:100%;
+    height:auto;
+    display:inline-block;
+}
+.student_profile .student_profile_banner {
+    width:100%;
+    height:165px;
+    background-image:url(../images/notice-board-1.png) ;
+    background-repeat:no-repeat;
+    background-position:center top;
+    background-size:100% 100%;
+    -webkit-box-shadow: 4px 4px 0px -2px rgba(0,0,0,0.34);
+    -moz-box-shadow: 4px 4px 0px -2px rgba(0,0,0,0.34);
+    box-shadow: 4px 4px 0px -2px rgba(0,0,0,0.34);
+}
+.student_profile .student_profile_banner .left_images{
+    width:28%;
+    height:165px;
+    float:left;
+}
+.student_profile .student_profile_banner .left_images img{
+    width:145px;
+    height:145px;
+    background-color:#FFFFFF;
+    border:1px solid #ddd;
+    border-radius:3px;
+    padding:2px;
+    margin:50px 30px;
+}
+.student_profile .student_profile_banner .right_content{
+    width:60%;
+    height:165px;
+    float:left;
+}
+.student_profile .student_profile_banner .right_content h2{
+    font-size:28px;
+    color:#FFFFFF;
+    font-weight:300;
+    margin-top:90px;
+}
+.student_profile .student_profile_banner .right_content h4{
+    font-size:15px;
+    color:#FFFFFF;
+    font-weight:300;
+    margin-top:-10px;
+}
+.student_profile .student_profile_details{
+    width:100%;
+    height:auto;
+    min-height:170px;
+    margin-top:35px;
+    padding:10px;
+    background-color:#F9FBFC;
+    border:1px solid #DCE9F1;
+    display:inline-block;
+}
+
+.profile_dl_ct{
+    width:100%;
+    height:auto;
+    display:inline-block;
+    border-bottom:1px solid #ddd;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.profile_dl_tl h4{
+    padding-left:0;
+    padding-bottom:5px;
+    font-weight:500;
+    font-size:18px;
+    color:#4285F4;
+    border-bottom:1px solid #53A93F;
+}
+.profile_dl_ct .p_left{
+    float:left;
+    width:40%;
+    font-weight:700;
+    height:auto;
+}
+.profile_dl_ct .p_right{
+    float:left;
+    width:60%;
+    text-align:left;
+    height:auto;
+}
+.profile_gd_user{
+    background-color:#7E3794;
+    min-height:240px;
+    margin-left:2%;
+    border-radius:3px;
+    height:auto;
+}
+.profile_gd_user h4{
+    color:#FFF;
+}
+
+.profile_dl_right{
+    width:100%;
+    height:auto;
+    display:inline-block;
+    padding-top:6px;
+    padding-bottom:6px;
+}
+.profile_dl_right p {
+    color:#FFFFFF ;
+    line-height: 1.8;
+}
+.profile_dl_right .pp_left{
+    float:left;
+    width:35%;
+    color:#FFF;
+    height:auto;
+}
+.profile_dl_right .pp_right{
+    float:left;
+    width:65%;
+    color:#FFF;
+    text-align:left;
+    height:auto;
+}

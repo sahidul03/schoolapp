@@ -38,6 +38,15 @@
           </li>
           <li class="menu-item-simple-parent menu-item-depth-0"><a href="#" title="">Academic  <i class="fa fa-angle-down"></i></a>
             <ul class="sub-menu">
+              <li>
+                <%= link_to 'Students', students_schools_path ,:data => { :no_turbolink => true } %>
+              </li>
+              <li>
+                <%= link_to 'Teachers', teachers_schools_path ,:data => { :no_turbolink => true } %>
+              </li>
+              <li>
+                <%= link_to 'Committee', committees_schools_path ,:data => { :no_turbolink => true } %>
+              </li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="about.html">FAQs for Parents</a></li>
             </ul>

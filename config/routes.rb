@@ -55,6 +55,7 @@ Rails.application.routes.draw do
       get "photo_galleries"
       get "photo_gallery/:id", action: 'photo_gallery', as: :photo_gallery
 
+
     end
   end
 

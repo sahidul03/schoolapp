@@ -76,13 +76,15 @@
             <div  class="col-sm-5 profile_gd">
               <h4>Important Info</h4>
               <div class="profile_dl_right">
-                <div class="pp_left">Designation</div>
+                <div class="pp_left">Designation:</div>
                 <div class="pp_right"><%= @committee.designation %> </div>
               </div>
               <% if @committee.message %>
                   <div class="profile_dl_right">
-                    <div class="pp_left">Message</div>
-                    <div class="pp_right"><%= @committee.message %></div>
+                    <p>
+                      <b>Message : &nbsp;&nbsp;&nbsp;&nbsp;</b>
+                      <%= @committee.message %>
+                    </p>
                   </div>
               <% end %>
 

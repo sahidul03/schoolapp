@@ -5764,19 +5764,21 @@ footer .footer-links a:last-child {
  font-size:14px;
 }
 .student-list{
- width:auto;
+ width:50%;
  float:left;
- height:auto;	
+ height:150px;
+ overflow: hidden;
 }
 .student-list img{
- width:50%;
+ width:80%;
  padding:4px;
- height:auto;	
+ height:auto;
+ min-height: 150px;
 }
 .student-details{
- width:auto;
+ width:48%;
  float:left;
- padding:5px;
+ padding:2%;
  height:auto;	
 }
 .border-student{

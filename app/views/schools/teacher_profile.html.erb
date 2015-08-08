@@ -1,0 +1,93 @@
+<div id="main">
+
+  <!--container starts-->
+  <div class="container">
+    <!--primary starts-->
+    <section  id="primary" class="with-sidebar">
+      <!--dt-sc-one-half starts-->
+      <div class="column dt-sc-one-column">
+        <div  class="student_profile">
+          <div class="student_profile_banner">
+            <div class="left_images">
+              <% if @teacher.profile_photo %>
+                  <%= image_tag(@teacher.profile_photo) %>
+              <% else %>
+                  <img src="/images/profile_image.jpg">
+              <% end %>
+            </div>
+            <div class="right_content">
+              <h2><%= @teacher.name %></h2>
+              <h4>Designation: <%= @teacher.designation %> </h4>
+            </div>
+          </div><!--message_person_banner ends-->
+          <div class="student_profile_details">
+            <div class="dt-sc-one-half column first profile_dl_tl">
+              <h4>Teacher's info</h4>
+              <div class="profile_dl_ct">
+                <div class="p_left">Name</div>
+                <div class="p_right"><%= @teacher.name %></div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Designation</div>
+                <div class="p_right"><%= @teacher.designation %></div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Qualification</div>
+                <div class="p_right"><%= @teacher.qualification %></div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Email</div>
+                <div class="p_right"><%= @teacher.email %></div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Contact No</div>
+                <div class="p_right"><%= @teacher.phone %></div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Address</div>
+                <div class="p_right"><%= @teacher.address %> </div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Gender</div>
+                <div class="p_right"><%= @teacher.gender %> </div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Date of Birth</div>
+                <div class="p_right"><%= @teacher.birth_day %> </div>
+              </div>
+
+            </div><!--end of-->
+            <div style="padding:20px;" class="dt-sc-one-half column  profile_gd_user">
+
+              <h4>Professional Info</h4>
+              <div class="profile_dl_right">
+                <div class="pp_left">Designation : </div>
+                <div class="pp_right"><%= @teacher.designation %></div>
+              </div>
+              <div class="profile_dl_right">
+                <div class="pp_left">Qualification : </div>
+                <div class="pp_right"><%= @teacher.qualification %> </div>
+              </div>
+              <div class="profile_dl_right">
+
+                <p>
+                <b>Message : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+                  <%= @teacher.message %>
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--dt-sc-one-half ends-->
+    </section>
+    <!--primary ends-->
+
+    <!--secondary starts-->
+    <%= render 'layouts/right_side_user_layout' %>
+    <!--secondary ends-->
+
+  </div>
+  <!--container ends-->
+</div>

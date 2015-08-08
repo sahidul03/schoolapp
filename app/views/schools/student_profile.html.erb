@@ -1,0 +1,90 @@
+<div id="main">
+  
+  <!--container starts-->
+  <div class="container">
+    <!--primary starts-->
+    <section  id="primary" class="with-sidebar">
+      <!--dt-sc-one-half starts-->
+      <div class="column dt-sc-one-column">
+        <div  class="student_profile">
+          <div class="student_profile_banner">
+            <div class="left_images">
+              <% if @student.profile_photo %>
+                  <%= image_tag(@student.profile_photo) %>
+              <% else %>
+                  <img src="/images/profile_image.jpg">
+              <% end %>
+            </div>
+            <div class="right_content">
+              <h2><%= @student.name %></h2>
+              <h4>Class: <%= @student.level.name %> , Roll No:<%= @student.roll_no %>  </h4>
+            </div>
+          </div><!--message_person_banner ends-->
+          <div class="student_profile_details">
+            <div class="dt-sc-one-half column first profile_dl_tl">
+              <h4>Student info</h4>
+              <div class="profile_dl_ct">
+                <div class="p_left">Name</div>
+                <div class="p_right"><%= @student.name %></div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Fathers name</div>
+                <div class="p_right"><%= @student.father_name %></div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Mothers name</div>
+                <div class="p_right"><%= @student.mother_name %></div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Class</div>
+                <div class="p_right"><%= @student.level.name %></div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Roll</div>
+                <div class="p_right"><%= @student.roll_no %></div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Gender</div>
+                <div class="p_right"><%= @student.gender %></div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Date of Birth</div>
+                <div class="p_right"><%= @student.birth_day %></div>
+              </div>
+              <div class="profile_dl_ct">
+                <div class="p_left">Address</div>
+                <div class="p_right"><%= @student.address %> </div>
+              </div>
+
+            </div><!--end of-->
+            <div style="padding:20px;" class="dt-sc-one-half column  profile_gd_user">
+
+              <h4>Guardian Info</h4>
+              <div class="profile_dl_right">
+                <div class="pp_left">Name</div>
+                <div class="pp_right"><%= @student.guardian_name %></div>
+              </div>
+              <div class="profile_dl_right">
+                <div class="pp_left">Contact No</div>
+                <div class="pp_right"><%= @student.guardian_contact_no %> </div>
+              </div>
+              <div class="profile_dl_right">
+                <div class="pp_left">Address</div>
+                <div class="pp_right"><%= @student.address %></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--dt-sc-one-half ends-->
+    </section>
+    <!--primary ends-->
+
+    <!--secondary starts-->
+   <%= render 'layouts/right_side_user_layout' %>
+    <!--secondary ends-->
+
+  </div>
+  <!--container ends-->
+</div>

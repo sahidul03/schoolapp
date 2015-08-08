@@ -1,0 +1,64 @@
+<div id="main">
+
+  <div class="container">
+    <!--primary starts-->
+    <section  id="primary" class="with-sidebar">
+      <!--dt-sc-one-half starts-->
+      <div  class="column dt-sc-one-column">
+        <div class="notice_banner">
+          <h2><i class="fa fa-user"></i> Teachers</h2>
+
+        </div>
+
+
+        <!--start student list--->
+        <div class="student_container">
+          <% if Teacher.all.any? %>
+              <% Teacher.all.each do |teacher|  %>
+                  <div class="col-sm-6">
+                    <div class="widget border-student_user">
+                      <div class="widget-content">
+                        <div class="student-list_user">
+                          <%= link_to teacher_profile_schools_path(teacher),:data => { :no_turbolink => true } do %>
+                              <% if teacher.profile_photo %>
+                                  <%= image_tag(teacher.profile_photo, :class => 'img-responsive') %>
+                              <% else %>
+                                  <img src="/images/profile_image.jpg">
+                              <% end %>
+                          <% end %>
+
+                        </div>
+                        <div class="student-details_user">
+                          <small class="text-left">
+                            <h5>
+                              <%= link_to teacher_profile_schools_path(teacher),:data => { :no_turbolink => true } do %>
+                                  <b> <%= teacher.name %></b>
+                              <% end %>
+                            </h5>
+                            <p><b> Designation: <%= teacher.designation %>  </b></p>
+
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              <% end %>
+          <% end %>
+        </div>
+        <!--end student list--->
+
+
+
+
+      </div>
+      <!--dt-sc-one-half ends-->
+    </section>
+    <!--primary ends-->
+
+    <!--secondary starts-->
+    <%= render 'layouts/right_side_user_layout' %>
+    <!--secondary ends-->
+
+  </div>
+  <!--container ends-->
+</div>

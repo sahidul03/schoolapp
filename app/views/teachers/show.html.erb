@@ -80,17 +80,19 @@
             <div  class="col-sm-5 profile_gd">
               <h4>Important Info</h4>
               <div class="profile_dl_right">
-                <div class="pp_left">Designation</div>
+                <div class="pp_left">Designation:</div>
                 <div class="pp_right"><%= @teacher.designation %> </div>
               </div>
               <div class="profile_dl_right">
-                <div class="pp_left">Qualification</div>
+                <div class="pp_left">Qualification:</div>
                 <div class="pp_right"><%= @teacher.qualification %></div>
               </div>
               <% if @teacher.message %>
                   <div class="profile_dl_right">
-                    <div class="pp_left">Message</div>
-                    <div class="pp_right"><%= @teacher.message %></div>
+                    <p>
+                      <b>Message :&nbsp;&nbsp;&nbsp;&nbsp;</b>
+                      <%= @teacher.message %>
+                    </p>
                   </div>
               <% end %>
 

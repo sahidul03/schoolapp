@@ -1,0 +1,81 @@
+<div id="main">
+
+  <div class="container">
+    <!--primary starts-->
+    <section  id="primary" class="with-sidebar">
+      <!--dt-sc-one-half starts-->
+      <div  class="column dt-sc-one-column">
+        <div class="notice_banner">
+          <h2><i class="fa fa-user"></i> Student</h2>
+
+        </div>
+
+        <div  class="data-table-toolbar">
+          <div class="row">
+            <div class="col-md-4">
+              <form role="form">
+                <input type="text" id="search_by_roll_no" class="form-control" placeholder="Search with roll no...">
+              </form>
+            </div>
+            <div class="col-md-8">
+              <div class="btn-group ">
+                <a data-toggle="tooltip" title="All Class Student Information" class="btn btn-primary"><i class="fa fa-search"></i> Select Class</a>
+              </div>
+              <div class="btn-group">
+                <%= select_tag 'level_id', options_from_collection_for_select(Level.all,:id, :name, :selected=>@selected_class.id), { :class => 'btn btn-blue-3 dropdown-toggle' } %>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--start student list--->
+        <div class="student_container">
+          <% if @selected_class.students.any? %>
+              <% @selected_class.students.each do |student|  %>
+                  <div class="col-sm-6">
+                    <div class="widget border-student_user">
+                      <div class="widget-content">
+                        <div class="student-list_user">
+                          <%= link_to student_profile_schools_path(student),:data => { :no_turbolink => true } do %>
+                              <% if student.profile_photo %>
+                                  <%= image_tag(student.profile_photo, :class => 'img-responsive') %>
+                              <% else %>
+                                  <img src="/images/profile_image.jpg">
+                              <% end %>
+                          <% end %>
+
+                        </div>
+                        <div class="student-details_user">
+                          <small class="text-left">
+                            <h5>
+                              <%= link_to student_profile_schools_path(student),:data => { :no_turbolink => true } do %>
+                                  <b> <%= student.name %></b>
+                              <% end %>
+                            </h5>
+                            <p><b> Class: <%= student.level.name %> , Roll no : <%= student.roll_no %> </b></p>
+
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              <% end %>
+          <% end %>
+        </div>
+        <!--end student list--->
+
+
+
+
+      </div>
+      <!--dt-sc-one-half ends-->
+    </section>
+    <!--primary ends-->
+
+    <!--secondary starts-->
+    <%= render 'layouts/right_side_user_layout' %>
+    <!--secondary ends-->
+
+  </div>
+  <!--container ends-->
+</div>

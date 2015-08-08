@@ -45,4 +45,32 @@ class SchoolsController < ApplicationController
     render layout: 'user_layout'
   end
 
+  def students
+    @selected_class=Level.find(10)
+    render layout: 'user_layout'
+  end
+
+  def student_profile
+    @student=Student.find(params[:id])
+    render layout: 'user_layout'
+  end
+
+  def teachers
+    render layout: 'user_layout'
+  end
+
+  def teacher_profile
+    @teacher=Teacher.find(params[:id])
+    render layout: 'user_layout'
+  end
+
+  def committees
+    render layout: 'user_layout'
+  end
+
+  def committee_profile
+    @committee=Committee.find(params[:id])
+    render layout: 'user_layout'
+  end
+
 end
