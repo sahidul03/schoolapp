@@ -9,71 +9,31 @@
 <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" style="margin:0px auto;  background-color:#E9E9E9;padding:0px;margin-top:0px;margin-bottom:0px;max-height:542px;">
   <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style="display:none;max-height:542px;height:542px;">
     <ul>	<!-- SLIDE  -->
-      <li data-transition="fade" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" >
-        <!-- MAIN IMAGE -->
-        <img src="/images/slider-st-2.jpg"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-        <!-- LAYERS -->
+      <% if IndexSlider.all.any? %>
+      <% IndexSlider.all.each do |index_slider| %>
+              <li data-transition="fade" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" >
+                <!-- MAIN IMAGE -->
+                <%= image_tag(index_slider.image) %>
+                <!-- LAYERS -->
 
-        <!-- LAYER NR. 2 -->
-        <div class="tp-caption sfl stl"
-             data-x="10"
-             data-y="190"
-             data-speed="1500"
-             data-start="600"
-             data-easing="Power0.easeInOut"
-             data-elementdelay="0.1"
-             data-endelementdelay="0.1"
-             data-end="6900"
-             data-endspeed="1500"
-             data-endeasing="Power0.easeInOut"
+                <!-- LAYER NR. 2 -->
+                <div class="tp-caption sfl stl"
+                     data-x="10"
+                     data-y="190"
+                     data-speed="1500"
+                     data-start="600"
+                     data-easing="Power0.easeInOut"
+                     data-elementdelay="0.1"
+                     data-endelementdelay="0.1"
+                     data-end="6900"
+                     data-endspeed="1500"
+                     data-endeasing="Power0.easeInOut"
 
-             style="z-index: 2; color:#FFF; font-size:34px; margin-top:15%;">ভবিষ্যতে উচ্চশিক্ষার মাধ্যম হবে অনলাইন
-        </div>
-      </li>
-      <!-- SLIDE  -->
-      <li data-transition="fade" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" >
-        <!-- MAIN IMAGE -->
-        <img src="/images/slider-st-3.jpg"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-        <!-- LAYERS -->
-
-        <!-- LAYER NR. 2 -->
-        <div class="tp-caption sfl stl"
-             data-x="30"
-             data-y="190"
-             data-speed="1500"
-             data-start="600"
-             data-easing="Power0.easeInOut"
-             data-elementdelay="0.1"
-             data-endelementdelay="0.1"
-             data-end="6900"
-             data-endspeed="1500"
-             data-endeasing="Power0.easeInOut"
-
-             style="z-index: 2; color:#FFF; font-size:34px; margin-top:15%;">ভবিষ্যতে উচ্চশিক্ষার মাধ্যম হবে অনলাইন
-        </div>
-      </li>
-      <!-- SLIDE  -->
-      <li data-transition="fade" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" >
-        <!-- MAIN IMAGE -->
-        <img src="/images/slider-st-4.jpg"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-        <!-- LAYERS -->
-
-        <!-- LAYER NR. 2 -->
-        <div class="tp-caption sfl stl"
-             data-x="30"
-             data-y="190"
-             data-speed="1500"
-             data-start="600"
-             data-easing="Power0.easeInOut"
-             data-elementdelay="0.1"
-             data-endelementdelay="0.1"
-             data-end="6900"
-             data-endspeed="1500"
-             data-endeasing="Power0.easeInOut"
-
-             style="z-index: 2; color:#FFF; font-size:34px; margin-top:15%;">ভবিষ্যতে উচ্চশিক্ষার মাধ্যম হবে অনলাইন
-        </div>
-      </li>
+                     style="z-index: 2; color:#FFF; font-size:34px; margin-top:15%;"><%= index_slider.title %>
+                </div>
+              </li>
+      <% end %>
+      <% end %>
       <!-- SLIDE  -->
 
     </ul>
@@ -334,81 +294,54 @@
   <div class="container">
     <!--dt-sc-one-half starts-->
     <div class="dt-sc-one-half column first">
-      <h2>Play As You Learn</h2>
+      <h2>Academic Activities</h2>
       <!--dt-sc-one-half starts-->
-      <div class="dt-sc-one-half column first">
 
-        <div class="dt-sc-ico-content type2">
-          <div class="icon">
-            <span class="fa fa-glass"> </span>
-          </div>
-          <h4><a href="#" target="_blank"> English Summer Camp </a></h4>
-          <p>Nam ullamcorper, diam sit amet euismod pelleontesque, eros risus rhoncus libero, inst tibulum nisl ligula....</p>
-        </div>
-        <div class="dt-sc-hr-very-small"></div>
-        <div class="dt-sc-ico-content type2">
-          <div class="icon">
-            <span class="fa fa-pencil"> </span>
-          </div>
-          <h4><a href="#" target="_blank"> Drawing & Painting </a></h4>
-          <p>Nam ullamcorper, diam sit amet euismod pelleontesque, eros risus rhoncus libero, inst tibulum nisl ligula....</p>
-        </div>
-        <div class="dt-sc-hr-very-small"></div>
-        <div class="dt-sc-ico-content type2">
-          <div class="icon">
-            <span class="fa fa-bullseye"> </span>
-          </div>
-          <h4><a href="#" target="_blank"> Swimming Camp </a></h4>
-          <p>Nam ullamcorper, diam sit amet euismod pelleontesque, eros risus rhoncus libero, inst tibulum nisl ligula....</p>
-        </div>
+      <div class="dt-sc-one-full ">
+        <% if Speech.all.any? %>
+            <% Speech.all.last(6).each do |speech| %>
+                <div class="dt-sc-one-half column first">
+                  <div class="dt-sc-ico-content type2">
+
+                    <h4>
+                      <i class="fa fa-university"></i>
+                      <%= link_to speech.title.to_s[0..15]+'..', academic_speech_schools_path(speech), :data=>{ :no_turbolink=> true} %>
+                    </h4>
+                    <p>
+                      <%= speech.body.to_s[0..110]+'...' if speech.body%>
+                    </p>
+                  </div>
+                  <div class="dt-sc-hr-very-small"></div>
+                </div>
+            <% end %>
+        <% end %>
+
+
+
 
       </div>
-      <!--dt-sc-one-half ends-->
 
-      <!--dt-sc-one-half starts-->
-      <div class="dt-sc-one-half column">
-
-        <div class="dt-sc-ico-content type2">
-          <div class="icon">
-            <span class="fa fa-tachometer"> </span>
-          </div>
-          <h4><a href="#" target="_blank"> Sports Camp </a></h4>
-          <p>Nam ullamcorper, diam sit amet euismod pelleontesque, eros risus rhoncus libero, inst tibulum nisl ligula....</p>
-        </div>
-        <div class="dt-sc-hr-very-small"></div>
-        <div class="dt-sc-ico-content type2">
-          <div class="icon">
-            <span class="fa fa-magic"> </span>
-          </div>
-          <h4><a href="#" target="_blank"> Personalizing </a></h4>
-          <p>Nam ullamcorper, diam sit amet euismod pelleontesque, eros risus rhoncus libero, inst tibulum nisl ligula....</p>
-        </div>
-        <div class="dt-sc-hr-very-small"></div>
-        <div class="dt-sc-ico-content type2">
-          <div class="icon">
-            <span class="fa fa-music"> </span>
-          </div>
-          <h4><a href="#" target="_blank"> Sing & Dance </a></h4>
-          <p>Nam ullamcorper, diam sit amet euismod pelleontesque, eros risus rhoncus libero, inst tibulum nisl ligula....</p>
-        </div>
-
-      </div>
       <!--dt-sc-one-half ends-->
     </div>
     <!--dt-sc-one-half ends-->
 
     <!--dt-sc-one-half starts-->
     <div class="dt-sc-one-half column">
-      <h2>welcome to school</h2>
+      <h2>welcome to CBHS</h2>
       <aside class="widget widget_categories">
         <div class="dt-sc-one-column">
           <div class="dt-sc-ico-content type2">
             <div class="portfolio-slider-container index_page_slider_bg">
               <ul class="portfolio-slider">
-
-                <li> <img src="/images/portfolio_detail2.jpg" alt="" title=""> </li>
-                <li> <img src="/images/portfolio_detail3.jpg" alt="" title=""> </li>
-                <li> <img src="/images/portfolio_detail4.jpg" alt="" title=""> </li>
+                <% if Gallery.all.any? %>
+                <% if Gallery.last.photos.any? %>
+                    <% Gallery.last.photos.each do |photo| %>
+                            <li>
+                              <%= image_tag(photo.image) %>
+                            </li>
+                    <% end %>
+                <% end %>
+                <% end %>
               </ul>
             </div>
           </div>

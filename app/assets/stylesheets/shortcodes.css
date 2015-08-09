@@ -141,7 +141,7 @@ transition:all 0.5s linear 0s; -moz-transition:all 0.5s linear 0s; -webkit-trans
 
 .fullwidth-background.turquoise-bg .dt-sc-ico-content.type2:hover .icon span, .dt-sc-ico-content.type2:hover .icon span{border:3px solid #80c6cc;}
 	
-.dt-sc-ico-content.type2 h4{margin-bottom:0px; line-height:40px;}
+.dt-sc-ico-content.type2 h4{margin-bottom:0px; color: white; line-height:40px;}
 
 .fullwidth-background.turquoise-bg .dt-sc-ico-content.type2:hover h4 a{color:#ffc907;}
 
