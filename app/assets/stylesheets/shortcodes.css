@@ -165,11 +165,11 @@ transition:all 0.5s linear 0s; -moz-transition:all 0.5s linear 0s; -webkit-trans
 
 .dt-sc-team .item-mask, .author-thumb .item-mask, .portfolio-thumb .item-mask, .comment-author .item-mask{left:0;  position:absolute; top:0; transition:all 0.2s ease 0s; z-index:9; clear:both;}
 
-.dt-sc-team .image img, .author-thumb .image img, .portfolio-thumb img{float:left; width:100%; clear:both; }
+.dt-sc-team .image img, .author-thumb .image img, .portfolio-thumb img{float:left; width:100%; clear:both; min-height: 156px }
 
 .dt-sc-team .image img{height:auto; }
 
-.dt-sc-team .image{display:inline-block; width:100%; float:none; text-align:center; margin:0px 0px 15px; max-width:220px;  max-height:192px;}
+.dt-sc-team .image{display:inline-block; width:100%; float:none; text-align:center; margin:0px 0px 15px; max-width:220px;  max-height:156px;}
 
 .dt-sc-team .team-details{text-align:center; clear:both; float:left; width:100%;}
 
