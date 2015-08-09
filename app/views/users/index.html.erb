@@ -1,5 +1,20 @@
 
+<script type="text/javascript">
+    jQuery(document).ready(
+            function()
+            {
+                //-----------------------------------------
+                $("#slider-carousel").carousel({activate: function(){}, timerAnimSlide:400, infinite:true, resizeItem:{width:100}, responsive:{minWidth:645}});
+                $("#slider-carousel-2").carousel({activate: function(){}, timerAnimSlide:400, infinite:true, resizeItem:{width:50}, responsive:{minWidth:645}});
 
+                //-----------------------------------------
+            });
+
+    function activate ()
+    {
+    }
+
+</script>
 <!--header starts-->
 
 <!--header ends-->
@@ -235,15 +250,15 @@
   <div  class="dt-sc-one-fourth column">
     <aside class=" widget_categories notice_right_side">
       <h2><i class="fa fa-microphone"></i> Recent Notice</h2>
-      <li><i class="fa fa-angle-right"></i> <a href="#"> বিতর্কিত মন্তব্য করে মন্ত্রিত্ব ও দলীয় সদস্যপদ হারানো সাবেক ডাক, </a></li>
-      <li><i class="fa fa-angle-right"></i> <a href="#"> Placement & Alumni (OPA) Office of Placement & Alumni (OPA)</a></li>
-      <li><i class="fa fa-angle-right"></i> <a href="#"> Office of Placement & Alumni (OPA)</a></li>
-      <li><i class="fa fa-angle-right"></i> <a href="#"> বিতর্কিত মন্তব্য করে মন্ত্রিত্ব ও দলীয় সদস্যপদ হারানো সাবেক ডাক, </a></li>
-      <li><i class="fa fa-angle-right"></i> <a href="#"> বিতর্কিত মন্তব্য করে মন্ত্রিত্ব ও দলীয় সদস্যপদ হারানো সাবেক ডাক, </a></li>
-
-
+      <% if Notice.all.any? %>
+          <% Notice.last(5).each do |notice| %>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <%= link_to notice.title, notice_details_schools_path(notice), :data=>{ :no_turbolink=> true} %>
+              </li>
+          <% end %>
+      <% end %>
     </aside>
-
   </div>
 
 </div>
@@ -255,35 +270,73 @@
 
   <div class="dt-sc-three-fourth column first">
     <h4 style="border-bottom:1px solid #ddd; color:#DA027F; padding-bottom:2px;">Best Students</h4>
-    <div class="best-student">
-      <li>
-        <img src="/images/student-1.jpg">
-        <h4>Shariar Alam</h4>
-        <p>class-Ten<p>
-      </li>
-      <li>
-        <img src="/images/student-2.jpg">
-        <h4>muntazur rahman</h4>
-        <p>class-Ten<p>
-      </li>
-      <li>
-        <img src="/images/student-3.jpg">
-        <h4>Rasel islam</h4>
-        <p>class-Ten<p>
-      </li>
-      <li>
-        <img src="/images/student-4.jpg">
-        <h4>Samanta islam faiza</h4>
-        <p>class-Ten<p>
-      </li>
-      <li>
-        <img src="/images/teacher-6.jpg">
-        <h4>Kibri ahsan</h4>
-        <p>class-Ten<p>
-      </li>
 
+    <div id="slider-carousel-2">
+      <div class="wrapper-setas">
+
+        <a href="#" class="seta-esq setaEsq">
+          <em class="sprite seta-pag-esq-md">
+            <i class="fa fa-angle-right"></i>
+          </em>
+        </a>
+        <a href="#" class="seta-dir setaDir">
+          <em class="sprite seta-pag-dir-md">
+            <i class="fa fa-angle-left"></i>
+          </em>
+        </a>
+
+        <div class="clear"></div>
+      </div>
+      <div id="container-slider-carousel-2" class="container">
+        <div id="content-silder-carousel-2" class="content">
+          <div class="wrapper-itens">
+            <div class="item">
+                              <span>
+                               <a href="#"><img src="images/teacher-1.jpg" alt="" class="img-responsive"></a>
+                              </span>
+              <h5><a href="#">Md. Kabirul Hasan</a></h5>
+              <p>Class:ten</p>
+            </div>
+            <div class="item">
+                             <span>
+                             <a href="#"><img src="images/teacher-3.jpg" alt="" class="img-responsive"></a>
+                             </span>
+              <h5><a href="#">Nayon Khan</a></h5>
+              <p>Class:six</p>
+            </div>
+            <div class="item">
+                             <span>
+                             <a><img src="images/teacher-4.jpg" alt="" class="img-responsive">
+                             </a>                         </span>
+              <h5><a href="#">Samiur Rahman</a></h5>
+              <p>Class:Eight</p>
+            </div>
+            <div class="item">
+                            <span>
+                            <img src="images/teacher-6.jpg" alt="" class="img-responsive">
+                            </span>
+              <h5>Samiur Rahman</h5>
+              <p>Class:Eight</p>
+            </div>
+            <div class="item">
+                            <span>
+                            <img src="images/teacher-1.jpg" alt="" class="img-responsive">
+                            </span>
+              <h5>Samiur Rahman</h5>
+              <p>Class:Eight</p>
+            </div>
+            <div class="item">
+                            <span>
+                            <img src="images/teacher-3.jpg" alt="" class="img-responsive">
+                            </span>
+              <h5>Samiur Rahman</h5>
+              <p>Class:Eight</p>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
     </div>
-
   </div>
 
 
@@ -293,13 +346,15 @@
 
         <h2><i class="fa fa-image"></i> News & Event</h2>
       </div>
-      <li><i class="fa fa-leaf"></i> <a href="#"> বিতর্কিত মন্তব্য করে মন্ত্রিত্ব ও দলীয় সদস্যপদ হারানো সাবেক ডাক</a></li>
-      <li><i class="fa fa-leaf"></i> <a href="#"> বিতর্কিত মন্তব্য করে মন্ত্রিত্ব ও দলীয় সদস্যপদ হারানো সাবেক ডাক</a></li>
-      <li><i class="fa fa-leaf"></i> <a href="#"> বিতর্কিত মন্তব্য করে মন্ত্রিত্ব ও দলীয় সদস্যপদ হারানো সাবেক ডাক</a></li>
-
+      <% if Event.all.any? %>
+          <% Event.last(5).each do |event| %>
+              <li>
+                <i class="fa fa-leaf"></i>
+                <%= link_to event.title, event_details_schools_path(event), :data=>{ :no_turbolink=> true} %>
+              </li>
+          <% end %>
+      <% end %>
     </aside>
-
-
   </div>
 
 </div>

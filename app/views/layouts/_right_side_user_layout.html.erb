@@ -1,41 +1,68 @@
 <section id="secondary">
 
   <aside class=" widget_categories vedio_right_side">
-    <div class="first_vedio">
-      <iframe width="854" height="510" src="https://www.youtube.com/embed/OGl_YNjE-P0" frameborder="0" allowfullscreen></iframe>
-      <h4><a href="#">বিতর্কিত মন্তব্য করে মন্ত্রিত্ব ও দলীয় সদস্যপদ হারানো সাবেক ডাক </a></h4>
-    </div>
-    <li><i class="fa fa-video-camera"></i> <a href="#"> বিতর্কিত মন্তব্য করে মন্ত্রিত্ব ও দলীয় সদস্যপদ হারানো সাবেক ডাক</a></li>
-    <li><i class="fa fa-video-camera"></i> <a href="#"> বিতর্কিত মন্তব্য করে মন্ত্রিত্ব ও দলীয় সদস্যপদ হারানো সাবেক ডাক</a></li>
+    <% if Video.all.any? %>
+        <div class="first_vedio">
+          <%= Video.last.url.html_safe if Video.last.url %>
+          <h4>
+            <%= link_to Video.last.title, video_gallery_schools_path, :data=>{ :no_turbolink=> true} %>
+          </h4>
+        </div>
+        <% Video.last(3).each do |video| %>
+           <% if video!=Video.last %>
+                <li>
+                  <i class="fa fa-video-camera"></i>
+                  <%= link_to video.title, video_gallery_schools_path, :data=>{ :no_turbolink=> true} %>
+                </li>
+
+           <% end %>
+        <% end %>
+    <% end %>
+
 
   </aside>
   <aside class=" widget_categories notice_right_side">
     <h2><i class="fa fa-microphone"></i> Recent Notice</h2>
-    <li><i class="fa fa-angle-right"></i> <a href="#"> বিতর্কিত মন্তব্য করে মন্ত্রিত্ব ও দলীয় সদস্যপদ হারানো সাবেক ডাক, </a></li>
-    <li><i class="fa fa-angle-right"></i> <a href="#"> Placement & Alumni (OPA) Office of Placement & Alumni (OPA)</a></li>
-    <li><i class="fa fa-angle-right"></i> <a href="#"> Office of Placement & Alumni (OPA)</a></li>
-    <li><i class="fa fa-angle-right"></i> <a href="#"> বিতর্কিত মন্তব্য করে মন্ত্রিত্ব ও দলীয় সদস্যপদ হারানো সাবেক ডাক, </a></li>
-    <li><i class="fa fa-angle-right"></i> <a href="#"> বিতর্কিত মন্তব্য করে মন্ত্রিত্ব ও দলীয় সদস্যপদ হারানো সাবেক ডাক, </a></li>
+    <% if Notice.all.any? %>
+    <% Notice.last(5).each do |notice| %>
+            <li>
+              <i class="fa fa-angle-right"></i>
+              <%= link_to notice.title, notice_details_schools_path(notice), :data=>{ :no_turbolink=> true} %>
+            </li>
+
+
+  <% end %>
+    <% end %>
+
 
   </aside>
   <aside class=" widget_categories slider_right_side">
-    <div class="portfolio-slider-container">
-      <ul class="portfolio-slider">
-        <li> <img src="/images/slider-st-1.jpg" alt="" title=""> </li>
-        <li> <img src="/images/portfolio_detail2.jpg" alt="" title=""> </li>
-        <li> <img src="/images/portfolio_detail3.jpg" alt="" title=""> </li>
-        <li> <img src="/images/portfolio_detail4.jpg" alt="" title=""> </li>
-      </ul>
-    </div>
+    <% if Gallery.all.any? %>
+        <% if Gallery.last.photos.any? %>
+            <div class="portfolio-slider-container">
+              <ul class="portfolio-slider">
+                <% Gallery.last.photos.each do |photo| %>
+                    <li>
+                      <%= image_tag(photo.image) %>
+                    </li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+    <% end %>
 
   </aside>
   <aside class=" widget_categories useful_link">
     <h2><i class="fa fa-microphone"></i> Usefull link</h2>
-    <li><i class="fa fa-angle-right"></i> <a href="#"> বিতর্কিত মন্তব্য করে মন্ত্রিত্ব ও দলীয় সদস্যপদ হারানো সাবেক ডাক, </a></li>
-    <li><i class="fa fa-angle-right"></i> <a href="#"> Placement & Alumni (OPA) Office of Placement & Alumni (OPA)</a></li>
-    <li><i class="fa fa-angle-right"></i> <a href="#"> Office of Placement & Alumni (OPA)</a></li>
-    <li><i class="fa fa-angle-right"></i> <a href="#"> বিতর্কিত মন্তব্য করে মন্ত্রিত্ব ও দলীয় সদস্যপদ হারানো সাবেক ডাক, </a></li>
-    <li><i class="fa fa-angle-right"></i> <a href="#"> বিতর্কিত মন্তব্য করে মন্ত্রিত্ব ও দলীয় সদস্যপদ হারানো সাবেক ডাক, </a></li>
+    <% if UsefulLink.all.any? %>
+        <% UsefulLink.last(5).each do |useful_link| %>
+            <li>
+              <i class="fa fa-angle-right"></i>
+              <a href="<%= useful_link.link %>" target="_blank"> <%=  useful_link.title %></a>
+
+            </li>
+        <% end %>
+    <% end %>
 
   </aside>
   <aside class=" widget_categories facebook_like">

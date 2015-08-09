@@ -1734,6 +1734,7 @@ footer .footer-links p{float:left; background:url(../images/footer_arrow.png) ri
     width:100%;
     min-height:115px;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 .notice_right_side h2{
     color:#FFF;
@@ -2098,4 +2099,104 @@ footer .footer-links p{float:left; background:url(../images/footer_arrow.png) ri
 /*footer*/
 .footer_user_layout{
 
+}
+
+/*new work for best student*/
+.center{ width:645px; margin:0 auto;}
+.wrapper-center{ padding:0 10px;}
+
+.img-responsive{ height:auto; width:100%;}
+
+/*------css obrigatório------*/
+#slider-carousel{ position: relative; width: 100%; padding: 0px 0 0 0; margin-bottom: 5px; }
+#container-slider-carousel{  width: 100%; position: relative; overflow: hidden; height:auto;}
+#content-silder-carousel{ width: 5000px; position: relative; left: 0;}
+/*---------------------------*/
+
+
+.seta-pag-esq-md{
+    width: 42px;
+    height:42px;
+    line-height:42px;
+    font-weight:bold;
+    font-size:26px;
+    margin-top:10px;
+    position:absolute;
+    float:right;
+    left:94%;
+    z-index:200;
+    top:50%;
+    color:#FFF;
+    opacity:.8;
+    background-color:#11A9CC;
+    text-align:center;
+    display:block;
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
+}
+.seta-pag-esq-md:hover{
+    background-color:#94CA73;
+}
+.seta-pag-dir-md{
+    width: 42px;
+    height:42px;
+    line-height:42px;
+    font-weight:bold;
+    font-size:26px;
+    z-index:200;
+    margin-top:10px;
+    position:absolute;
+    float:left;
+    left:.3%;
+    top:50%;
+    opacity:.8;
+    color:#FFF;
+    background-color:#11A9CC	;
+    text-align:center;
+    display:block;
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
+}
+.seta-pag-dir-md:hover{
+    background-color:#94CA73;
+}
+
+#slider-carousel-2{ position: relative; margin-top:-30px; width: 100%; padding: 0px 0 0 0;  margin-bottom: 5px;}
+#container-slider-carousel-2{  width: 820px; position: relative; overflow: hidden; height:auto;}
+#content-silder-carousel-2{ width: 5000px; position: relative; left: 0;}
+#content-silder-carousel-2 .item{ width:180px; float:left; border:1px solid #DEDEDE;  margin-right:27px; margin-left:3px;}
+#content-silder-carousel-2 .item h5{
+    margin:0;
+    text-align:center;
+    font-size:14px;
+}
+#content-silder-carousel-2 .item p{
+    margin:0;
+    text-align:center;
+    font-size:13px;
+    font-style:italic;
+}
+#content-silder-carousel-2 .item span img{ width:100%; height:166px; padding:3px;  }
+
+#slider-carousel-2 .wrapper-setas{ margin:0 0 10px 0;}
+#slider-carousel-2 .wrapper-setas a{  margin-left:10px;}
+
+
+
+@media screen and (max-width: 645px) {
+    .center{ width:100%;}
+
+}
+
+hr{
+    border:none;
+    height:1px;
+    width:100%;
+    display:block;
+    margin:60px 0;
+    background-color:#CCC;
 }

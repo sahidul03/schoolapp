@@ -1,7 +1,9 @@
 <header>
   <div class="container">
     <div class="logo">
-      <a href="index.html" title="Kids Life"><img src="/images/logo.png" alt="Kids Life" title="Kids Life"></a>
+      <%= link_to root_path ,:data => { :no_turbolink => true } do %>
+          <img src="/images/logo.png" alt="Kids Life" title="Kids Life">
+      <% end %>
     </div>
 
     <div class="contact-details">
@@ -26,7 +28,10 @@
       <nav id="main-menu">
         <div class="dt-menu-toggle" id="dt-menu-toggle">Menu<span class="dt-menu-toggle-icon"></span></div>
         <ul id="menu-main-menu" class="menu">
-          <li class="current_page_item menu-item-simple-parent menu-item-depth-0 "> <a href="index.html"><i class="fa fa-home"></i> Home </a>
+          <li class="current_page_item menu-item-simple-parent menu-item-depth-0 ">
+            <%= link_to root_path ,:data => { :no_turbolink => true } do %>
+                <i class="fa fa-home"></i> Home
+            <% end %>
 
           </li>
           <li class="menu-item-simple-parent menu-item-depth-0"><a href="#" title="">About Us  <i class="fa fa-angle-down"></i></a>
