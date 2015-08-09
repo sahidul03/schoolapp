@@ -14,33 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require ckeditor-jquery
-//= require modernizr-2.6.2.min
-//= require marquee
-//= require jquery-migrate.min
-//= require jquery.validate.min
-//= require jquery-easing-1.3
-//= require jquery.sticky
-//= require jquery.nicescroll.min
-//= require jquery.inview
-//= require validation
-//= require jquery.tipTip.minified
-//= require jquery.bxslider.min
-//= require jquery.prettyPhoto
-//= require jquery.tweet.min
-//= require jquery.parallax-1.1.3
-//= require shortcodes
-//= require custom
-//= require jquery-transit-modified
-//= require layerslider.kreaturamedia.jquery
-//= require greensock
-//= require layerslider.transitions
-//= require jquery.flexslider
 //= require custom_admin
 
 
 // admin js files
-//= require bootstrap.min
-//= require jquery.slimscroll
 
 //= require_tree .
 //<script type="text/javascript">var lsjQuery = jQuery;</script>

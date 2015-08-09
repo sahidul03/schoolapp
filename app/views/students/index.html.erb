@@ -14,9 +14,9 @@
       <div class="col-sm-6">
         <small class="text-left class_information_container">
           <h4><strong><a >Class :<span class="class_name"><%= @selected_class.name %></span> </a></strong></h4>
-          <p><strong>TOTAL STUDENTS : </strong> # <span class="all_students_of_class"><%= @selected_class.students.count %></span> </p>
-          <p><strong>TOTAL MALE: </strong> # <span class="all_male_student_of_class"><%= @selected_class.students.where(:gender=>'male').count %></span> </p>
-          <p><strong>TOTAL FEMALE: </strong> # <span class="all_female_student_of_class"><%= @selected_class.students.where(:gender=>'female').count %></span> </p>
+          <p><strong>TOTAL STUDENTS : </strong> # <span class="all_students_of_class"><%= @selected_class.students.where(:is_accepted=>true).count %></span> </p>
+          <p><strong>TOTAL MALE: </strong> # <span class="all_male_student_of_class"><%= @selected_class.students.where(:gender=>'male', :is_accepted=>true).count %></span> </p>
+          <p><strong>TOTAL FEMALE: </strong> # <span class="all_female_student_of_class"><%= @selected_class.students.where(:gender=>'female', :is_accepted=>true).count %></span> </p>
         </small>
 
       </div>
@@ -24,10 +24,10 @@
         <small class="text-right">
 
           <h4><strong>All Students of this School </strong></h4>
-          <p><strong>All Students  : </strong> <span class="label label-info"><%= Student.all.count %></span></p>
-          <p><strong>All Male Students : </strong> <span class="label label-danger"><%= Student.where(:gender=>'male').count %></span></p>
+          <p><strong>All Students  : </strong> <span class="label label-info"><%= Student.where(:is_accepted=>true).count %></span></p>
+          <p><strong>All Male Students : </strong> <span class="label label-danger"><%= Student.where(:gender=>'male',:is_accepted=>true).count %></span></p>
 
-          <p><strong>All Female Students  : </strong> <span class="label label-primary"><%= Student.where(:gender=>'female').count %></span></p>
+          <p><strong>All Female Students  : </strong> <span class="label label-primary"><%= Student.where(:gender=>'female',:is_accepted=>true).count %></span></p>
 
         </small>
       </div>
@@ -60,8 +60,8 @@
   </div>
   <!--start student list--->
   <div class="student_container">
-  <% if @selected_class.students.any? %>
-  <% @selected_class.students.each do |student|  %>
+  <% if @selected_class.students.where(:is_accepted=>true).any? %>
+  <% @selected_class.students.where(:is_accepted=>true).each do |student|  %>
         <div class="col-sm-6">
           <div class="widget border-student">
             <div class="widget-content">
@@ -101,7 +101,7 @@
 
 </div>
 </div>
-
+<script src="/js/jquery-1.11.2.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
       var level_id_selector=$('#level_id');

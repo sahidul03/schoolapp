@@ -21,6 +21,9 @@ Rails.application.routes.draw do
   resources :students do
     collection do
        get 'search_student'
+       get 'admission'
+       get 'admission_student_search'
+       get "admission_confirm/:id", action: 'admission_confirm', as: :admission_confirm
     end
   end
   resources :teachers

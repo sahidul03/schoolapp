@@ -12,20 +12,12 @@ class StudentsController < ApplicationController
 
   def edit
     @student=Student.find(params[:id])
-    if @student.is_accepted==false
-      redirect_to students_path
-    else
-      render layout: 'admin_layout'
-    end
+    render layout: 'admin_layout'
   end
 
   def show
     @student=Student.find(params[:id])
-    if @student.is_accepted==false
-      redirect_to students_path
-    else
-      render layout: 'admin_layout'
-    end
+    render layout: 'admin_layout'
   end
 
   def create
@@ -44,7 +36,7 @@ class StudentsController < ApplicationController
   def update
     @student=Student.find(params[:id])
     # raise params_student.inspect
-    if @student.update(params_student)
+    if @student.update(params_student_update)
       flash[:notice] = "Student Updated successfully."
       redirect_to students_path
     else
@@ -72,10 +64,41 @@ class StudentsController < ApplicationController
     # raise @students.inspect
   end
 
+
+  def admission
+    @selected_class=Level.find(10)
+    @students=Student.where(:is_accepted=> false)
+    render layout: 'admin_layout'
+  end
+
+  def admission_student_search
+    @selected_class=Level.find(params[:level_id])
+    if params[:roll_no] ==''
+      @students=@selected_class.students.where(:is_accepted=>false)
+    else
+      @students=@selected_class.students.where(:roll_no=>params[:roll_no],:is_accepted=>false)
+    end
+  end
+
+  def admission_confirm
+    @student=Student.find(params[:id])
+    if @student.update(:is_accepted=>true)
+      flash[:notice] = "Student Admitted successfully."
+      redirect_to :back
+    else
+      flash[:notice] = "Student is not accepted."
+      redirect_to :back
+    end
+  end
+
   protected
 
   def params_student
     params.require(:student).permit(:name,:father_name, :mother_name, :guardian_name, :guardian_contact_no, :roll_no, :address,:profile_photo,:gender,:birth_day).merge(:level_id=>params[:level_id],:is_accepted=>true)
+  end
+
+  def params_student_update
+    params.require(:student).permit(:name,:father_name, :mother_name, :guardian_name, :guardian_contact_no, :roll_no, :address,:profile_photo,:gender,:birth_day).merge(:level_id=>params[:level_id])
   end
 
 end

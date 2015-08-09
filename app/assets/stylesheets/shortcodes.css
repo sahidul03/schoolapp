@@ -107,8 +107,8 @@ ul.dt-sc-social-icons li a{line-height:60px; font-size:16px; font-weight:bold; c
 .dt-sc-ico-content.type1 h5 a{text-shadow:none; font-size:18px; color:#353F6C;}
 .dt-sc-ico-content.type1 h6 a{text-shadow:none; font-size:14px; font-weight:500;    color:#353F6C;}
 
-.dt-sc-ico-content.type1 span.icon-outer{max-width:260px; max-height:166px; display:inline-block; background-repeat:no-repeat; margin-bottom:10px; transition:all 0.5s linear 0s; -moz-transition:all 0.5s linear 0s; -webkit-transition:all 0.5s linear 0s;}
-.dt-sc-ico-content.type1 span.icon-outer img {width:260px; height:160px; border:1px solid #ddd; padding:2px; }
+.dt-sc-ico-content.type1 span.icon-outer{max-width:260px; overflow: hidden; max-height:166px; display:inline-block; background-repeat:no-repeat; margin-bottom:10px; transition:all 0.5s linear 0s; -moz-transition:all 0.5s linear 0s; -webkit-transition:all 0.5s linear 0s;}
+.dt-sc-ico-content.type1 span.icon-outer img {width:260px; border:1px solid #ddd; padding:2px; }
 
 
 .dt-sc-ico-content.type1:hover .icon span.icon-outer{border:3px solid #008c99; box-shadow:none;}

@@ -829,6 +829,7 @@ a:focus {
 .label {
   padding: 0.3em 0.6em;
   font-size:11px;
+    margin-right: 3px;
 }
 .container {
   /*width: auto;*/
@@ -5913,7 +5914,32 @@ footer .footer-links a:last-child {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
 }
 
+.confirm_profile {
+    color:#FFFFFF;
+    margin-top:130px;
+    background-color:#7CB342;
+    margin-left:-10%;
+    width:48px;
+    z-index:9;
+    position:absolute;
+    height:48px;
+    line-height:48px;
+    border-radius:50%;
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
 
+.confirm_profile i{
+    text-align:center;
+    margin-left:30%;
+    font-size:20px;
+    font-weight:700;
+}
+
+
+
+.confirm_profile:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+}
 
 
 

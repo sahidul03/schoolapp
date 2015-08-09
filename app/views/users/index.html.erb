@@ -1,20 +1,4 @@
 
-<script type="text/javascript">
-    jQuery(document).ready(
-            function()
-            {
-                //-----------------------------------------
-                $("#slider-carousel").carousel({activate: function(){}, timerAnimSlide:400, infinite:true, resizeItem:{width:100}, responsive:{minWidth:645}});
-                $("#slider-carousel-2").carousel({activate: function(){}, timerAnimSlide:400, infinite:true, resizeItem:{width:50}, responsive:{minWidth:645}});
-
-                //-----------------------------------------
-            });
-
-    function activate ()
-    {
-    }
-
-</script>
 <!--header starts-->
 
 <!--header ends-->
@@ -290,48 +274,32 @@
       <div id="container-slider-carousel-2" class="container">
         <div id="content-silder-carousel-2" class="content">
           <div class="wrapper-itens">
-            <div class="item">
+            <% if Level.all.any? %>
+                <% Level.all.each do |level|%>
+                <% if level.students.any? %>
+                    <% student= level.students.where(:is_accepted => true).sort_by &:roll_no %>
+                        <% if student.any? %>
+                            <div class="item">
                               <span>
-                               <a href="#"><img src="images/teacher-1.jpg" alt="" class="img-responsive"></a>
+                                <%= link_to student_profile_schools_path(student.first), :data=>{ :no_turbolink=> true} do %>
+                                <% if student.first.profile_photo %>
+                                     <%= image_tag(student.first.profile_photo, :class =>'img-responsive' ) %>
+                                <% else %>
+                                    <img src="/images/user.jpg" alt="" class="img-responsive">
+                                <% end %>
+                                <% end %>
                               </span>
-              <h5><a href="#">Md. Kabirul Hasan</a></h5>
-              <p>Class:ten</p>
-            </div>
-            <div class="item">
-                             <span>
-                             <a href="#"><img src="images/teacher-3.jpg" alt="" class="img-responsive"></a>
-                             </span>
-              <h5><a href="#">Nayon Khan</a></h5>
-              <p>Class:six</p>
-            </div>
-            <div class="item">
-                             <span>
-                             <a><img src="images/teacher-4.jpg" alt="" class="img-responsive">
-                             </a>                         </span>
-              <h5><a href="#">Samiur Rahman</a></h5>
-              <p>Class:Eight</p>
-            </div>
-            <div class="item">
-                            <span>
-                            <img src="images/teacher-6.jpg" alt="" class="img-responsive">
-                            </span>
-              <h5>Samiur Rahman</h5>
-              <p>Class:Eight</p>
-            </div>
-            <div class="item">
-                            <span>
-                            <img src="images/teacher-1.jpg" alt="" class="img-responsive">
-                            </span>
-              <h5>Samiur Rahman</h5>
-              <p>Class:Eight</p>
-            </div>
-            <div class="item">
-                            <span>
-                            <img src="images/teacher-3.jpg" alt="" class="img-responsive">
-                            </span>
-              <h5>Samiur Rahman</h5>
-              <p>Class:Eight</p>
-            </div>
+                              <h5>
+                                <%= link_to student.first.name, student_profile_schools_path(student.first), :data=>{ :no_turbolink=> true} %>
+                                <!--<a href="#">Md. Kabirul Hasan</a>-->
+                              </h5>
+                              <p>Class: <%= student.first.level.name %></p>
+                            </div>
+                        <% end %>
+                <% end %>
+                <% end %>
+            <% end %>
+
           </div>
           <div class="clear"></div>
         </div>

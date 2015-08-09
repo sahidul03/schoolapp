@@ -1,7 +1,7 @@
 class SchoolsController < ApplicationController
 
   def notices
-    @notices=Notice.all.reverse_order.page(params[:page]).per(8)
+    @notices=Notice.all.reverse_order.page(params[:page]).per(15)
     render layout: 'user_layout'
   end
 

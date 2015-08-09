@@ -27,7 +27,13 @@
               <i class="fa fa-pencil"></i>
             </div>
         <% end %>
-
+        <% if @student.is_accepted==false %>
+            <%= link_to admission_confirm_students_path(@student),:data => { :no_turbolink => true } do %>
+                <div class="confirm_profile">
+                  <i class="fa fa-check"></i>
+                </div>
+            <% end %>
+        <% end %>
       </div>
     </div>
     <div class="widget widget-tabbed">

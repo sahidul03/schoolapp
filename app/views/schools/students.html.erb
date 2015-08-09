@@ -30,8 +30,8 @@
         </div>
         <!--start student list--->
         <div class="student_container">
-          <% if @selected_class.students.any? %>
-              <% @selected_class.students.each do |student|  %>
+          <% if @selected_class.students.where(:is_accepted=>true).any? %>
+              <% @selected_class.students.where(:is_accepted=>true).each do |student|  %>
                   <div class="col-sm-6">
                     <div class="widget border-student_user">
                       <div class="widget-content">

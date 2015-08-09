@@ -2,10 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="997e753e-bb61-4b75-aaed-6f70415be5c1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_right_side_user_layout.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_right_side_user_layout.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_user_header.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_user_header.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery-1.7.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.slimscroll.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/student/profile_photo/1/4fdd1aae0a26392a4e515fb503179d27-image-1__1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/student/profile_photo/4/60259257efa571885182fbb553f7b024-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/teacher/profile_photo/1/26ad93926fe952ce9bfe75c371379dc1-1-1-14-07-15-MIRZA-FOKRUL-ISLAM-ALAMGIR-4.jpg" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom.js" afterPath="$PROJECT_DIR$/public/js/custom.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/greensock.js" afterPath="$PROJECT_DIR$/public/js/greensock.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery-1.11.2.min.js" afterPath="$PROJECT_DIR$/public/js/jquery-1.11.2.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery-carousel.js" afterPath="$PROJECT_DIR$/public/js/jquery-carousel.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery-easing-1.3.js" afterPath="$PROJECT_DIR$/public/js/jquery-easing-1.3.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery-migrate.min.js" afterPath="$PROJECT_DIR$/public/js/jquery-migrate.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery-transit-modified.js" afterPath="$PROJECT_DIR$/public/js/jquery-transit-modified.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.bxslider.min.js" afterPath="$PROJECT_DIR$/public/js/jquery.bxslider.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.carouFredSel-6.2.0-packed.js" afterPath="$PROJECT_DIR$/public/js/jquery.carouFredSel-6.2.0-packed.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.flexslider.js" afterPath="$PROJECT_DIR$/public/js/jquery.flexslider.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.inview.js" afterPath="$PROJECT_DIR$/public/js/jquery.inview.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.isotope.min.js" afterPath="$PROJECT_DIR$/public/js/jquery.isotope.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.nicescroll.min.js" afterPath="$PROJECT_DIR$/public/js/jquery.nicescroll.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.parallax-1.1.3.js" afterPath="$PROJECT_DIR$/public/js/jquery.parallax-1.1.3.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.prettyPhoto.js" afterPath="$PROJECT_DIR$/public/js/jquery.prettyPhoto.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.sticky.js" afterPath="$PROJECT_DIR$/public/js/jquery.sticky.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.tabs.min.js" afterPath="$PROJECT_DIR$/public/js/jquery.tabs.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.themepunch.revolution.min.js" afterPath="$PROJECT_DIR$/public/js/jquery.themepunch.revolution.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.themepunch.tools.min.js" afterPath="$PROJECT_DIR$/public/js/jquery.themepunch.tools.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.tipTip.minified.js" afterPath="$PROJECT_DIR$/public/js/jquery.tipTip.minified.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.tweet.min.js" afterPath="$PROJECT_DIR$/public/js/jquery.tweet.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.validate.min.js" afterPath="$PROJECT_DIR$/public/js/jquery.validate.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/js - Copy.js" afterPath="$PROJECT_DIR$/public/js/js - Copy.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/js.js" afterPath="$PROJECT_DIR$/public/js/js.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/layerslider.kreaturamedia.jquery.js" afterPath="$PROJECT_DIR$/public/js/layerslider.kreaturamedia.jquery.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/layerslider.transitions.js" afterPath="$PROJECT_DIR$/public/js/layerslider.transitions.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/marquee.js" afterPath="$PROJECT_DIR$/public/js/marquee.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/modernizr-2.6.2.min.js" afterPath="$PROJECT_DIR$/public/js/modernizr-2.6.2.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/shortcodes.js" afterPath="$PROJECT_DIR$/public/js/shortcodes.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/validation.js" afterPath="$PROJECT_DIR$/public/js/validation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_left_side_bar_admin_layout.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_left_side_bar_admin_layout.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/students/index.html.erb" afterPath="$PROJECT_DIR$/app/views/students/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/responsive.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/responsive.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/schools_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/schools_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/shortcodes.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/shortcodes.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/students/show.html.erb" afterPath="$PROJECT_DIR$/app/views/students/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/schools/students.html.erb" afterPath="$PROJECT_DIR$/app/views/schools/students.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/students_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/students_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/style.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/style_admin.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/style_admin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/user_layout.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/user_layout.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="schoolapp.iws" />
@@ -29,45 +76,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
+      <file leaf-file-name="students_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/students_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="11970">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <element signature="tag#div#0;tag#div#0;tag#section#0;tag#section#0;tag#div#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery-carousel.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery-carousel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5145">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.52095807" vertical-offset="414" max-vertical-offset="1650">
+              <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/students/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.568441" vertical-offset="0" max-vertical-offset="930">
-              <caret line="55" column="15" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="15" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-11.875" vertical-offset="180" max-vertical-offset="1785">
+              <caret line="31" column="43" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="students_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/students_controller.rb">
+      <file leaf-file-name="admission_student_search.js.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/students/admission_student_search.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="329" max-vertical-offset="1305">
-              <caret line="37" column="43" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="43" />
+            <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
+              <caret line="4" column="75" selection-start-line="4" selection-start-column="75" selection-end-line="4" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_admission_student_search_partial_view.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/students/_admission_student_search_partial_view.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.5" vertical-offset="75" max-vertical-offset="645">
+              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -76,28 +119,18 @@
       <file leaf-file-name="schools_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/schools_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1436" max-vertical-offset="2055">
-              <caret line="120" column="47" selection-start-line="120" selection-start-column="47" selection-end-line="120" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="2055">
+              <caret line="3" column="64" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="admission.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/schools/admission.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/students/admission.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="285" max-vertical-offset="1605">
-              <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_right_side_user_layout.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_right_side_user_layout.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.666667" vertical-offset="230" max-vertical-offset="1170">
-              <caret line="34" column="13" selection-start-line="25" selection-start-column="3" selection-end-line="34" selection-end-column="13" />
+            <state vertical-scroll-proportion="-10.083333" vertical-offset="868" max-vertical-offset="1950">
+              <caret line="74" column="73" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -106,18 +139,28 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.885715" vertical-offset="32599" max-vertical-offset="33105">
-              <caret line="2201" column="1" selection-start-line="2201" selection-start-column="1" selection-end-line="2201" selection-end-column="1" />
+            <state vertical-scroll-proportion="-115.77143" vertical-offset="22948" max-vertical-offset="33165">
+              <caret line="1800" column="24" selection-start-line="1800" selection-start-column="24" selection-end-line="1800" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_user_header.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_user_header.html.erb">
+      <file leaf-file-name="style_admin.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style_admin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="36.375" vertical-offset="963" max-vertical-offset="2025">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.0285714" vertical-offset="88679" max-vertical-offset="90225">
+              <caret line="5919" column="28" selection-start-line="5919" selection-start-column="28" selection-end-line="5919" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="students.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/schools/students.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.625" vertical-offset="495" max-vertical-offset="1635">
+              <caret line="32" column="74" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -126,8 +169,8 @@
       <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="496" max-vertical-offset="1725">
-              <caret line="62" column="26" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1770">
+              <caret line="25" column="29" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -146,12 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/uploaders/notice_photo_uploader.rb" />
-        <option value="$PROJECT_DIR$/app/views/schools/notice_details.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/schools/event_details.html.erb" />
-        <option value="$PROJECT_DIR$/app/uploaders/event_photo_uploader.rb" />
-        <option value="$PROJECT_DIR$/app/views/schools/events.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/schools/notices.html.erb" />
         <option value="$PROJECT_DIR$/app/views/schools/useful_links.html.erb" />
         <option value="$PROJECT_DIR$/app/views/schools/routine.html.erb" />
         <option value="$PROJECT_DIR$/app/views/schools/video_gallery.html.erb" />
@@ -162,7 +199,6 @@
         <option value="$PROJECT_DIR$/app/uploaders/gallery_image_uploader.rb" />
         <option value="$PROJECT_DIR$/app/controllers/galleries_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/schools/photo_galleries.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/user_layout.html.erb" />
         <option value="$PROJECT_DIR$/app/views/schools/photo_gallery.html.erb" />
         <option value="$PROJECT_DIR$/app/views/schools/teacher_profile.html.erb" />
         <option value="$PROJECT_DIR$/app/views/teachers/show.html.erb" />
@@ -173,13 +209,10 @@
         <option value="$PROJECT_DIR$/app/views/schools/student_profile.html.erb" />
         <option value="$PROJECT_DIR$/app/views/schools/search_student.js.erb" />
         <option value="$PROJECT_DIR$/app/views/schools/_search_student_partial_view.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/schools/students.html.erb" />
         <option value="$PROJECT_DIR$/app/views/results/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/results_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/schools/results.html.erb" />
         <option value="$PROJECT_DIR$/app/views/schools/result_details.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/style_admin.css" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/shortcodes.css" />
         <option value="$PROJECT_DIR$/app/uploaders/speech_photo_uploader.rb" />
         <option value="$PROJECT_DIR$/app/views/schools/academic_speeches.html.erb" />
         <option value="$PROJECT_DIR$/app/views/schools/academic_speech.html.erb" />
@@ -188,15 +221,25 @@
         <option value="$PROJECT_DIR$/app/views/speeches/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/speeches_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20150808192534_add_is_accepted_to_students.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/students_controller.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/schools_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/schools/admission.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_right_side_user_layout.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_user_header.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/views/layouts/user_layout.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/schools_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/shortcodes.css" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/views/students/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_left_side_bar_admin_layout.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/students/admission_student_search.js.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/students/admission.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/students/_admission_student_search_partial_view.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/students/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/style_admin.css" />
+        <option value="$PROJECT_DIR$/app/views/schools/students.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/students_controller.rb" />
       </list>
     </option>
   </component>
@@ -232,7 +275,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
@@ -280,7 +322,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -631,31 +673,10 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="schoolapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="schoolapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -666,10 +687,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/assets/javascripts" />
-      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/app/assets/stylesheets" />
       <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/app/assets" />
+      <recent name="$PROJECT_DIR$/app/assets/javascripts" />
+      <recent name="$PROJECT_DIR$/public/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/views/index_sliders" />
@@ -835,9 +857,10 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2549801" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25896415" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -846,7 +869,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -875,94 +897,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/schools/committees.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875" vertical-offset="225" max-vertical-offset="1035">
-          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/schools/teachers.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.375" vertical-offset="45" max-vertical-offset="1035">
-          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/schools/teacher_profile.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.25" vertical-offset="810" max-vertical-offset="1470">
-          <caret line="80" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="92" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/schools/committee_profile.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.25" vertical-offset="225" max-vertical-offset="1380">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/schools/student_profile.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.0833335" vertical-offset="910" max-vertical-offset="1425">
-          <caret line="72" column="67" selection-start-line="72" selection-start-column="67" selection-end-line="72" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/students/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4166667" vertical-offset="1478" max-vertical-offset="1980">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="126" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/students/search_student.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
-          <caret line="4" column="54" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="133" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/schools/search_student.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="105">
-          <caret line="1" column="76" selection-start-line="1" selection-start-column="76" selection-end-line="1" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/students/_search_student_partial_view.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="600">
-          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/schools/_search_student_partial_view.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.625" vertical-offset="3" max-vertical-offset="600">
-          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/results_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
-          <caret line="4" column="33" selection-start-line="3" selection-start-column="4" selection-end-line="4" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/results/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.75" vertical-offset="0" max-vertical-offset="675">
           <caret line="84" column="31" selection-start-line="0" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/schools/students.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0" vertical-offset="402" max-vertical-offset="1635">
-          <caret line="54" column="72" selection-start-line="54" selection-start-column="72" selection-end-line="54" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -978,21 +916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="10" max-vertical-offset="750">
           <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style_admin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="85077" max-vertical-offset="89835">
-          <caret line="5683" column="6" selection-start-line="5683" selection-start-column="0" selection-end-line="5683" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/shortcodes.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="542" max-vertical-offset="11700">
-          <caret line="107" column="80" selection-start-line="107" selection-start-column="80" selection-end-line="107" selection-end-column="80" />
           <folding />
         </state>
       </provider>
@@ -1147,7 +1070,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="1500">
           <caret line="68" column="139" selection-start-line="68" selection-start-column="104" selection-end-line="68" selection-end-column="139" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1171,31 +1093,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="77" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="496" max-vertical-offset="1725">
-          <caret line="62" column="26" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/students_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="329" max-vertical-offset="1305">
-          <caret line="37" column="43" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/schools_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1436" max-vertical-offset="2055">
-          <caret line="120" column="47" selection-start-line="120" selection-start-column="47" selection-end-line="120" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1209,7 +1106,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_user_header.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="36.375" vertical-offset="963" max-vertical-offset="2025">
+        <state vertical-scroll-proportion="0.0" vertical-offset="963" max-vertical-offset="2025">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
@@ -1217,45 +1114,190 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_right_side_user_layout.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.666667" vertical-offset="230" max-vertical-offset="1170">
-          <caret line="34" column="13" selection-start-line="25" selection-start-column="3" selection-end-line="34" selection-end-column="13" />
+        <state vertical-scroll-proportion="-23.125" vertical-offset="0" max-vertical-offset="1170">
+          <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.885715" vertical-offset="32599" max-vertical-offset="33105">
-          <caret line="2201" column="1" selection-start-line="2201" selection-start-column="1" selection-end-line="2201" selection-end-column="1" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="585">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery-carousel.js">
+    <entry file="file://$PROJECT_DIR$/public/js/js.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5145">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="564">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/students/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="564">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/user_layout.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="39.375" vertical-offset="1215" max-vertical-offset="3045">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="39090">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/shortcodes.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6571426" vertical-offset="1487" max-vertical-offset="11700">
+          <caret line="110" column="58" selection-start-line="110" selection-start-column="58" selection-end-line="110" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="11970">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state vertical-scroll-proportion="-11.166667" vertical-offset="4187" max-vertical-offset="12525">
+          <caret line="297" column="33" selection-start-line="297" selection-start-column="33" selection-end-line="297" selection-end-column="33" />
           <folding>
-            <element signature="tag#div#0;tag#div#0;tag#section#0;tag#section#0;tag#div#0" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#section#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#h2#0;n#div#0;n#section#1;n#section#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#a#0;n#div#0;n#div#0;n#article#0;n#div#0;n#div#0;n#section#1;n#section#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#a#0;n#div#0;n#div#0;n#article#0;n#div#1;n#div#0;n#section#1;n#section#0;n#section#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+    <entry file="file://$PROJECT_DIR$/app/views/students/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.568441" vertical-offset="0" max-vertical-offset="930">
-          <caret line="55" column="15" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="15" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-6.875" vertical-offset="180" max-vertical-offset="1980">
+          <caret line="23" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="126" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_left_side_bar_admin_layout.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.75" vertical-offset="0" max-vertical-offset="2055">
+          <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/students/search_student.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
+          <caret line="4" column="32" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="133" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/students/_search_student_partial_view.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="600">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/students/admission_student_search.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
+          <caret line="4" column="75" selection-start-line="4" selection-start-column="75" selection-end-line="4" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/students/_admission_student_search_partial_view.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5" vertical-offset="75" max-vertical-offset="645">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1770">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/students/admission.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.083333" vertical-offset="868" max-vertical-offset="1950">
+          <caret line="74" column="73" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/students/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.875" vertical-offset="180" max-vertical-offset="1785">
+          <caret line="31" column="43" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-115.77143" vertical-offset="22948" max-vertical-offset="33165">
+          <caret line="1800" column="24" selection-start-line="1800" selection-start-column="24" selection-end-line="1800" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style_admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0285714" vertical-offset="88679" max-vertical-offset="90225">
+          <caret line="5919" column="28" selection-start-line="5919" selection-start-column="28" selection-end-line="5919" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/schools/students.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.625" vertical-offset="495" max-vertical-offset="1635">
+          <caret line="32" column="74" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/schools_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="2055">
+          <caret line="3" column="64" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/students_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52095807" vertical-offset="414" max-vertical-offset="1650">
+          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
