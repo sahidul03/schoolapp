@@ -1905,7 +1905,9 @@ iframe {
 }
 body.fixed-left .side-menu.left {
   margin-top: 0px;
+  position: fixed;
   height: 100%;
+  bottom: 50px;
   margin-bottom: -50px;
   padding-bottom: 50px;
 }
