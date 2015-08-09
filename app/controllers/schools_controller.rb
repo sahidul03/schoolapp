@@ -1,5 +1,10 @@
 class SchoolsController < ApplicationController
 
+  before_action :authenticate_user!,
+                :except => [:notices, :notice_details, :events, :event_details, :useful_links, :routine, :video_gallery, :photo_galleries, :photo_gallery, :students,
+                             :student_profile, :teachers, :teacher_profile, :committees, :committee_profile, :search_student, :results,
+                             :result_details, :academic_speeches, :academic_speech, :admission, :admission_save ]
+
   def notices
     @notices=Notice.all.reverse_order.page(params[:page]).per(15)
     render layout: 'user_layout'
