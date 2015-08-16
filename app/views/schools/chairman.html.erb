@@ -1,0 +1,58 @@
+<% president_committee= Committee.where(:head=>"head").first if Committee.where(:head=>"head").any? %>
+<% if president_committee %>
+
+<% else %>
+    <% if Committee.last %>
+        <% president_committee=Committee.last %>
+
+    <% end %>
+<% end %>
+
+
+
+
+
+<% if president_committee %>
+    <% @teacher = president_committee %>
+    <div id="main">
+
+      <!--container starts-->
+      <div class="container">
+        <!--primary starts-->
+        <section  id="primary" class="with-sidebar">
+          <!--dt-sc-one-half starts-->
+          <div class="column dt-sc-one-column">
+            <div  class="student_profile">
+              <div class="student_profile_banner">
+                <div class="left_images">
+                  <% if @teacher.profile_photo %>
+                      <%= image_tag(@teacher.profile_photo) %>
+                  <% else %>
+                      <img src="/images/profile_image.jpg">
+                  <% end %>
+                </div>
+                <div class="right_content">
+                  <h2><%= @teacher.name %></h2>
+                  <h4>Designation: <%= @teacher.designation %> </h4>
+                </div>
+              </div><!--message_person_banner ends-->
+              <div class="student_profile_details">
+                <h4> Message of Chairman (CBHS)</h4>
+                <%= @teacher.message %>
+              </div>
+            </div>
+          </div>
+          <!--dt-sc-one-half ends-->
+        </section>
+        <!--primary ends-->
+
+        <!--secondary starts-->
+        <%= render 'layouts/right_side_user_layout' %>
+        <!--secondary ends-->
+
+      </div>
+      <!--container ends-->
+    </div>
+<% end %>
+
+

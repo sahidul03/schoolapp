@@ -3,7 +3,8 @@ class SchoolsController < ApplicationController
   before_action :authenticate_user!,
                 :except => [:notices, :notice_details, :events, :event_details, :useful_links, :routine, :video_gallery, :photo_galleries, :photo_gallery, :students,
                              :student_profile, :teachers, :teacher_profile, :committees, :committee_profile, :search_student, :results,
-                             :result_details, :academic_speeches, :academic_speech, :admission, :admission_save ]
+                             :result_details, :academic_speeches, :academic_speech, :admission, :admission_save, :principal,
+                             :chairman, :contact_us]
 
   def notices
     @notices=Notice.all.reverse_order.page(params[:page]).per(15)
@@ -127,10 +128,36 @@ class SchoolsController < ApplicationController
     end
   end
 
+  def principal
+    render layout: 'user_layout'
+  end
+
+  def chairman
+    render layout: 'user_layout'
+  end
+
+  def contact_us
+    @contact=Contact.new
+    render layout: 'user_layout'
+  end
+
+  def contact_save
+    @contact=Contact.new(params_contact)
+    if @contact.save
+      flash[:notice] = "Email Sent successfully."
+      redirect_to root_path
+    else
+      render 'contact_us', :layout=>'user_layout'
+    end
+  end
+
   protected
 
   def params_student
     params.require(:student).permit(:name,:father_name, :mother_name, :guardian_name, :guardian_contact_no, :address,:profile_photo,:gender,:birth_day).merge(:level_id=>params[:level_id],:is_accepted=>false,:roll_no=>'8888')
+  end
+  def params_contact
+    params.require(:contact).permit(:name,:phone, :email, :subject, :body)
   end
 
 end

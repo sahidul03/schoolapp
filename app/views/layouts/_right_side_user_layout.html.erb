@@ -8,7 +8,7 @@
             <%= link_to Video.last.title, video_gallery_schools_path, :data=>{ :no_turbolink=> true} %>
           </h4>
         </div>
-        <% Video.last(3).each do |video| %>
+        <% Video.last(3).reverse.each do |video| %>
            <% if video!=Video.last %>
                 <li>
                   <i class="fa fa-video-camera"></i>
@@ -24,7 +24,7 @@
   <aside class=" widget_categories notice_right_side">
     <h2><i class="fa fa-microphone"></i> Recent Notice</h2>
     <% if Notice.all.any? %>
-    <% Notice.last(5).each do |notice| %>
+    <% Notice.last(5).reverse.each do |notice| %>
             <li>
               <i class="fa fa-angle-right"></i>
               <%= link_to notice.title, notice_details_schools_path(notice), :data=>{ :no_turbolink=> true} %>
@@ -55,7 +55,7 @@
   <aside class=" widget_categories useful_link">
     <h2><i class="fa fa-microphone"></i> Usefull link</h2>
     <% if UsefulLink.all.any? %>
-        <% UsefulLink.last(5).each do |useful_link| %>
+        <% UsefulLink.last(5).reverse.each do |useful_link| %>
             <li>
               <i class="fa fa-angle-right"></i>
               <a href="<%= useful_link.link %>" target="_blank"> <%=  useful_link.title %></a>

@@ -193,8 +193,18 @@ footer .widget.widget_text ul li:before, .portfolio-detail p:before, h5.dt-sc-to
 
 .is-sticky header ul.dt-sc-social-icons li a span{height:55px; line-height:50px;}
 
-header{width:100%; float:left; margin:0px; padding:0px; background:url(../images/header_bg.png)  #9C9C9C; display:block; z-index:9999;}
-
+header{
+    width:100%;
+    float:left;
+    margin:0px;
+    padding:0px;
+    background:url(../images/header_bg_bg.png)  ;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    display:block;
+    z-index:9999;
+    background-position:top center;
+}
 .is-sticky header #menu-container{height:45px;}
 
 .header_top{width:100%; float:left; padding:28px 0px; margin:0px;}

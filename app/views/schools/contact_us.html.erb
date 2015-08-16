@@ -1,0 +1,90 @@
+<div id="main">
+  <!--breadcrumb-section starts-->
+  <div class="breadcrumb-section">
+    <div class="container">
+      <h1>Contact</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="fa fa-angle-double-right"></span>
+        <span class="current">Contact</span>
+      </div>
+    </div>
+  </div>
+  <!--breadcrumb-section ends-->
+  <!--container starts-->
+  <div class="container">
+    <!--primary starts-->
+    <section id="primary" class="content-full-width">
+
+      <div id="map"> </div>
+
+      <div class="dt-sc-hr"> </div>
+
+      <!--dt-sc-two-third starts-->
+      <div class="column dt-sc-three-fourth first contact_form_outer">
+        <%= form_for @contact,:url=> contact_save_schools_path , method: :post, :html=> {:class =>'contact-form' } do |f|  %>
+
+
+        <!--<form name="frcontact" class="contact-form" method="post" action="php/contactmail.php">-->
+          <h2>We'd Like to Hear From You!</h2>
+            <% if @contact.errors.any? %>
+                <p >
+                  <% @contact.errors.full_messages.each do |msg| %>
+                      <span style="color: deeppink"><%= msg %></span><br>
+                  <% end %>
+                </p>
+            <% end %>
+          <p class="column dt-sc-one-third first">
+            <%= f.text_field :name, :class=>'form-control', :placeholder=>'Name*' %>
+            <!--<input id="name" name="txtname" type="text" placeholder="Name" required>-->
+          </p>
+          <p class="column dt-sc-one-third">
+            <%= f.text_field :email, :class=>'form-control', :placeholder=>'Email' %>
+          </p>
+          <p class="column dt-sc-one-third">
+            <%= f.text_field :phone, :class=>'form-control', :placeholder=>'Phone no' %>
+          </p>
+            <p>
+              <%= f.text_field :subject, :class=>'form-control', :placeholder=>'Subject' %>
+            </p>
+          <p>
+            <%= f.text_area :body, :class=>'form-control', :placeholder=>'Body*', :style=>'min-height : 215px;' %>
+          </p>
+          <div id="ajax_contact_msg"> </div>
+          <p>
+            <%= f.submit 'Send Email', :class=>'dt-sc-button medium' %>
+            <!--<input name="submit" type="submit" id="submit" class="dt-sc-button medium" value="Send Email">-->
+          </p>
+        <% end %>
+
+      </div>
+      <!--dt-sc-two-third ends-->
+
+      <!--dt-sc-one-third starts-->
+      <div class="column dt-sc-one-fourth class_hours">
+        <h2>Class Hours</h2>
+        <ul class="class_hours">
+          <li>Monday<span>9am - 3pm</span></li>
+          <li>Tuesday<span>9am - 3pm</span></li>
+          <li>Wednesday<span>9am - 3pm</span></li>
+          <li>Thursday<span>9am - 3pm</span></li>
+          <li>Friday<span>9am - 3pm</span></li>
+          <li>Saturday<span>Holiday</span></li>
+          <li>Sunday<span>Holiday</span></li>
+        </ul>
+        <div class="dt-sc-hr-small"></div>
+        <p><strong><span class="highlighter">We care</span> about your dearest</strong></p>
+        <ul class="dt-sc-social-icons">
+          <li class="facebook"><a href="#" title="Facebook" class="dt-sc-tooltip-bottom"><img src="images/facebook.png" alt="" title=""></a></li>
+          <li class="twitter"><a href="#" title="Twitter" class="dt-sc-tooltip-bottom"><img src="images/twitter.png" alt="" title=""></a></li>
+          <li class="gplus"><a href="#" title="Google Plus" class="dt-sc-tooltip-bottom"><img src="images/gplus.png" alt="" title=""></a></li>
+          <li class="pinterest"><a href="#" title="Pinterest" class="dt-sc-tooltip-bottom"><img src="images/pinterest.png" alt="" title=""></a></li>
+        </ul>
+      </div>
+      <!--dt-sc-one-third ends-->
+
+    </section>
+    <!--primary ends-->
+  </div>
+  <!--container ends-->
+</div>

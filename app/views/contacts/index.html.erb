@@ -1,0 +1,55 @@
+<div style="margin-top:30px;" class="row">
+
+  <div class="col-lg-8">
+    <div class="widget">
+      <div class="widget-header">
+        <h2><i class="fa fa-mail-reply-all"></i> <strong>Guardian's Mail</strong> </h2>
+      </div>
+
+      <div class="tab-content">
+
+
+        <!-- Tab timeline -->
+        <div class="tab-pane animated active fadeInRight" id="my-timeline">
+          <div class="user-profile-content">
+            <div class="widget">
+
+              <ul >
+                <% if @contacts.any? %>
+                    <% @contacts.each do |contact| %>
+                        <li  style="border:1px solid #EDEDED; border-radius:3px; padding:10px; margin-bottom: 10px">
+                          <h4>Name :  <%= contact.name %> </h4>
+                          <h5>Email :  <%= contact.email %> </h5>
+                          <h5>Contact No :  <%= contact.phone %> </h5>
+                          <h5>Subject :  <%= contact.subject %> </h5>
+                          <h6>
+                            <%= contact.created_at.strftime('%d %B, %y') %> <span>|  BY CBHS </span>
+                            <%= link_to contact_path(contact), :class=>'label label-danger pull-right', method: :delete,data: { confirm: 'Are you sure?' } do %>
+                                <i class="fa fa-close"></i>  Delete
+                            <% end %>
+                          </h6>
+
+                          <p>
+                          <h4>Message : </h4>
+                          <%= contact.body if contact.body %>
+                          </p><br>
+                        </li>
+                    <% end %>
+                <% end %>
+
+              </ul>
+            </div><!-- / total .tab-content -->
+
+            <!-- Begin timeline -->
+
+
+
+            </div><!-- End div .the-timeline -->
+            <!-- End timeline -->
+          </div><!-- End div .user-profile-content -->
+        </div><!-- End div .tab-pane -->
+
+      </div><!-- End div .tab-content -->
+    </div><!-- End div .box-info -->
+  <%= render 'layouts/right_side_student_count_class_wise_admin' %>
+</div>

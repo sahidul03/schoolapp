@@ -64,11 +64,16 @@ Rails.application.routes.draw do
       get "academic_speech/:id", action: "academic_speech", as: :academic_speech
       get "admission"
       post "admission_save"
+      get "principal"
+      get "chairman"
+      get "contact_us"
+      post "contact_save"
 
 
     end
   end
 
+  resources :contacts
 
   # Example resource route with options:
   #   resources :products do

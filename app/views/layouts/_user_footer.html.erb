@@ -7,13 +7,14 @@
       <div class="column dt-sc-one-fourth first">
         <aside class="widget widget_text">
           <h3 class="widgettitle red_sketch">Useful link </h3>
-          <p>Happy <a href=""><strong>Kids Life</strong></a> comes with powerful theme options, which empowers you to quickly and easily build incredible store.</p>
           <ul>
-            <li> <a href=""> English Grammar Class </a> </li>
-            <li> <a href=""> Music class </a> </li>
-            <li> <a href=""> Swimming & Karate </a> </li>
-            <li> <a href=""> Lot of HTML Styles </a> </li>
-            <li> <a href=""> Unique News Page Design </a> </li>
+            <% if UsefulLink.all.any? %>
+                <% UsefulLink.last(5).reverse.each do |useful_link| %>
+                    <li>
+                      <a href="<%= useful_link.link %>" target="_blank"> <%=  useful_link.title %></a>
+                    </li>
+                <% end %>
+            <% end %>
           </ul>
         </aside>
       </div>
@@ -21,27 +22,19 @@
         <aside class="widget widget_recent_entries">
           <h3 class="widgettitle green_sketch"> News & Event </h3>
           <ul>
-            <li>
-              <a href="">
-                <img src="/images/blog_list1.jpg" alt="" title="">
-              </a>
-              <h6><a href=""> Amazing post with all  goodies </a></h6>
-              <span> March 23, 2014 </span>
-            </li>
-            <li>
-              <a href="">
-                <img src="/images/blog_list2.jpg" alt="" title="">
-              </a>
-              <h6><a href=""> Amazing post with all  goodies </a></h6>
-              <span> March 23, 2014 </span>
-            </li>
-            <li>
-              <a href="">
-                <img src="/images/blog_list3.jpg" alt="" title="">
-              </a>
-              <h6><a href=""> Amazing post with all  goodies </a></h6>
-              <span> March 23, 2014 </span>
-            </li>
+            <% if Event.all.any? %>
+                <% Event.last(3).reverse.each do |event| %>
+                    <li>
+                      <%= link_to event_details_schools_path(event), :data=>{ :no_turbolink=> true} do %>
+                      <%= image_tag(event.image) %>
+                      <% end %>
+                      <h6>
+                        <%= link_to event.title, event_details_schools_path(event), :data=>{ :no_turbolink=> true} %>
+                      </h6>
+                      <span><%= event.created_at.strftime('%d %B, %y') %> </span>
+                    </li>
+                <% end %>
+            <% end %>
           </ul>
         </aside>
       </div>

@@ -370,26 +370,29 @@
         <% index_photo=1 %>
         <% if gallery.photos.any? %>
         <% gallery.photos.each do |photo|%>
-                <div class="<%= 'portfolio-content portfolio-content'+index_photo.to_s %>">
-                  <div class="front-portfolio">
-                    <div class="portfolio-outer">
-                      <div class="portfolio-thumb">
-                        <%= image_tag(photo.image) if photo.image%>
-                        <!--<img src="/images/image1.jpg" alt="" title="">-->
-                        <div class="image-overlay">
+                <% if  index_photo < 8  %>
+                    <div class="<%= 'portfolio-content portfolio-content'+index_photo.to_s %>">
+                      <div class="front-portfolio">
+                        <div class="portfolio-outer">
+                          <div class="portfolio-thumb">
+                            <%= image_tag(photo.image) if photo.image%>
+                            <!--<img src="/images/image1.jpg" alt="" title="">-->
+                            <div class="image-overlay">
 
-                          <%= link_to photo_gallery_schools_path(photo.gallery), :data=>{ :no_turbolink=> true}, :class=>'link' do %>
-                              <span class="fa fa-link"></span>
-                          <% end %>
-                          <!--<a href="portfolio-detail.html" class="link"></a>-->
+                              <%= link_to photo_gallery_schools_path(photo.gallery), :data=>{ :no_turbolink=> true}, :class=>'link' do %>
+                                  <span class="fa fa-link"></span>
+                              <% end %>
+                              <!--<a href="portfolio-detail.html" class="link"></a>-->
 
-                          <a href="<%= photo.image %>" data-gal="prettyPhoto[gallery]" class="zoom"><span class="fa fa-search"></span></a>
+                              <a href="<%= photo.image %>" data-gal="prettyPhoto[gallery]" class="zoom"><span class="fa fa-search"></span></a>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <% index_photo=index_photo+1 %>
+                    <% index_photo=index_photo+1 %>
+                <% end %>
+
          <% end %>
         <% end %>
         <% while index_photo < 8  do %>
